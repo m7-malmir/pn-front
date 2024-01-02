@@ -2005,7 +2005,58 @@ a{
         .side_menu_topic:hover{
             background-color:#484848;
         }
-        
+        #section{
+            width:80%;
+            margin:150px auto;
+            display: flex;
+            flex-direction:column;
+        }
+        #SideBySideForm {
+            background-color: #333;
+        }
+        #SideBySideForm{
+            width:300px;
+            display:flex;
+            flex-direction:column;
+            margin:0 auto;
+            height:520px;
+            box-shadow:0px 2px 3px 0 black;
+        }
+        #SideBySideForm img{
+            width:128px;
+            margin:60px auto;
+        }
+        #SideBySideForm label{
+            font-size:14px;
+            width:60px;
+            margin-right: 15px;
+            background-color: #26a49a;
+            box-shadow:0px 1px 2px 0 #26a49a;
+            padding:3px 6px;
+            margin-bottom: 6px;
+            border-radius: 3px;
+        }
+        #SideBySideForm input{
+            width:90%;
+            margin:0 auto;
+            margin-bottom:50px;
+        }
+        #SideBySideForm button{
+            margin:50px auto 0 auto;
+            width:90%;
+            background-color: #26a49a;
+            color:white;
+            border:none;
+            box-shadow:0px 1px 2px 0 #26a49a;
+            transition: 0.4s;
+            padding: 8px 0;
+            font-weight:900;
+            font-size: 14px;
+        }
+        #SideBySideForm button:hover{
+            color: #26a49a;
+            background-color: white;
+        }
         @media screen and (min-width:768px){
             #MainSection{
                 width: calc(100% - 240px);
