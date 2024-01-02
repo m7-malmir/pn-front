@@ -1,201 +1,224 @@
 <html lang="fa-IR">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel='icon' href='../../../files/logo.webp' alt='لوگو نیک پی' size='16x16'></link>
-        <link rel="stylesheet" href="css/maintenance.css">
 
-        <title>انتخاب ترمینال</title>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='icon' href='../../../files/logo.webp' alt='لوگو نیک پی' size='16x16'>
+    </link>
+    <link rel="stylesheet" href="css/maintenance.css">
 
-    <div class='navbar' >
-                <div style='width:160px;display:flex;float:left;color: white;position:relative;height:55px;' onclick='ToggleNavBarMenu();' >
-                <a style='display:none;width:32px;height:32px;margin:auto;' href='/membership/notification/'>
-                    <img style='width: 100%;margin-top: 5px;' src='/library/images/notification.webp'>
-                        <div id='NotificationCounter' >
-                        </div>
-                    </img>
-                </a>
-                <div style='width:calc(100% - 32px);height:32px;display:flex;margin:auto;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;'>
-                    <div style='margin: auto;' >admin admin</div>
-                </div>
-                <div style='width:32px;height:32px;margin:auto 5px;'>
-                                        <img src='/library/images/user_logo_white.webp' style='width:30px;height:30px;'></img>
-                                </div>
+    <title>انتخاب ترمینال</title>
+</head>
+
+<div class='navbar'>
+    <div style='width:160px;display:flex;float:left;color: white;position:relative;height:55px;'
+        onclick='ToggleNavBarMenu();'>
+        <a style='display:none;width:32px;height:32px;margin:auto;' href='/membership/notification/'>
+            <img style='width: 100%;margin-top: 5px;' src='/library/images/notification.webp'>
+            <div id='NotificationCounter'>
             </div>
-            <div id='HeaderImage' style='display:none;'>
-                <a href='./?logout=on'>
-                    <img src='/library/images/logout_white.webp'></img>
-                </a>
-                <a href='/membership/notification/'>
-                    <img src='/library/images/notification.webp'>
-                        <div id='NotificationCounter' >
-                            اعلانات 
-                            (
-                                100+						)
-                        </div>
-                    </img>
-                </a>
-            </div>
-        <div id='header_hamburger_button' style='' onclick='ToggleHeaderSideMenu();' >
-            <div style=''></div>
-            <div style=''></div>
-            <div style=''></div>
+            </img>
+        </a>
+        <div
+            style='width:calc(100% - 32px);height:32px;display:flex;margin:auto;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;'>
+            <div style='margin: auto;'>admin admin</div>
         </div>
-            <div id='header_bigsize'>
-            <div class='dropdown'>
-                <button class='dropbtn'>
-                    <a>منو عمومی</a>
-                    <i class='fa fa-caret-down'></i>
-                </button>
-                <div class='dropdown-content'>
-                    <div class='' id=''>
-                        <a href='/maintenance/external/paymentservice/'>تعمیرگاه سانیار سرویس</a>
-                    </div>
-                </div>
-            </div>
-        <div class='dropdown'>
-                    <button class='dropbtn'>
-                        <a>منو</a>
-                        <i class='fa fa-caret-down'></i>
-                    </button><div class='dropdown-content'><div class='' id=''><a href='../../../'>منو</a></div></div><div class='dropdown-content'><div class='' id=''><a href='../../../membership/'>خانه</a><a href='../../../membership/profile/'>پروفایل</a><a href='../../../library/logout.php'>خروج</a><a href='../../../membership/bank/PaymentTerminal/V1/'>کارتخوان</a><a href='../../../membership/tool/sidebyside/'>چسباندن عکس کنار هم</a><a href='../../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/'>استعلام سریال </a><a href='../../../membership/bank/AutomaticTellerMachine/V1/'>خودپرداز</a><a href='../../../Bank/Registry/'>رجیستر پذیرنده</a><a href='../../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off'>خروجی ترمینال</a><a href='../../../membership/maintenance/'>تعمیرات کارتخوان</a></div></div></div>	</div>
+        <div style='width:32px;height:32px;margin:auto 5px;'>
+            <img src='/library/images/user_logo_white.webp' style='width:30px;height:30px;'></img>
+        </div>
     </div>
-    
-    <section id='navbar2' style=''>
-        <div id='navbar2_content' style='' >
-            <div>
-                <a href='/membership/'>داشبورد</a>
+    <div id='HeaderImage' style='display:none;'>
+        <a href='./?logout=on'>
+            <img src='/library/images/logout_white.webp'></img>
+        </a>
+        <a href='/membership/notification/'>
+            <img src='/library/images/notification.webp'>
+            <div id='NotificationCounter'>
+                اعلانات
+                (
+                100+ )
             </div>
-            <div>
-                <a href='/membership/profile/'>پروفایل</a>
+            </img>
+        </a>
+    </div>
+    <div id='header_hamburger_button' style='' onclick='ToggleHeaderSideMenu();'>
+        <div style=''></div>
+        <div style=''></div>
+        <div style=''></div>
+    </div>
+    <div id='header_bigsize'>
+        <div class='dropdown'>
+            <button class='dropbtn'>
+                <a>منو عمومی</a>
+                <i class='fa fa-caret-down'></i>
+            </button>
+            <div class='dropdown-content'>
+                <div class='' id=''>
+                    <a href='/maintenance/external/paymentservice/'>تعمیرگاه سانیار سرویس</a>
+                </div>
             </div>
-            <div>
-                <a style='' href='/membership/message/messenger/'>
-                    پیام ها 
-                    (
-                        0				)
-                </a>
-            </div>
-            <div>
-                <a style='' href='/membership/notification/'>
-                    اعلانات 
-                    (
-                        100+				)
-                </a>
-            </div>
-                        <div ><a href='/membership/admin/'>ادمین</a></div>
-                    <div ><a href='./?logout=on'>خروج</a></div>
         </div>
-    </section>
-    
-    <section id='header_smallsize'>
-    
-                    <div class='header_smallsize_topic'>
-                        <a>منو</a>
-                    </div>
-                
-                    <div style='width:80%;height:1px;margin: 3px auto;background-color:#333333;'></div>
-                
-                        <div class='header_smallsize_menu'>
-                            <a href='../../../' >منو</a>
-                        </div>
-                    
-                            <div class='header_smallsize_menu'>
-                                <a href='../../../membership/' >خانه</a>
-                            </div>
-                        
-                            <div class='header_smallsize_menu'>
-                                <a href='../../../membership/profile/' >پروفایل</a>
-                            </div>
-                        
-                            <div class='header_smallsize_menu'>
-                                <a href='../../../library/logout.php' >خروج</a>
-                            </div>
-                        
-                            <div class='header_smallsize_menu'>
-                                <a href='../../../membership/bank/PaymentTerminal/V1/' >کارتخوان</a>
-                            </div>
-                        
-                            <div class='header_smallsize_menu'>
-                                <a href='../../../membership/tool/sidebyside/' >چسباندن عکس کنار هم</a>
-                            </div>
-                        
-                            <div class='header_smallsize_menu'>
-                                <a href='../../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/' >استعلام سریال </a>
-                            </div>
-                        
-                            <div class='header_smallsize_menu'>
-                                <a href='../../../membership/bank/AutomaticTellerMachine/V1/' >خودپرداز</a>
-                            </div>
-                        
-                            <div class='header_smallsize_menu'>
-                                <a href='../../../Bank/Registry/' >رجیستر پذیرنده</a>
-                            </div>
-                        
-                            <div class='header_smallsize_menu'>
-                                <a href='../../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off' >خروجی ترمینال</a>
-                            </div>
-                        
-                            <div class='header_smallsize_menu'>
-                                <a href='../../../membership/maintenance/' >تعمیرات کارتخوان</a>
-                            </div>
-                        </section>
-    <main>
-        <section id="MainSection" >
+        <div class='dropdown'>
+            <button class='dropbtn'>
+                <a>منو</a>
+                <i class='fa fa-caret-down'></i>
+            </button>
+            <div class='dropdown-content'>
+                <div class='' id=''><a href='../../../'>منو</a></div>
+            </div>
+            <div class='dropdown-content'>
+                <div class='' id=''><a href='../../../membership/'>خانه</a><a
+                        href='../../../membership/profile/'>پروفایل</a><a href='../../../library/logout.php'>خروج</a><a
+                        href='../../../membership/bank/PaymentTerminal/V1/'>کارتخوان</a><a
+                        href='../../../membership/tool/sidebyside/'>چسباندن عکس کنار هم</a><a
+                        href='../../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/'>استعلام سریال
+                    </a><a href='../../../membership/bank/AutomaticTellerMachine/V1/'>خودپرداز</a><a
+                        href='../../../Bank/Registry/'>رجیستر پذیرنده</a><a
+                        href='../../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off'>خروجی
+                        ترمینال</a><a href='../../../membership/maintenance/'>تعمیرات کارتخوان</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id='navbar2' style=''>
+    <div id='navbar2_content' style=''>
+        <div>
+            <a href='/membership/'>داشبورد</a>
+        </div>
+        <div>
+            <a href='/membership/profile/'>پروفایل</a>
+        </div>
+        <div>
+            <a style='' href='/membership/message/messenger/'>
+                پیام ها
+                (
+                0 )
+            </a>
+        </div>
+        <div>
+            <a style='' href='/membership/notification/'>
+                اعلانات
+                (
+                100+ )
+            </a>
+        </div>
+        <div><a href='/membership/admin/'>ادمین</a></div>
+        <div><a href='./?logout=on'>خروج</a></div>
+    </div>
+</section>
+
+<section id='header_smallsize'>
+
+    <div class='header_smallsize_topic'>
+        <a>منو</a>
+    </div>
+
+    <div style='width:80%;height:1px;margin: 3px auto;background-color:#333333;'></div>
+
+    <div class='header_smallsize_menu'>
+        <a href='../../../'>منو</a>
+    </div>
+
+    <div class='header_smallsize_menu'>
+        <a href='../../../membership/'>خانه</a>
+    </div>
+
+    <div class='header_smallsize_menu'>
+        <a href='../../../membership/profile/'>پروفایل</a>
+    </div>
+
+    <div class='header_smallsize_menu'>
+        <a href='../../../library/logout.php'>خروج</a>
+    </div>
+
+    <div class='header_smallsize_menu'>
+        <a href='../../../membership/bank/PaymentTerminal/V1/'>کارتخوان</a>
+    </div>
+
+    <div class='header_smallsize_menu'>
+        <a href='../../../membership/tool/sidebyside/'>چسباندن عکس کنار هم</a>
+    </div>
+
+    <div class='header_smallsize_menu'>
+        <a href='../../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/'>استعلام سریال </a>
+    </div>
+
+    <div class='header_smallsize_menu'>
+        <a href='../../../membership/bank/AutomaticTellerMachine/V1/'>خودپرداز</a>
+    </div>
+
+    <div class='header_smallsize_menu'>
+        <a href='../../../Bank/Registry/'>رجیستر پذیرنده</a>
+    </div>
+
+    <div class='header_smallsize_menu'>
+        <a href='../../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off'>خروجی
+            ترمینال</a>
+    </div>
+
+    <div class='header_smallsize_menu'>
+        <a href='../../../membership/maintenance/'>تعمیرات کارتخوان</a>
+    </div>
+</section>
+<main>
+    <section id="MainSection">
         <section id='InscriptionSection'>
             <form action='./query/' method='GET'>
                 <article class='label' style='display:flex;flex-direction:column;'>
                     <div style='display:flex;flex-direction:column;'>
                         <div class='TableRow2'>
-                            <input style='' id='terminalCode' name='terminalCode' value='' placeholder='کد ترمینال' autocomplete='off' required></input>
+                            <input style='' id='terminalCode' name='terminalCode' value='' placeholder='کد ترمینال'
+                                autocomplete='off' required></input>
                         </div>
                     </div>
                 </article>
-                <article id='PagingButton' >
+                <article id='PagingButton'>
                     <button class='SubmitBtn' type='button' onclick="history.back();">قبلی</button>
                     <button class='SubmitBtn' type='submit'>جستجو</button>
                 </article>
             </form>
         </section>
     </section>
-    </main>
-    </body>
-    <script src="js/main.js"></script>
-    <script>
-    window.onload = function() {
-      showResult();
+</main>
+</body>
+<script src="js/main.js"></script>
+<script>
+    window.onload = function () {
+        showResult();
     };
-    
+
     function showResult() {
         var search = document.getElementById('search').value;
 
-        var xmlhttp=new XMLHttpRequest();
-        xmlhttp.onreadystatechange=function() {
-            if (this.readyState==4 && this.status==200) {
-                document.getElementById("livesearch").innerHTML=this.responseText;
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("livesearch").innerHTML = this.responseText;
             }
         }
-      xmlhttp.open("GET","livesearch.php?search="+search,true);
-      xmlhttp.send();
+        xmlhttp.open("GET", "livesearch.php?search=" + search, true);
+        xmlhttp.send();
     }
-    
-    function addtoperson(theselectedid,theselectedname){
+
+    function addtoperson(theselectedid, theselectedname) {
         //var valuetosend = document.getElementById().value;
         //console.log(theselectedid);
         var personidfieldvalue = document.getElementById('personid').value;
         var personidfieldtotal = document.getElementById('personid');
         var personnamefieldvalue = document.getElementById('personname').value;
         var personnamefieldtotal = document.getElementById('personname');
-    
-        if( personidfieldvalue.search(theselectedid) < 0 ){
+
+        if (personidfieldvalue.search(theselectedid) < 0) {
             personidfieldtotal.value = personidfieldvalue + '-' + theselectedid;
             personnamefieldtotal.value = personnamefieldvalue + '-' + theselectedname;
             //document.getElementById(theselectedid).getElementsByTagName('a')[0].innerHTML = 'حذف';
-        }else{
+        } else {
             personidfieldtotal.value = personidfieldvalue.replace('-' + theselectedid, '');
             personnamefieldtotal.value = personnamefieldvalue.replace('-' + theselectedname, '');
             //document.getElementById(theselectedid).getElementsByTagName('a')[0].innerHTML = 'اضافه';
         }
     }
-    </script>
-    </html>
+</script>
+
+</html>
