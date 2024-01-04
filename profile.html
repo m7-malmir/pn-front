@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang='fa-IR'>
-
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='icon' href='https://www.pnikpay.com/files/logo.webp' alt='نیک پی لوگو' size='16x16'>
-    </link>
     <link rel="stylesheet" href="css/style.css">
+    </link>
     <title>پروفایل | نیک پی</title>
     <meta name='description' content='پروفایل'>
     </meta>
     <meta name='robots' content='noindex, nofollow'>
 </head>
-
 <body>
+    <style>
+        main {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
     <div class='navbar'>
         <div style='width:160px;display:flex;float:left;color: white;position:relative;height:55px;'
             onclick='ToggleNavBarMenu();'>
             <a style='display:none;width:32px;height:32px;margin:auto;' href='/membership/notification/'>
-                <img style='width: 100%;margin-top: 5px;' src='./img/notification.webp'>
+                <img style='width: 100%;margin-top: 5px;' src='/img/notification.webp'>
                 <div id='NotificationCounter'>
                 </div>
                 </img>
@@ -28,15 +32,15 @@
                 <div style='margin: auto;'>admin admin</div>
             </div>
             <div style='width:32px;height:32px;margin:auto 5px;'>
-                <img src='/library/images/user_logo_white.webp' style='width:30px;height:30px;'></img>
+                <img src='./img/user_logo_white.webp' style='width:30px;height:30px;'></img>
             </div>
         </div>
         <div id='HeaderImage' style='display:none;'>
             <a href='./?logout=on'>
-                <img src='/library/images/logout_white.webp'></img>
+                <img src='./img/logout_white.webp'></img>
             </a>
             <a href='/membership/notification/'>
-                <img src='/library/images/notification.webp'>
+                <img src='/img/notification.webp'>
                 <div id='NotificationCounter'>
                     اعلانات
                     (
@@ -268,24 +272,4 @@
         </section>
     </main>
 </body>
-<script src="js/main.js"></script>
-<script>
-    function OpenPasswordMenu() {
-        var PasswordMenu = document.getElementById('PasswordMenu');
-        PasswordMenu.style.display = 'block';
-    }
-    function ClosePasswordMenu() {
-        var PasswordMenu = document.getElementById('PasswordMenu');
-        PasswordMenu.style.display = 'none';
-    }
-    function OpenReferralMenu() {
-        var PasswordMenu = document.getElementById('ReferralMenu');
-        PasswordMenu.style.display = 'block';
-    }
-    function CloseReferralMenu() {
-        var PasswordMenu = document.getElementById('ReferralMenu');
-        PasswordMenu.style.display = 'none';
-    }
-</script>
-<script src="js/main.js"></script>
 </html>
