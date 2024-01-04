@@ -220,12 +220,7 @@ aside{
     height:20px;
     margin: auto auto;
 }
-/* form{
-    display:flex;
-    flex-direction:column;
-    width:260px;
-    margin: 0 auto;
-} */
+
 
 .login_input, #password{
     background-color:transparent;
