@@ -9,7 +9,7 @@
   }
 *{
     direction: rtl ;
-    /* font-family: 'Samim', sans-serif; */
+     font-family: 'Samim', sans-serif; 
 }
 body{
     margin: 0;
@@ -19,7 +19,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Samim', sans-serif;
+    font-family: Samim;
 }
 
 main{
