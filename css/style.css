@@ -2052,6 +2052,40 @@ a{
             color: #26a49a;
             background-color: white;
         }
+        .grid_frame {
+            display: grid;
+            width: 98%;
+            margin: 10px auto;
+        }
+        .grid_partition {
+            display:flex;
+            margin: 5px 0;
+        }
+        .grid_partition input {
+            margin: 0 auto;
+            width:15px;
+            height:15px;
+        }
+        .grid_partition p {
+            width: calc(100% - 30px);
+            margin: 0 auto;
+        }
+        
+        @media screen and (max-width:440px){
+            .grid_frame {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media screen and (max-width:768px){
+            .grid_frame {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+        @media screen and (min-width:768px){
+            .grid_frame {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
         @media screen and (min-width:768px){
             #MainSection{
                 width: calc(100% - 240px);
