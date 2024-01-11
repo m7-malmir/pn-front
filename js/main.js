@@ -14,7 +14,7 @@ function ToggleHeaderSideMenu(){
         navbar2.style.display = 'flex';
     }
 }
-        // show password
+        
         function myFunction() {
             var x = document.getElementById("password");
             if (x.type === "password") {
@@ -52,3 +52,4 @@ function ToggleHeaderSideMenu(){
                });
             }));
         });
+//this for all html files
