@@ -1,6 +1,11 @@
+
+@font-face {
+    font-family: samim;
+    src: url(../font/Samim-Bold.woff);
+  }
 * {
     direction: rtl;
-    font-family: 'Samim';
+    font-family: Samim;
 }
 
 body {
