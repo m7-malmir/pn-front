@@ -6,6 +6,7 @@
 * {
     direction: rtl;
     font-family: Samim;
+    font-weight: 100;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* font-family: Samim; */
+
 }
 
 main {
