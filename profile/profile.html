@@ -4,8 +4,9 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='icon' href='https://www.pnikpay.com/files/logo.webp' alt='نیک پی لوگو' size='16x16'>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     </link>
+    <script src="../js/main.js"></script>
     <title>پروفایل | نیک پی</title>
     <meta name='description' content='پروفایل'>
     </meta>
@@ -32,7 +33,7 @@
                 <div style='margin: auto;'>admin admin</div>
             </div>
             <div style='width:32px;height:32px;margin:auto 5px;'>
-                <img src='./img/user_logo_white.webp' style='width:30px;height:30px;'></img>
+                <img src='../img/user_logo_white.webp' style='width:30px;height:30px;'></img>
             </div>
         </div>
         <div id='HeaderImage' style='display:none;'>
@@ -204,19 +205,19 @@
                 </div>
             </form>
         </div>
-        <div style='width:100%;height:250px;background-image:url("./img/header.webp");background-size:cover;'></div>
+        <div style='width:100%;height:250px;background-image:url("../img/header.webp");background-size:cover;'></div>
         <section id='view'>
             <article id='primary'>
                 <div id='PhotoProfile'>
-                    <img src='./img/contact.webp'></img>
+                    <img src='../img/contact.webp'></img>
                 </div>
                 <a id='AddPhotoProfile' href='photo/change/'>
-                    <img style='width:100%;' src='./img/camera.webp'></img>
+                    <img style='width:100%;' src='../img/camera.webp'></img>
                 </a>
                 <table style='position:relative;top:-50px;'>
                     <tr>
                         <td style='width:24px;'>
-                            <img style='width:18px;margin:0 auto;' src='./img/contact.webp'></img>
+                            <img style='width:18px;margin:0 auto;' src='../img/contact.webp'></img>
                         </td>
                         <th>
                             مشخصات فردی <br>
@@ -226,7 +227,7 @@
                     </tr>
                     <tr>
                         <td style='width:24px;'>
-                            <img style='width:18px;margin:0 auto;' src='./img/info.webp'></img>
+                            <img style='width:18px;margin:0 auto;' src='../img/info.webp'></img>
                         </td>
                         <th>
                             درباره <br>
@@ -236,7 +237,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <img style='width:18px;margin:0 auto;' src='./img/lock.webp'></img>
+                            <img style='width:18px;margin:0 auto;' src='../img/lock.webp'></img>
                         </td>
                         <th>
                             <input style='background-color:transparent;border:none;' type='password' name='password'
@@ -244,7 +245,7 @@
                         </th>
                         <td>
                             <button onclick='OpenPasswordMenu();' class='FormButton'>
-                                <img style='width:18px;margin:0 auto;' src='./img/edit.webp'></img>
+                                <img style='width:18px;margin:0 auto;' src='../img/edit.webp'></img>
                             </button>
                         </td>
                     </tr>
@@ -273,3 +274,29 @@
     </main>
 </body>
 </html>
+<script>
+    /*
+        function ToggleShowProfileMenu(ElementId){
+            document.getElementById('Marketers').style.display = 'none';
+            document.getElementById('Financial').style.display = 'none';
+            document.getElementById(ElementId).style.display = 'table';
+            //document.getElementById(ElementId).style.borderBottom = '2px solid gray';
+        }
+    */
+        function OpenPasswordMenu(){
+            var PasswordMenu = document.getElementById('PasswordMenu');
+            PasswordMenu.style.display = 'block';
+        }
+        function ClosePasswordMenu(){
+            var PasswordMenu = document.getElementById('PasswordMenu');
+            PasswordMenu.style.display = 'none';
+        }
+        function OpenReferralMenu(){
+            var PasswordMenu = document.getElementById('ReferralMenu');
+            PasswordMenu.style.display = 'block';
+        }
+        function CloseReferralMenu(){
+            var PasswordMenu = document.getElementById('ReferralMenu');
+            PasswordMenu.style.display = 'none';
+        }
+    </script>

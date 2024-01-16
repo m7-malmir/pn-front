@@ -1,15 +1,11 @@
 @font-face {
-    font-family: 'dastnevis';
-    src: url(/library/fonts/dastnevis.otf);
-}
-@font-face {
-    font-family: 'samim';
-    src: url(/library/fonts/samim.ttf);
-}
-
+    font-family: samim;
+    src: url(../font/Samim-Bold.woff);
+  }
 * {
     direction: rtl ;
-    font-family:samim;
+    font-family: Samim;
+    font-weight: 100;
 }
 body{
     margin: 0;
