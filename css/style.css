@@ -3390,8 +3390,8 @@ select:focus {
 
 @media screen and (min-width:768px) {
     #MainSection {
-        width: calc(100% - 240px);
-        margin-right: 250px;
+        /* width: calc(100% - 240px);
+        margin-right: 250px; */
     }
 
     .side_menu {

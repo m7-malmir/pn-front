@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang='fa-IR'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='icon' href='https://www.pnikpay.com/files/logo.webp' alt='نیک پی لوگو' size='16x16'>
+    </link>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>منو کارتخوان | نیک پی</title>
+    <meta name='robots' content='noindex, nofollow'>
+    </meta>
+</head>
+
+<body>
+
+    <div class='navbar'>
+        <div style='width:160px;display:flex;float:left;color: white;position:relative;height:55px;'
+            onclick='ToggleNavBarMenu();'>
+            <a style='display:none;width:32px;height:32px;margin:auto;' href='/membership/notification/'>
+                <img style='width: 100%;margin-top: 5px;' src='/library/images/notification.webp'>
+                <div id='NotificationCounter'>
+                </div>
+                </img>
+            </a>
+            <div
+                style='width:calc(100% - 32px);height:32px;display:flex;margin:auto;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;'>
+                <div style='margin: auto;'>admin admin</div>
+            </div>
+            <div style='width:32px;height:32px;margin:auto 5px;'>
+                <img src='/library/images/user_logo_white.webp' style='width:30px;height:30px;'></img>
+            </div>
+        </div>
+        <div id='HeaderImage' style='display:none;'>
+            <a href='./?logout=on'>
+                <img src='/library/images/logout_white.webp'></img>
+            </a>
+            <a href='/membership/notification/'>
+                <img src='/library/images/notification.webp'>
+                <div id='NotificationCounter'>
+                    اعلانات
+                    (
+                    100+ )
+                </div>
+                </img>
+            </a>
+        </div>
+        <div id='header_hamburger_button' style='' onclick='ToggleHeaderSideMenu();'>
+            <div style=''></div>
+            <div style=''></div>
+            <div style=''></div>
+        </div>
+        <div id='header_bigsize'>
+            <div class='dropdown'>
+                <button class='dropbtn'>
+                    <a>منو عمومی</a>
+                    <i class='fa fa-caret-down'></i>
+                </button>
+                <div class='dropdown-content'>
+                    <div class='' id=''>
+                        <a href='/maintenance/external/paymentservice/'>تعمیرگاه سانیار سرویس</a>
+                    </div>
+                </div>
+            </div>
+            <div class='dropdown'>
+                <button class='dropbtn'>
+                    <a>منو</a>
+                    <i class='fa fa-caret-down'></i>
+                </button>
+                <div class='dropdown-content'>
+                    <div class='' id=''><a href='../../'>منو</a></div>
+                </div>
+                <div class='dropdown-content'>
+                    <div class='' id=''><a href='../../membership/'>خانه</a><a
+                            href='../../membership/profile/'>پروفایل</a><a href='../../library/logout.php'>خروج</a><a
+                            href='../../membership/bank/PaymentTerminal/V1/'>کارتخوان</a><a
+                            href='../../membership/tool/sidebyside/'>چسباندن عکس کنار هم</a><a
+                            href='../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/'>استعلام سریال
+                        </a><a href='../../membership/bank/AutomaticTellerMachine/V1/'>خودپرداز</a><a
+                            href='../../Bank/Registry/'>رجیستر پذیرنده</a><a
+                            href='../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off'>خروجی
+                            ترمینال</a><a href='../../membership/maintenance/'>تعمیرات کارتخوان</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id='navbar2' style=''>
+        <div id='navbar2_content' style=''>
+            <div>
+                <a href='/membership/'>داشبورد</a>
+            </div>
+            <div>
+                <a href='/membership/profile/'>پروفایل</a>
+            </div>
+            <div>
+                <a style='' href='/membership/message/messenger/'>
+                    پیام ها
+                    (
+                    0 )
+                </a>
+            </div>
+            <div>
+                <a style='' href='/membership/notification/'>
+                    اعلانات
+                    (
+                    100+ )
+                </a>
+            </div>
+            <div><a href='/membership/admin/'>ادمین</a></div>
+            <div><a href='./?logout=on'>خروج</a></div>
+        </div>
+    </section>
+
+    <section id='header_smallsize'>
+
+        <div class='header_smallsize_topic'>
+            <a>منو</a>
+        </div>
+
+        <div style='width:80%;height:1px;margin: 3px auto;background-color:#333333;'></div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../'>منو</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/'>خانه</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/profile/'>پروفایل</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../library/logout.php'>خروج</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/bank/PaymentTerminal/V1/'>کارتخوان</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/tool/sidebyside/'>چسباندن عکس کنار هم</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/'>استعلام سریال </a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/bank/AutomaticTellerMachine/V1/'>خودپرداز</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../Bank/Registry/'>رجیستر پذیرنده</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off'>خروجی
+                ترمینال</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/maintenance/'>تعمیرات کارتخوان</a>
+        </div>
+    </section>
+    <main>
+        <style>
+            main {
+                display: flex;
+            }
+
+            .side_menu {
+                overflow-y: auto;
+                height: calc(100vh - 60px);
+                display: flex;
+                flex-direction: column;
+                background-color: #333333;
+                color: #ffffff;
+                position: fixed;
+                font-size: 14px;
+            }
+
+            .side_menu_topic {
+                padding: 2px 0;
+                display: flex;
+                width: 90%;
+                color: white;
+                margin: 4px auto;
+                border-radius: 3px;
+                text-decoration: none;
+            }
+
+            .side_menu_topic img {
+                margin: auto 8px;
+                width: 26px;
+                height: 26px;
+            }
+
+            .side_menu_topic:hover {
+                background-color: #484848;
+            }
+
+            @media screen and (min-width:768px) {
+                #MainSection {
+                    width: calc(100% - 240px);
+                    margin-right: 250px;
+                }
+
+                .side_menu {
+                    width: 240px;
+                }
+
+                .side_menu_topic p {
+                    display: block;
+                }
+            }
+
+            @media screen and (max-width:768px) {
+                #MainSection {
+                    width: calc(100% - 240px);
+                    margin-right: 250px;
+                }
+
+                .side_menu {
+                    width: 240px;
+                }
+
+                .side_menu_topic p {
+                    display: block;
+                }
+            }
+
+            @media screen and (max-width:440px) {
+                #MainSection {
+                    width: calc(100% - 50px);
+                    margin-right: 50px;
+                }
+
+                .side_menu {
+                    width: 50px;
+                }
+
+                .side_menu_topic p {
+                    display: none;
+                }
+            }
+        </style>
+        <section class='side_menu'>
+            <div style=''></div>
+            <a class='side_menu_topic' style='background-color:inherit;'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/paqi_logo.png'></img>
+                <p>منو بیمه گزار</p>
+            </a>
+            <a style='width:90%;margin:20px auto;font-size:16px;text-decoration:none;color: white;text-align:center;border-bottom: 1px solid white;'
+                href='#'></a>
+            <a href='/membership/Insurance/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/home.png/'></img>
+                <p>میزکار</p>
+            </a>
+            <a href='/membership/Insurance/costumer/insert/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/new_acceptor.png'></img>
+                <p>ثبت بیمه</p>
+            </a>
+            <a href='/membership/Insurance/costumer/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/acceptor.png'></img>
+                <p>بیمه شدگان</p>
+            </a>
+            <a href='/membership/Insurance/V1/policy/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/pos.png'></img>
+                <p>بیمه نامه ها</p>
+            </a>
+            <a href='/membership/Insurance/V1/request/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/request.png'></img>
+                <p>درخواست ها</p>
+            </a>
+            <a href='/membership/Insurance/V1/document/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/document.png'></img>
+                <p>بایگانی</p>
+            </a>
+        </section>
+        <section id="MainSection">
+            <section id='FunctionalMenu'>
+
+                <div>
+                    <a href='../Export/' class='classification'>
+                        <button style=''>
+                            <img src='../../membership/bank/PaymentTerminal/V1/images/pos1.webp'></img>
+                        </button>
+                        <p>خروجی</p>
+                    </a>
+                    <a href='../Import/' class='classification'>
+                        <button style=''>
+                            <img src='../../membership/bank/PaymentTerminal/V1/images/pos1.webp'></img>
+                        </button>
+                        <p>ورودی</p>
+                    </a>
+                </div>
+                <div>
+                    <a href='../api/' class='classification'>
+                        <button style=''>
+                            <img src='../../membership/bank/PaymentTerminal/V1/images/pos1.webp'></img>
+                        </button>
+                        <p>وب سرویس</p>
+                    </a>
+                    <a href='setting/' class='classification'>
+                        <button style=''>
+                            <img src='../../library/images/setting_logo_black_512X512.webp'></img>
+                        </button>
+                        <p></p>
+                    </a>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
