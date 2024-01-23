@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang='fa-IR'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='icon' href='../../files/logo.webp' alt='لوگو نیک پی' size='16x16'>
+    </link>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>نمایش دستگاه تعمیری</title>
+    <script src='/library/jquery/3.3.1.min.js'></script>
+</head>
+<style>
+    main {
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+
+    <div class='navbar'>
+        <div style='width:160px;display:flex;float:left;color: white;position:relative;height:55px;'
+            onclick='ToggleNavBarMenu();'>
+            <a style='display:none;width:32px;height:32px;margin:auto;' href='/membership/notification/'>
+                <img style='width: 100%;margin-top: 5px;' src='/library/images/notification.webp'>
+                <div id='NotificationCounter'>
+                </div>
+                </img>
+            </a>
+            <div
+                style='width:calc(100% - 32px);height:32px;display:flex;margin:auto;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;'>
+                <div style='margin: auto;'>admin admin</div>
+            </div>
+            <div style='width:32px;height:32px;margin:auto 5px;'>
+                <img src='/library/images/user_logo_white.webp' style='width:30px;height:30px;'></img>
+            </div>
+        </div>
+        <div id='HeaderImage' style='display:none;'>
+            <a href='./?logout=on'>
+                <img src='/library/images/logout_white.webp'></img>
+            </a>
+            <a href='/membership/notification/'>
+                <img src='/library/images/notification.webp'>
+                <div id='NotificationCounter'>
+                    اعلانات
+                    (
+                    100+ )
+                </div>
+                </img>
+            </a>
+        </div>
+        <div id='header_hamburger_button' style='' onclick='ToggleHeaderSideMenu();'>
+            <div style=''></div>
+            <div style=''></div>
+            <div style=''></div>
+        </div>
+        <div id='header_bigsize'>
+            <div class='dropdown'>
+                <button class='dropbtn'>
+                    <a>منو عمومی</a>
+                    <i class='fa fa-caret-down'></i>
+                </button>
+                <div class='dropdown-content'>
+                    <div class='' id=''>
+                        <a href='/maintenance/external/paymentservice/'>تعمیرگاه سانیار سرویس</a>
+                    </div>
+                </div>
+            </div>
+            <div class='dropdown'>
+                <button class='dropbtn'>
+                    <a>منو</a>
+                    <i class='fa fa-caret-down'></i>
+                </button>
+                <div class='dropdown-content'>
+                    <div class='' id=''><a href='../../'>منو</a></div>
+                </div>
+                <div class='dropdown-content'>
+                    <div class='' id=''><a href='../../membership/'>خانه</a><a
+                            href='../../membership/profile/'>پروفایل</a><a href='../../library/logout.php'>خروج</a><a
+                            href='../../membership/bank/PaymentTerminal/V1/'>کارتخوان</a><a
+                            href='../../membership/tool/sidebyside/'>چسباندن عکس کنار هم</a><a
+                            href='../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/'>استعلام سریال
+                        </a><a href='../../membership/bank/AutomaticTellerMachine/V1/'>خودپرداز</a><a
+                            href='../../Bank/Registry/'>رجیستر پذیرنده</a><a
+                            href='../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off'>خروجی
+                            ترمینال</a><a href='../../membership/maintenance/'>تعمیرات کارتخوان</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id='navbar2' style=''>
+        <div id='navbar2_content' style=''>
+            <div>
+                <a href='/membership/'>داشبورد</a>
+            </div>
+            <div>
+                <a href='/membership/profile/'>پروفایل</a>
+            </div>
+            <div>
+                <a style='' href='/membership/message/messenger/'>
+                    پیام ها
+                    (
+                    0 )
+                </a>
+            </div>
+            <div>
+                <a style='' href='/membership/notification/'>
+                    اعلانات
+                    (
+                    100+ )
+                </a>
+            </div>
+            <div><a href='/membership/admin/'>ادمین</a></div>
+            <div><a href='./?logout=on'>خروج</a></div>
+        </div>
+    </section>
+
+    <section id='header_smallsize'>
+
+        <div class='header_smallsize_topic'>
+            <a>منو</a>
+        </div>
+
+        <div style='width:80%;height:1px;margin: 3px auto;background-color:#333333;'></div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../'>منو</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/'>خانه</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/profile/'>پروفایل</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../library/logout.php'>خروج</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/bank/PaymentTerminal/V1/'>کارتخوان</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/tool/sidebyside/'>چسباندن عکس کنار هم</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/'>استعلام سریال </a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/bank/AutomaticTellerMachine/V1/'>خودپرداز</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../Bank/Registry/'>رجیستر پذیرنده</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off'>خروجی
+                ترمینال</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../membership/maintenance/'>تعمیرات کارتخوان</a>
+        </div>
+    </section>
+    <main>
+        <style>
+            main {
+                display: flex;
+            }
+
+            .side_menu {
+                overflow-y: auto;
+                height: calc(100vh - 60px);
+                display: flex;
+                flex-direction: column;
+                background-color: #333333;
+                color: #ffffff;
+                position: fixed;
+                font-size: 14px;
+            }
+
+            .side_menu_topic {
+                display: flex;
+                width: 90%;
+                color: white;
+                margin: 1px auto;
+                border-radius: 3px;
+                text-decoration: none;
+            }
+
+            .side_menu_topic img {
+                margin: auto 8px;
+                width: 26px;
+                height: 26px;
+            }
+
+            .side_menu_topic:hover {
+                background-color: #484848;
+            }
+
+            @media screen and (min-width:768px) {
+                #MainSection {
+                    width: calc(100% - 240px);
+                    margin-right: 250px;
+                }
+
+                .side_menu {
+                    width: 240px;
+                }
+
+                .side_menu_topic p {
+                    display: block;
+                }
+            }
+
+            @media screen and (max-width:768px) {
+                #MainSection {
+                    width: calc(100% - 240px);
+                    margin-right: 250px;
+                }
+
+                .side_menu {
+                    width: 240px;
+                }
+
+                .side_menu_topic p {
+                    display: block;
+                }
+            }
+
+            @media screen and (max-width:440px) {
+                #MainSection {
+                    width: calc(100% - 50px);
+                    margin-right: 50px;
+                }
+
+                .side_menu {
+                    width: 50px;
+                }
+
+                .side_menu_topic p {
+                    display: none;
+                }
+            }
+        </style>
+        <section class='side_menu'>
+            <div style=''></div>
+            <a class='side_menu_topic' style='background-color:inherit;'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/paqi_logo.png'></img>
+                <p>منو تعمیرگاه</p>
+            </a>
+            <a style='width:90%;margin:20px auto;font-size:16px;text-decoration:none;color: white;text-align:center;border-bottom: 1px solid white;'
+                href='#'></a>
+            <a href='/membership/maintenance/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/home.png'></img>
+                <p>میزکار</p>
+            </a>
+            <a href='/membership/maintenance/New/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/new_acceptor.png'></img>
+                <p>ثبت تعمیری</p>
+            </a>
+            <a href='/membership/maintenance/reception/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/acceptor.png'></img>
+                <p>بخش پذیرش</p>
+            </a>
+            <a href='/membership/maintenance/triage/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/acceptor.png'></img>
+                <p>تریاژ</p>
+            </a>
+            <a href='/membership/maintenance/workshop/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/acceptor.png'></img>
+                <p>تعمیرگاه</p>
+            </a>
+            <a href='/membership/maintenance/Declaration/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/acceptor.png'></img>
+                <p>اعلام هزینه</p>
+            </a>
+            <a href='/membership/maintenance/QualityControl/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/acceptor.png'></img>
+                <p>کنترل کیفیت</p>
+            </a>
+            <a href='/membership/maintenance/clearance/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/new_acceptor.png'></img>
+                <p>بخش ترخیص</p>
+            </a>
+            <a href='/membership/maintenance/archive/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/new_acceptor.png'></img>
+                <p>بخش تحویل</p>
+            </a>
+            <a href='/membership/maintenance/Report/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/acceptor.png'></img>
+                <p>گزارشگیری</p>
+            </a>
+            <a href='/membership/maintenance/Setting/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/acceptor.png'></img>
+                <p>تنظیمات</p>
+            </a>
+
+
+        </section>
+        <section id="MainSection">
+            <form action='modify.php' method='post'>
+                <article class='label' style=''>
+                    <p class='LabelTitle'>مشخصات اشخاص</p>
+                    <div class='TableRow2'>
+                        <input style='display:none;' id='agent' name='agent' class='CustomTableTh'
+                            value='admin'></input>
+                        <div style='position: relative;' id='UserSearcher'>
+
+                            <input style='' class='CustomTableTd' id='SpecialSearcher' onclick='openslider();'
+                                onkeyup='SearchOption();' placeholder='نام کاربری (اختیاری)' autocomplete='off'></input>
+                            <table id='SearchList' style='position:static;margin-top:0;width: 100%;'>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='admin'></input>
+                                    </th>
+                                    <td><span>admin admin</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='sassan'></input>
+                                    </th>
+                                    <td><span>ساسان قاسمی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='rozbayani'></input>
+                                    </th>
+                                    <td><span>هدیه روزبیانی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='raminalidost'></input>
+                                    </th>
+                                    <td><span>رامین علی دوست جیراندرق</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='koleyni'></input>
+                                    </th>
+                                    <td><span>عسل کلینی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='farmani'></input>
+                                    </th>
+                                    <td><span>سارا فرمانی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='hoseinfarhikhte'></input>
+                                    </th>
+                                    <td><span>حسین فرهیخته</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='sarahaji'></input>
+                                    </th>
+                                    <td><span>سارا حاجی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='virapose'></input>
+                                    </th>
+                                    <td><span>حجت بختیاری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='kiani'></input>
+                                    </th>
+                                    <td><span>امین کیانی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='aminkiani'></input>
+                                    </th>
+                                    <td><span>امین کیانی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='farzadrafati'></input>
+                                    </th>
+                                    <td><span>فرزاد رفعتی نیا</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='2360301004'></input>
+                                    </th>
+                                    <td><span>محمد هادی ندائی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='hadifarmani'></input>
+                                    </th>
+                                    <td><span>هادی فرمنی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='amirdarvish'></input>
+                                    </th>
+                                    <td><span>امیر درویش</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.alizade'></input>
+                                    </th>
+                                    <td><span>حسین علیزاده</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.falegari'></input>
+                                    </th>
+                                    <td><span>پوریا فعله گری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.sina'></input>
+                                    </th>
+                                    <td><span>سینا محمودوند</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.ghanavati'></input>
+                                    </th>
+                                    <td><span>غلامرضا قنواتی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.mortezaabasi'></input>
+                                    </th>
+                                    <td><span>مرتضی عباسی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.alighafari'></input>
+                                    </th>
+                                    <td><span>علی غفاری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.nafar'></input>
+                                    </th>
+                                    <td><span>حسین نفر</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.gandom'></input>
+                                    </th>
+                                    <td><span>محمدرضا کریمیان</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='azarpos'></input>
+                                    </th>
+                                    <td><span>رامین یدالهی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='almaspay'></input>
+                                    </th>
+                                    <td><span>سجاد بشیری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.jahan'></input>
+                                    </th>
+                                    <td><span>مرتضی جهان</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='mansorhoseini'></input>
+                                    </th>
+                                    <td><span>منصور محمدحسینی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='Bivamir'></input>
+                                    </th>
+                                    <td><span>امیر قلندری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='Pnp.kartnet'></input>
+                                    </th>
+                                    <td><span>میلاد مقرب</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.solgi'></input>
+                                    </th>
+                                    <td><span>رضا سلگی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pishrosaman'></input>
+                                    </th>
+                                    <td><span>فرزانه غافرین</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='Aidaebrahimi'></input>
+                                    </th>
+                                    <td><span>آیدا ابراهیمی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='paxfriend'></input>
+                                    </th>
+                                    <td><span>ایمان بقائی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='minitek'></input>
+                                    </th>
+                                    <td><span>حسام مالمیر</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='psp.nikpay'></input>
+                                    </th>
+                                    <td><span>رضا سلگی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='babaei'></input>
+                                    </th>
+                                    <td><span>مونا بابایی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.zaeri'></input>
+                                    </th>
+                                    <td><span>محمد حسین زا‌‌‌‌‌ءری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.azizi'></input>
+                                    </th>
+                                    <td><span>نفیسه عزیزی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='Arvinpos'></input>
+                                    </th>
+                                    <td><span>مهدی منصور خیاو</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.rasam'></input>
+                                    </th>
+                                    <td><span>سید محمد حسین شاهزاده فاضلی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.jahanpos'></input>
+                                    </th>
+                                    <td><span>آیدا شکوهی زاده</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='honampay'></input>
+                                    </th>
+                                    <td><span>زهرا مختاری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='Pishrosam6an'></input>
+                                    </th>
+                                    <td><span>حسین کیانی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='Pishrosam689an'></input>
+                                    </th>
+                                    <td><span>حسین کیایی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='Farzanehpishro'></input>
+                                    </th>
+                                    <td><span>حسین کیایی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='mosavipos'></input>
+                                    </th>
+                                    <td><span>سید حسین موسوی وند</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pars'></input>
+                                    </th>
+                                    <td><span>جواد فرهادیان</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='motamed'></input>
+                                    </th>
+                                    <td><span>محمد قربانی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='fixpos'></input>
+                                    </th>
+                                    <td><span>رضا عظیمی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pishro.sayar'></input>
+                                    </th>
+                                    <td><span>علی مهین آباد</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='vahidkhani '></input>
+                                    </th>
+                                    <td><span>وحید خانی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='naseri'></input>
+                                    </th>
+                                    <td><span>محمد ناصری فورگ</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='hamidnajafi'></input>
+                                    </th>
+                                    <td><span>حمید حکیم نجفی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='missizd'></input>
+                                    </th>
+                                    <td><span>miss izd</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='vojdani'></input>
+                                    </th>
+                                    <td><span>علیرضا وجدانی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='izadi'></input>
+                                    </th>
+                                    <td><span>ندا ایزدی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='saranajimi'></input>
+                                    </th>
+                                    <td><span>سارا نجیمی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='ladanmohmadi'></input>
+                                    </th>
+                                    <td><span>لادن محمدی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='haqani'></input>
+                                    </th>
+                                    <td><span>امان اله حقانی خواه</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='hidapos'></input>
+                                    </th>
+                                    <td><span>سجاد سمیعی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='میلاد مشیری تادوانی'></input>
+                                    </th>
+                                    <td><span>میلاد مشیری تادوانی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='fardayipor'></input>
+                                    </th>
+                                    <td><span>محمد جواد فردائی پور</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='alitarahomi'></input>
+                                    </th>
+                                    <td><span>علی ترحمی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='javadsafari'></input>
+                                    </th>
+                                    <td><span>جواد صفری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='Saminpos'></input>
+                                    </th>
+                                    <td><span>رضا بابازاده</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='jalilkarimi'></input>
+                                    </th>
+                                    <td><span>جلیل کریمی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='mohamadhajizade'></input>
+                                    </th>
+                                    <td><span>محمد حاجی زاده</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='rezafalahi'></input>
+                                    </th>
+                                    <td><span>رضا فلاحی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='batavani'></input>
+                                    </th>
+                                    <td><span>مهرداد باتوانی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='maryam reyka'></input>
+                                    </th>
+                                    <td><span>مریم ری کا</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='robot'></input>
+                                    </th>
+                                    <td><span>robot robot</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='Negar Ghafurian'></input>
+                                    </th>
+                                    <td><span>negar ghafurian</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnpheydari'></input>
+                                    </th>
+                                    <td><span>احمد حیدری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='Badili zade'></input>
+                                    </th>
+                                    <td><span>زهرا بدیلی زاده</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='OMID'></input>
+                                    </th>
+                                    <td><span>امید قیاسوند</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='azadeh'></input>
+                                    </th>
+                                    <td><span>آزاده محمدی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='navaie'></input>
+                                    </th>
+                                    <td><span>زینب نوایی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pnp.pasha'></input>
+                                    </th>
+                                    <td><span>حسین پاشا</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='ansari'></input>
+                                    </th>
+                                    <td><span>پیشخوان انصاری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='mahdi.izadi'></input>
+                                    </th>
+                                    <td><span>مهدی ایزدی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='akhtarpos'></input>
+                                    </th>
+                                    <td><span>نوید اخترشناس</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='pmp.jahan'></input>
+                                    </th>
+                                    <td><span>محمد محمودی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='arses'></input>
+                                    </th>
+                                    <td><span>مصطفی عبدالهی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='Naderdaneshvar'></input>
+                                    </th>
+                                    <td><span>نادر دانشور</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='p.nicpay'></input>
+                                    </th>
+                                    <td><span>میثم مالکی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='mohamadmahdi moghadas bayat'></input>
+                                    </th>
+                                    <td><span>محمد مهدی مقدس بیات</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='OMID.PAY'></input>
+                                    </th>
+                                    <td><span>معین ملک لو</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='seyed javad Hosseini'></input>
+                                    </th>
+                                    <td><span>سید جواد حسینی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='reza dehkahi'></input>
+                                    </th>
+                                    <td><span>رضا دهکاهی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='mohamad kazemi nejad'></input>
+                                    </th>
+                                    <td><span>محمد کاظمی نژاد</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='moghtaderi nasab'></input>
+                                    </th>
+                                    <td><span>مهران مقتدری نسب</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='amir rashedi'></input>
+                                    </th>
+                                    <td><span>امیر راشدی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='hamed jahanbazi'></input>
+                                    </th>
+                                    <td><span>حامد جهانبازی </span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='mohamad hojabri'></input>
+                                    </th>
+                                    <td><span>محمد هژیری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='reza bonjoyi'></input>
+                                    </th>
+                                    <td><span>رضا بنجوئی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='computer novin'></input>
+                                    </th>
+                                    <td><span>محمود فراهانی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='mehdi asadi'></input>
+                                    </th>
+                                    <td><span>مهدی اسدی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='bakhtiyar bameri'></input>
+                                    </th>
+                                    <td><span>بختیار بامری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='valid absalan'></input>
+                                    </th>
+                                    <td><span>ولید اب سالان</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='seyed alangi'></input>
+                                    </th>
+                                    <td><span>اعظم سادات سید النگی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='fardin barzegar'></input>
+                                    </th>
+                                    <td><span>فردین برزگررازیان</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='arta pardaz'></input>
+                                    </th>
+                                    <td><span>حمید راغ</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='mohamad fatahi'></input>
+                                    </th>
+                                    <td><span>محمد فتاحی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='Z.Zareei'></input>
+                                    </th>
+                                    <td><span>ذکریا زارعی طاسکند</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='bistoni'></input>
+                                    </th>
+                                    <td><span>فاطمه بیستونی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='haji hoseinlo'></input>
+                                    </th>
+                                    <td><span>امیر حاجی حسین لو</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='hasanlo'></input>
+                                    </th>
+                                    <td><span>غلامرضا حسنلو</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='sina kohi'></input>
+                                    </th>
+                                    <td><span>سینا کوهی گوی اغاج</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='nazari'></input>
+                                    </th>
+                                    <td><span>عمران نظری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='molayi'></input>
+                                    </th>
+                                    <td><span>کبری ملائی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='razmjo'></input>
+                                    </th>
+                                    <td><span>بهزاد رزمجوحاجی ابادی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='SARIVE'></input>
+                                    </th>
+                                    <td><span>ارزو سریو</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='NADERPOR'></input>
+                                    </th>
+                                    <td><span>مهدی نادرپور</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='HEJRATI'></input>
+                                    </th>
+                                    <td><span>هاشم هجرتی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='ARDAME'></input>
+                                    </th>
+                                    <td><span>سجاد اردمه</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='ghavami far'></input>
+                                    </th>
+                                    <td><span>حسین قوامی فر</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='mohamadsalehi'></input>
+                                    </th>
+                                    <td><span>محمد صالحی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='rezayi'></input>
+                                    </th>
+                                    <td><span>زهرا رضائی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='MOHAMAD TAGHI MOLAYI'></input>
+                                    </th>
+                                    <td><span>محمد تقی ملائی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='MAHZON'></input>
+                                    </th>
+                                    <td><span>محمد محزون</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='rabehi'></input>
+                                    </th>
+                                    <td><span>محمد رابحی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='RABIEE'></input>
+                                    </th>
+                                    <td><span>رضا ربیعی خوندابی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='NAJI'></input>
+                                    </th>
+                                    <td><span>رضا ناجی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='sheykholeslami'></input>
+                                    </th>
+                                    <td><span>سعید شیخ الاسلامی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='borhan bahrami'></input>
+                                    </th>
+                                    <td><span>برهان بهرامی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='AZAM HOSEYNI'></input>
+                                    </th>
+                                    <td><span>اعظم حسینی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='abron'></input>
+                                    </th>
+                                    <td><span>عمر ابرون</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='shahriyar bahrami'></input>
+                                    </th>
+                                    <td><span>میلاد شهریار بهرامی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value='AKBARI KHORASGANI'></input>
+                                    </th>
+                                    <td><span>محمد حسین اکبری خوراسگانی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value=''></input>
+                                    </th>
+                                    <td><span>رضا سلگی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value=''></input>
+                                    </th>
+                                    <td><span>رضا سلگی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value=''></input>
+                                    </th>
+                                    <td><span>رضا سلگی</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value=''></input>
+                                    </th>
+                                    <td><span>محمد حسین زاءری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value=''></input>
+                                    </th>
+                                    <td><span>محمد حسین زاءری</span></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <input onclick="closeslider();CopyToUsername(this.value);" type='radio'
+                                            name='naming' value=''></input>
+                                    </th>
+                                    <td><span>محمد حسین زاءری</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <select name='activation_status' required>
+                            <option value=''>انتخاب وضعیت پذیرنده</option>
+                            <option value='دارد'>دارد</option>
+                            <option value='ندارد' selected>ندارد</option>
+                        </select>
+                    </div>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='نام و نام خانوادگی'></input>
+                        <input value='admin admin'></input>
+                    </div>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='نام پذیرنده'></input>
+                        <input name='client' value='مجیدمجیدی'></input>
+                    </div>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='تلفن همراه پذیرنده'></input>
+                        <input type='tel' name='mobile' value='09122222222'></input>
+                    </div>
+                    <div class='TableRow2'>
+                        <input id='address' name='address' value='روسیه' autocomplete='off'
+                            placeholder='نشانی مشتری'></input>
+                    </div>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='شرکت'></input>
+                        <select name='company' required>
+                            <option value=''>انتخاب شرکت</option>
+                            <option value='پادرا نیک پی' selected>پادرا نیک پی</option>
+                            <option value='سایر'>سایر</option>
+                        </select>
+                    </div>
+                </article>
+                <article class='label' style=''>
+                    <p class='LabelTitle'>مشخصات محصول</p>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='نرم افزار'></input>
+                        <select name='software' required>
+                            <option value=''>انتخاب نرم افزار</option>
+                            <option value='آواپی '>آواپی </option>
+                            <option value='پاسارگاد' selected>پاسارگاد</option>
+                            <option value='فن آوا نفیس'>فن آوا نفیس</option>
+                            <option value='فن آوا یکتا'>فن آوا یکتا</option>
+                            <option value='آیریک'>آیریک</option>
+                            <option value='پرداخت نوین'>پرداخت نوین</option>
+                            <option value='ایران کیش'>ایران کیش</option>
+                            <option value='بدون اپ'>بدون اپ</option>
+                        </select>
+                    </div>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='نوع محصول'></input>
+                        <select name='product' required>
+                            <option value=''>انتخاب محصول</option>
+                            <option value='pax s80'>pax s80</option>
+                            <option value='pax s58' selected>pax s58</option>
+                            <option value='VX520'>VX520</option>
+                            <option value='pax s90'>pax s90</option>
+                            <option value='new pos 7210'>new pos 7210</option>
+                            <option value=' G2'> G2</option>
+                            <option value='pax s910'>pax s910</option>
+                            <option value='D210 G'>D210 G</option>
+                            <option value=' VX 675'> VX 675</option>
+                            <option value='VX680'>VX680</option>
+                            <option value='vx670'>vx670</option>
+                            <option value='G3'>G3</option>
+                            <option value='PAX 910 MINI'>PAX 910 MINI</option>
+                            <option value='PAX D210 B'>PAX D210 B</option>
+                            <option value='NEWPOS 8210'>NEWPOS 8210</option>
+                        </select>
+                    </div>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='سریال'></input>
+                        <input autocomplete='off' name='serial' value=''></input>
+                    </div>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='سریال قدیم'></input>
+                        <input autocomplete='off' name='oldsn' value=''></input>
+                    </div>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' name='more' placeholder='توضیحات بیشتر' value=''></input>
+                    </div>
+                </article>
+                <article class='label' style=''>
+                    <p class='LabelTitle'>وسایل همراه</p>
+                    <div class='grid_frame'>
+                        <div class='grid_partition'><input type='checkbox' name='supplementary[]' value='شارژر'></input>
+                            <p>شارژر</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='supplementary[]' value='باطری'></input>
+                            <p>باطری</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='supplementary[]'
+                                value='درب پشت'></input>
+                            <p>درب پشت</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='supplementary[]'
+                                value='سیم کارت'></input>
+                            <p>سیم کارت</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='supplementary[]' value='کارتن'></input>
+                            <p>کارتن</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='supplementary[]'
+                                value='کابل برق'></input>
+                            <p>کابل برق</p>
+                        </div>
+                    </div>
+                </article>
+                <article class='label' style=''>
+                    <p class='LabelTitle'>علل ارسال</p>
+                    <div class='grid_frame'>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='خاموش'></input>
+                            <p>خاموش</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='نرم افزار'></input>
+                            <p>نرم افزار</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='شکستگی'></input>
+                            <p>شکستگی</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='آب خوردگی'></input>
+                            <p>آب خوردگی</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='چاپگر'></input>
+                            <p>چاپگر</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='جریان کشی'></input>
+                            <p>جریان کشی</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='شارژ'></input>
+                            <p>شارژ</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='آنتن'></input>
+                            <p>آنتن</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='تامپر'></input>
+                            <p>تامپر</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='تعریف سریال'></input>
+                            <p>تعریف سریال</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='مغایرت سریال'
+                                checked></input>
+                            <p>مغایرت سریال</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]'
+                                value='ورود به انبار'></input>
+                            <p>ورود به انبار</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='صفحه سفید'></input>
+                            <p>صفحه سفید</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='باطری'></input>
+                            <p>باطری</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='کیپد' checked></input>
+                            <p>کیپد</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='غلتک'></input>
+                            <p>غلتک</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='جای سیم'></input>
+                            <p>جای سیم</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='مگنت'></input>
+                            <p>مگنت</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='درب باطری'></input>
+                            <p>درب باطری</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='درب چاپگر'></input>
+                            <p>درب چاپگر</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='قاب رو'></input>
+                            <p>قاب رو</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='قاب زیر'
+                                checked></input>
+                            <p>قاب زیر</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='ال سی دی'></input>
+                            <p>ال سی دی</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='پروگرم'></input>
+                            <p>پروگرم</p>
+                        </div>
+                        <div class='grid_partition'><input type='checkbox' name='reason[]' value='سایر'></input>
+                            <p>سایر</p>
+                        </div>
+                    </div>
+                </article>
+                <article class='label' style=''>
+                    <p class='LabelTitle'>اقدامات صورت گرفته</p>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='کد پیگیری'></input>
+                        <input autocomplete='off' value='1705992481'></input>
+                    </div>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='تاریخ ثبت'></input>
+                        <input autocomplete='off' value='1402-11-03'></input>
+                    </div>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='تاریخ ورود'></input>
+                        <input autocomplete='off' name='receivedate' value='1402-11-03'></input>
+                    </div>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='تاریخ خروج'></input>
+                        <input autocomplete='off' name='outdate' value=''></input>
+                    </div>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='وضعیت'></input>
+                        <select name='status' required>
+                            <option value=''>انتخاب وضعیت</option>
+                            <option value='منتظر پذیرش'>منتظر پذیرش</option>
+                            <option value='پذیرش' selected>پذیرش</option>
+                            <option value='تعمیرگاه'>تعمیرگاه</option>
+                            <option value='اعلام هزینه'>اعلام هزینه</option>
+                            <option value='غیر قابل تعمیر'>غیر قابل تعمیر</option>
+                            <option value='آماده'>آماده</option>
+                            <option value='بایگانی'>بایگانی</option>
+                        </select>
+                    </div>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='وضعیت تکمیلی'></input>
+                        <select name='temporary'>
+                            <option value=''>انتخاب وضعیت تکمیلی</option>
+                            <option value='ارسال به ارس'>ارسال به ارس</option>
+                            <option value='ارسال به پارت آوا'> ارسال به پارت آوا</option>
+                            <option value='ارسال به پرداخت سبز'> ارسال به پرداخت سبز</option>
+                            <option value='ارسال به هامون'> ارسال به هامون</option>
+                            <option value='تعمیرگاه'>تعمیرگاه</option>
+                        </select>
+                    </div>
+                    <div class='TableRow2'>
+                        <input autocomplete='off' placeholder='نام تعمیرکار'></input>
+                        <select name='serviceman'>
+                            <option value=''>انتخاب تعمیرکار</option>
+                        </select>
+                    </div>
+                </article>
+                <article id='PagingButton'>
+                    <button class='SubmitBtn' type='button' name='sid' value='5'
+                        style='background-image: linear-gradient(310deg,#271414,#6f3a3a);'>حذف</button>
+                    <input type='hidden' value='modify' name='functions'></input>
+                    <button class='SubmitBtn' name='sid' type='submit' value='5'>ویرایش</button>
+                </article>
+            </form>
+            <form id='DeleteForm' action='delete.php' method='post'></form>
+        </section>
+    </main>
+</body>
+<script>
+    function SearchOption() {
+        var i;
+        var input = document.getElementById("SpecialSearcher");
+        var filter = input.value.toUpperCase();
+        var ul = document.getElementById("SearchList");
+        var li = ul.getElementsByTagName("tr");
+        for (i = 0; i < li.length; i++) {
+            var a = li[i].getElementsByTagName("td")[0];
+            var txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    function openslider() {
+        var ul2 = document.getElementById("SearchList");
+        ul2.style.display = "flex";
+    }
+    function closeslider() {
+        var ul10 = document.getElementById("SearchList");
+        ul10.style.display = "none";
+
+    }
+    function CopyToUsername(val) {
+        document.getElementById('agent').value = val;
+        document.getElementById('SpecialSearcher').value = val;
+    }
+</script>
+
+</html>
