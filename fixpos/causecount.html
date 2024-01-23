@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang='fa-IR'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='icon' href='../../../../files/logo.webp' alt='لوگو نیک پی' size='16x16'>
+    </link>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>خدمات پس از فروش</title>
+    <script src='/library/jquery/3.3.1.min.js'></script>
+</head>
+
+<body>
+
+    <div class='navbar'>
+        <div style='width:160px;display:flex;float:left;color: white;position:relative;height:55px;'
+            onclick='ToggleNavBarMenu();'>
+            <a style='display:none;width:32px;height:32px;margin:auto;' href='/membership/notification/'>
+                <img style='width: 100%;margin-top: 5px;' src='/library/images/notification.webp'>
+                <div id='NotificationCounter'>
+                </div>
+                </img>
+            </a>
+            <div
+                style='width:calc(100% - 32px);height:32px;display:flex;margin:auto;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;'>
+                <div style='margin: auto;'>admin admin</div>
+            </div>
+            <div style='width:32px;height:32px;margin:auto 5px;'>
+                <img src='/library/images/user_logo_white.webp' style='width:30px;height:30px;'></img>
+            </div>
+        </div>
+        <div id='HeaderImage' style='display:none;'>
+            <a href='./?logout=on'>
+                <img src='/library/images/logout_white.webp'></img>
+            </a>
+            <a href='/membership/notification/'>
+                <img src='/library/images/notification.webp'>
+                <div id='NotificationCounter'>
+                    اعلانات
+                    (
+                    100+ )
+                </div>
+                </img>
+            </a>
+        </div>
+        <div id='header_hamburger_button' style='' onclick='ToggleHeaderSideMenu();'>
+            <div style=''></div>
+            <div style=''></div>
+            <div style=''></div>
+        </div>
+        <div id='header_bigsize'>
+            <div class='dropdown'>
+                <button class='dropbtn'>
+                    <a>منو عمومی</a>
+                    <i class='fa fa-caret-down'></i>
+                </button>
+                <div class='dropdown-content'>
+                    <div class='' id=''>
+                        <a href='/maintenance/external/paymentservice/'>تعمیرگاه سانیار سرویس</a>
+                    </div>
+                </div>
+            </div>
+            <div class='dropdown'>
+                <button class='dropbtn'>
+                    <a>منو</a>
+                    <i class='fa fa-caret-down'></i>
+                </button>
+                <div class='dropdown-content'>
+                    <div class='' id=''><a href='../../../../'>منو</a></div>
+                </div>
+                <div class='dropdown-content'>
+                    <div class='' id=''><a href='../../../../membership/'>خانه</a><a
+                            href='../../../../membership/profile/'>پروفایل</a><a
+                            href='../../../../library/logout.php'>خروج</a><a
+                            href='../../../../membership/bank/PaymentTerminal/V1/'>کارتخوان</a><a
+                            href='../../../../membership/tool/sidebyside/'>چسباندن عکس کنار هم</a><a
+                            href='../../../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/'>استعلام
+                            سریال </a><a href='../../../../membership/bank/AutomaticTellerMachine/V1/'>خودپرداز</a><a
+                            href='../../../../Bank/Registry/'>رجیستر پذیرنده</a><a
+                            href='../../../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off'>خروجی
+                            ترمینال</a><a href='../../../../membership/maintenance/'>تعمیرات کارتخوان</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id='navbar2' style=''>
+        <div id='navbar2_content' style=''>
+            <div>
+                <a href='/membership/'>داشبورد</a>
+            </div>
+            <div>
+                <a href='/membership/profile/'>پروفایل</a>
+            </div>
+            <div>
+                <a style='' href='/membership/message/messenger/'>
+                    پیام ها
+                    (
+                    0 )
+                </a>
+            </div>
+            <div>
+                <a style='' href='/membership/notification/'>
+                    اعلانات
+                    (
+                    100+ )
+                </a>
+            </div>
+            <div><a href='/membership/admin/'>ادمین</a></div>
+            <div><a href='./?logout=on'>خروج</a></div>
+        </div>
+    </section>
+
+    <section id='header_smallsize'>
+
+        <div class='header_smallsize_topic'>
+            <a>منو</a>
+        </div>
+
+        <div style='width:80%;height:1px;margin: 3px auto;background-color:#333333;'></div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../'>منو</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../membership/'>خانه</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../membership/profile/'>پروفایل</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../library/logout.php'>خروج</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../membership/bank/PaymentTerminal/V1/'>کارتخوان</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../membership/tool/sidebyside/'>چسباندن عکس کنار هم</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/'>استعلام سریال </a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../membership/bank/AutomaticTellerMachine/V1/'>خودپرداز</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../Bank/Registry/'>رجیستر پذیرنده</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off'>خروجی
+                ترمینال</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../membership/maintenance/'>تعمیرات کارتخوان</a>
+        </div>
+    </section>
+    <main>
+        <section id='section' style='width:80%;margin:20px auto;display: flex;flex-direction:column;'>
+            <form class='search_form' action='' method='post'>
+                <div class='search_partition'>
+                    <div class='search_field'>
+                        <input name='suser2' id='SpecialSearcher' onclick='openslider();' onkeyup="SearchOption();"
+                            placeholder='جستجو نام کاربری' autocomplete='off'></input>
+                        <table id='SearchList'>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value=''></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'>همه</td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='raminalidost'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='koleyni'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='hoseinfarhikhte'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='sarahaji'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='virapose'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='kiani'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='aminkiani'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='farzadrafati'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='2360301004'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='hadifarmani'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='amirdarvish'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.alizade'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.falegari'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.sina'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.ghanavati'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.mortezaabasi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.alighafari'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.nafar'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.gandom'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='azarpos'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='almaspay'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.jahan'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='mansorhoseini'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='Bivamir'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='Pnp.kartnet'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.solgi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pishrosaman'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='Aidaebrahimi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='paxfriend'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='minitek'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='psp.nikpay'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.zaeri'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.azizi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='Arvinpos'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.rasam'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.jahanpos'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='honampay'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='Pishrosam6an'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='Pishrosam689an'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='Farzanehpishro'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='mosavipos'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pars'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='motamed'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='fixpos'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pishro.sayar'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='vahidkhani '></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='naseri'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='hamidnajafi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='missizd'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='vojdani'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='izadi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='haqani'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='hidapos'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='میلاد مشیری تادوانی'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='fardayipor'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='alitarahomi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='javadsafari'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='Saminpos'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='jalilkarimi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='mohamadhajizade'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='rezafalahi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='batavani'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnpheydari'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='Badili zade'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='OMID'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='azadeh'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pnp.pasha'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='ansari'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='mahdi.izadi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='akhtarpos'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='pmp.jahan'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='arses'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='Naderdaneshvar'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='mohamadmahdi moghadas bayat'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='OMID.PAY'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='seyed javad Hosseini'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='reza dehkahi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='mohamad kazemi nejad'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='moghtaderi nasab'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='amir rashedi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='hamed jahanbazi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='mohamad hojabri'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='reza bonjoyi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='computer novin'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='mehdi asadi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='bakhtiyar bameri'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='valid absalan'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='seyed alangi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='fardin barzegar'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='arta pardaz'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='mohamad fatahi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='Z.Zareei'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='bistoni'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='haji hoseinlo'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='hasanlo'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='sina kohi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='nazari'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='molayi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='razmjo'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='SARIVE'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='NADERPOR'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='HEJRATI'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='ARDAME'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='ghavami far'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='mohamadsalehi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='rezayi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='MOHAMAD TAGHI MOLAYI'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='MAHZON'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='rabehi'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='RABIEE'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='NAJI'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='sheykholeslami'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='borhan bahrami'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='AZAM HOSEYNI'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='abron'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='shahriyar bahrami'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                            <tr>
+                                <th style='width:20px;'>
+                                    <input style='width:70%;' onclick="closeslider();" type='radio' name='suser'
+                                        value='AKBARI KHORASGANI'></input>
+                                </th>
+                                <td style='width: calc(100% - 20px);'> </td>
+                            </tr>
+                        </table>
+                        <button class='search_btn' type='submit' style=''>
+                            <img src='../../../../library/images/search_logo_orange_512X512.webp'></img>
+                        </button>
+                    </div>
+                    <div class='search_field'>
+                        <input name='bGltaXQ=' value='50'></input>
+                        <button type='submit'>
+                            <img src='../../../../library/images/search_logo_orange_512X512.webp'></img>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <table style='width:300px;margin:0 auto;'>
+                <tr>
+                    <th></th>
+                    <th>علل</th>
+                    <th>تعداد</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>خاموش</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>نرم افزار</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>شکستگی</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>آب خوردگی</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>چاپگر</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>جریان کشی</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>شارژ</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>آنتن</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>تامپر</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>تعریف سریال</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>مغایرت سریال</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>ورود به انبار</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>صفحه سفید</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>باطری</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>کیپد</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>غلتک</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>جای سیم</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>مگنت</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>درب باطری</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>درب چاپگر</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>قاب رو</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>قاب زیر</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>ال سی دی</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>پروگرم</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>سایر</td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+<style>
+    #SearchList {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        height: 100px;
+        overflow-y: scroll;
+        display: none;
+        z-index: 10;
+        position: absolute;
+        margin-top: 30px;
+        background-color: white;
+    }
+
+    #SearchList tr :hover:not(.header) {
+        background-color: #eee;
+    }
+
+    #indexing {
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .search_form {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin: 25px auto;
+        padding: 25px 0;
+        box-shadow: 0 0 6px gray;
+        background-color: white;
+    }
+
+    .search_partition {
+        width: 100%;
+        display: flex;
+        background-color: transparent;
+    }
+
+    .search_field {
+        display: flex;
+        width: 45%;
+        margin: 10px auto;
+    }
+
+    .search_field input,
+    .search_field select {
+        width: calc(100% - 38px);
+        border: none;
+        border-bottom: 1px solid gray;
+        font-size: 18px;
+    }
+
+    .search_field button {
+        width: 32px;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+
+    .search_field button img {
+        width: 100%;
+    }
+
+    .searcher form {
+        display: flex;
+    }
+
+    #limiter {
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+
+    @media screen and (min-width:768px) {
+        #SearchList {
+            width: 185px;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+
+        #SearchList {
+            width: 300px;
+        }
+    }
+</style>
+<script>
+    function SearchOption() {
+        var i;
+        var input = document.getElementById("SpecialSearcher");
+        var filter = input.value.toUpperCase();
+        var ul = document.getElementById("SearchList");
+        var li = ul.getElementsByTagName("tr");
+        for (i = 0; i < li.length; i++) {
+            var a = li[i].getElementsByTagName("td")[0];
+            var txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    function openslider() {
+        var ul2 = document.getElementById("SearchList");
+        ul2.style.display = "block";
+    }
+    function closeslider() {
+        var ul10 = document.getElementById("SearchList");
+        ul10.style.display = "none";
+
+    }
+</script>
+
+</html>
