@@ -39,7 +39,7 @@ function ToggleHeaderSideMenu(){
                 formData.append('language', language);
                 
                 $.ajax({
-                    url: "/library/login.php",
+                    url: "./library/login.php",
                     type: "POST",
                     data:  formData,
                     contentType: false,
