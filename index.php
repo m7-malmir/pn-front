@@ -60,13 +60,13 @@ function autoload($classname)
                 ?>
     <main style='display:flex;max-width:1024px;margin: 0 auto;flex-direction:column;'>
         <div style='width:300px;margin:100px auto;background-color:white;border-radius:6px;padding:20px 0;'>
-            <form id='imgup' enctype='multipart/form-data'>
+            <form id='imgup' method="post" action="controllers/includes/login.inc.php" enctype='multipart/form-data'>
                 <div style='margin: 0 auto;'>
                     <img style='width:100%;' src='./img/logo.webp'></img>
                 </div>
-                <input class='login_input' type='text' name='username' id='username' placeholder='username'></input>
+                <input class='login_input' type='text' name='uid' id='username' placeholder='username'></input>
                 <div id='login_pswd'>
-                    <input type='password' id='password' name='password' placeholder='password'></input>
+                    <input type='password' id='password' name='pwd' placeholder='password'></input>
                     <img src='./img/eye-icon.webp' style='' onclick='myFunction()'></img>
                 </div>
                 <section id='result'></section>
@@ -98,8 +98,8 @@ function autoload($classname)
                     session_destroy();
                 }else{
                     echo 'صفحه اصلی';
-
-                } ?>
+                } 
+            ?>
                 </button>
             </a>
         </div>

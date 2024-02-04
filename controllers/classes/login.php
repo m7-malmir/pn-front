@@ -10,7 +10,6 @@ class Login extends Dbh{
                 header("location: ../index.php?error=stmtfailedcheck");
                 exit();
             }
-
             if($stmt->rowCount() == 0){
                 $stmt=null;
                 header("location:../index.php?error=usernotfound!");
@@ -20,8 +19,7 @@ class Login extends Dbh{
             $pwdcheck=password_verify($pwd,$pwdHashed[0]["users_pwd"]);
             if( $pwdcheck ==false){
                 $stmt=null;
-                $_SESSION['wrong-pass']='رمز ورود یا نام کاربری اشتباه است';
-                header("location:../manage/profile.php?error=wrongpassword!");
+                header("location:../index.php?error=wrongpassword!");
                 exit();
             }elseif ($pwdcheck ==true) {
                 $stmt=$this->connect()->prepare('SELECT * FROM `users` WHERE `users_uid`=? OR `users_email`=? AND `users_pwd`=?');
@@ -42,5 +40,6 @@ class Login extends Dbh{
             }
                 $stmt=null;
         }
-
+        
+        
 }
