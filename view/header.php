@@ -1,15 +1,15 @@
 
-    <script src='/library/jquery/3.4.1.min.js'></script>
-    <script src="js/main.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/main.js"></script>
+    <script src='<?= ROOT_URL; ?>/library/jquery/3.4.1.min.js'></script>
+    <script src="<?= ROOT_URL; ?>/js/main.js"></script>
+    <link rel="stylesheet" href="<?= ROOT_URL; ?>/css/style.css">
+    <script src="<?= ROOT_URL; ?>/js/main.js"></script>
 </head>
 <body>
     <div class='navbar'>
         <div style='width:160px;display:flex;float:left;color: white;position:relative;height:55px;'
             onclick='ToggleNavBarMenu();'>
             <a style='display:none;width:32px;height:32px;margin:auto;' href='/membership/notification/'>
-                <img style='width: 100%;margin-top: 5px;' src='./img/notification.webp'>
+                <img style='width: 100%;margin-top: 5px;' src="<?= ROOT_URL; ?>/img/notification.webp">
                 <div id='NotificationCounter'>
                 </div>
                 </img>
@@ -19,15 +19,15 @@
                 <div style='margin: auto;'>admin admin</div>
             </div>
             <div style='width:32px;height:32px;margin:auto 5px;'>
-                <img src='./img/user_logo_white.webp' style='width:30px;height:30px;'></img>
+                <img src="<?= ROOT_URL; ?>/img/user_logo_white.webp" style='width:30px;height:30px;'></img>
             </div>
         </div>
         <div id='HeaderImage' style='display:none;'>
             <a href='./?logout=on'>
-                <img src='/img/logout_white.webp'></img>
+                <img src='<?= ROOT_URL; ?>/img/logout_white.webp'></img>
             </a>
             <a href='/membership/notification/'>
-                <img src='/img/notification.webp'>
+                <img src='<?= ROOT_URL; ?>/img/notification.webp'>
                 <div id='NotificationCounter'>
                     اعلانات
                     (

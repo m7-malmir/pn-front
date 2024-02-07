@@ -14,6 +14,6 @@ if(isset($_POST['submit'])){
     
      $login->loginUser();
      //going to back to front page
-     header("location: ../../view/index.html?error=none");
+     header("location: ../../view/index.php");
 
 } 
