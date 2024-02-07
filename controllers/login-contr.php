@@ -1,4 +1,5 @@
 <?php
+
 class LoginContr extends Login{
      private  $uid;  
      private  $pwd; 
