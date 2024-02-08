@@ -2,7 +2,6 @@
     <script src='<?= ROOT_URL; ?>/library/jquery/3.4.1.min.js'></script>
     <script src="<?= ROOT_URL; ?>/js/main.js"></script>
     <link rel="stylesheet" href="<?= ROOT_URL; ?>/css/style.css">
-    <script src="<?= ROOT_URL; ?>/js/main.js"></script>
 </head>
 <body>
     <div class='navbar'>

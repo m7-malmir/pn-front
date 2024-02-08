@@ -1,8 +1,6 @@
-<?php
+<?php 
     require_once 'header-up.php';
 ?>
-    <link rel="stylesheet" href="./../css/style.css">
-    </link>
     <title>منو عابر بانک | نیک پی</title>
     <meta name='robots' content='noindex, nofollow'>
     </meta>
@@ -10,7 +8,6 @@
     require_once 'header.php';
 ?>
     <main>
-
         <section class='side_menu'>
             <div style=''></div>
             <a class='side_menu_topic' style='background-color:inherit;'>
