@@ -9,7 +9,7 @@
         <section>
             <a onclick="history.back()">
                 <button id='ReturnFormButton'>
-                    <img src='./../img/return.webp' style='width:100%;'></img>
+                    <img src='<?= ROOT_URL; ?>/img/return.webp' style='width:100%;'></img>
                 </button>
             </a>
         </section>

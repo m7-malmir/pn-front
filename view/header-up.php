@@ -1,6 +1,6 @@
 <?php
-require_once '../controllers/classes/Dbh.php';
-?>
+require_once 'C:\xampp\htdocs\pnikpay\controllers\classes\Dbh.php';
+?> 
 <!DOCTYPE html>
 <html lang='fa-IR'>
 <head>

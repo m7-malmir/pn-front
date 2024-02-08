@@ -18,7 +18,7 @@
                         0 </div>
                 </div>
                 <div class='mcimagearea'>
-                    <img style='width:100%;' src='./../img/envelope-black-1.webp'></img>
+                    <img style='width:100%;' src='<?= ROOT_URL; ?>/img/envelope-black-1.webp'></img>
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@
                         0 </div>
                 </div>
                 <div class='mcimagearea'>
-                    <img style='width:100%;filter: invert(1);' src='./../img/document.png'></img>
+                    <img style='width:100%;filter: invert(1);' src='<?= ROOT_URL; ?>/img/document.png'></img>
                 </div>
             </div>
         </a>
@@ -43,7 +43,7 @@
                         0 </div>
                 </div>
                 <div class='mcimagearea'>
-                    <img style='width:100%;filter: invert(1);' src='./../img/specialist_white.webp'></img>
+                    <img style='width:100%;filter: invert(1);' src='<?= ROOT_URL; ?>/img/specialist_white.webp'></img>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
                         540 </div>
                 </div>
                 <div class='mcimagearea'>
-                    <img style='width:100%;filter: invert(1);' src='./../img/acceptor.png'></img>
+                    <img style='width:100%;filter: invert(1);' src='<?= ROOT_URL; ?>/img/acceptor.png'></img>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
                     <div class='mccounter'></div>
                 </div>
                 <div class='mcimagearea' style='visibility:hidden;'>
-                    <img style='width:100%;' src='./../img/envelope-black-1.webp'></img>
+                    <img style='width:100%;' src='<?= ROOT_URL; ?>/img/envelope-black-1.webp'></img>
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 <div class='mcimagearea'>
-                    <img style='width:100%;filter: invert(1);' src='./../img/specialist_white.webp'></img>
+                    <img style='width:100%;filter: invert(1);' src='<?= ROOT_URL; ?>/img/specialist_white.webp'></img>
                 </div>
             </div>
         </div>
@@ -92,7 +92,7 @@
                     </div>
                 </div>
                 <div class='mcimagearea'>
-                    <img style='width:100%;filter: invert(1);' src='./../img/specialist_white.webp'></img>
+                    <img style='width:100%;filter: invert(1);' src='<?= ROOT_URL; ?>/img/specialist_white.webp'></img>
                 </div>
             </div>
         </div>
@@ -104,7 +104,7 @@
                     </div>
                 </div>
                 <div class='mcimagearea' style='visibility:hidden;'>
-                    <img style='width:100%;filter: invert(1);' src='./../img/acceptor.png'></img>
+                    <img style='width:100%;filter: invert(1);' src='<?= ROOT_URL; ?>/img/acceptor.png'></img>
                 </div>
             </div>
         </div>
@@ -114,7 +114,7 @@
             <div class='noticecentertab'>
                 <p>آخرین اخبار سامانه</p>
             </div>
-            <img src='./../img/last_update.webp'></img>
+            <img src='<?= ROOT_URL; ?>/img/last_update.webp'></img>
             <ul style='color: #858796;'>
                 <li> - به فضای کاربری سامانه جامع شرکت نیک پی خوش آمدید </li>
                 <li> - این سامانه به گونه ای طراحی شده است که شما را در همه حالت همراهی کند</li>
