@@ -8,49 +8,17 @@
     require_once '../header.php';
 ?>
     <main>
-        <section class='side_menu'>
-            <div style=''></div>
-            <a class='side_menu_topic' style='background-color:inherit;'>
-                <img src='<?= ROOT_URL; ?>img/paqi_logo.png'></img>
-                <p>منو کارتخوان</p>
-            </a>
-            <a style='width:90%;margin:10px auto;font-size:16px;text-decoration:none;color: white;text-align:center;border-bottom: 1px solid white;'
-                href='#'></a>
-            <a href='paymentterminal.html' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/home.png'></img>
-                <p>میزکار</p>
-            </a>
-            <a href='newcastumers.html' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/new_acceptor.png'></img>
-                <p>ثبت پذیرنده</p>
-            </a>
-            <a href='caslist.html' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/acceptor.png'></img>
-                <p>لیست پذیرنده ها</p>
-            </a>
-            <a href='terminallist.html' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/pos.png'></img>
-                <p>لیست پایانه ها</p>
-            </a>
-            <a href='requestlist.html' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/request.png'></img>
-                <p>لیست درخواست ها</p>
-            </a>
-            <a href='document.html' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/document.png'></img>
-                <p>لیست بایگانی</p>
-            </a>
-        </section><!--side_menu_paymentterminal-->
+<?php include 'sidemenu.php' ?>
         <section id="MainSection">
             <section id='FunctionalMenu'>
                 <div>
-                    <a href='/membership/tool/PostalCode/' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\postalcode.php' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>
                         <p>تأییدیه پستی</p>
                     </a>
-                    <a href='/membership/tool/IbanVerificator/' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\IbanVerificator.php' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>
@@ -78,7 +46,7 @@
                         </button>
                         <p>وب سرویس</p>
                     </a>
-                    <a href='../Activation/' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\Activation.html' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>
@@ -86,13 +54,13 @@
                     </a>
                 </div>
                 <div>
-                    <a href='../Application/' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\Application.html' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>
                         <p>اپلیکیشن</p>
                     </a>
-                    <a href='../Forms/' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\Forms.html' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>
@@ -100,13 +68,13 @@
                     </a>
                 </div>
                 <div>
-                    <a href='../Repository/' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\Repository.html' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>
                         <p>انبار</p>
                     </a>
-                    <a href='../ElectronicalMail/' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\ElectronicalMail.html' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>
@@ -114,7 +82,7 @@
                     </a>
                 </div>
                 <div>
-                    <a href='../Terminal/Marketer/' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\Marketer.html' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>
@@ -122,7 +90,7 @@
                     </a>
                 </div>
                 <div>
-                    <a href='../Settings/Customization/' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\Setting.html' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>

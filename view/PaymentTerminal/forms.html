@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='icon' href='https://www.pnikpay.com/files/logo.webp' alt='نیک پی لوگو' size='16x16'>
     </link>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <title>اپلیکیشن کارتخوان | نیک پی</title>
     <meta name='description' content='این منو تمامی اپلیکیشن های مربوط به کارتخوان را در اختیار کاربران می گذارد'>
     </meta>
@@ -42,13 +42,28 @@
 </head>
 <style>
     main{
-        argin: 0 auto;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         background-color: inherit;
         width: 100%;
         height: calc(100vh - 64px);
         overflow-y: scroll;
+    }
+    #MainSection{
+		margin:0 auto;
+		display: flex;
+		flex-direction:column;
+		background-color:inherit;
+		width: 100%;
+		height: calc(100vh - 64px);
+		overflow-y: scroll;
+	}
+    @media screen and (min-width:768px) {
+        #MainSection {
+            width:100%0!important;
+            margin-right:0!important;
+        }
     }
 </style>
 <body>
