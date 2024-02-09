@@ -26,7 +26,7 @@
                     </a>
                 </div>
                 <div>
-                    <a href='../Export/' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\export.php' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>
