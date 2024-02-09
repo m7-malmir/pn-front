@@ -7,6 +7,13 @@
 <?php 
     require_once '../header.php';
 ?>
+<style>
+    main{
+	display:block;
+	margin: 0 auto;
+}
+
+</style>
     <main>
 <?php include 'sidemenu.php' ?>
         <section id="MainSection">
@@ -32,7 +39,7 @@
                         </button>
                         <p>خروجی</p>
                     </a>
-                    <a href='../Import/' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\Import.php' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>
