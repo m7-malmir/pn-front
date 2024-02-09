@@ -1,9 +1,9 @@
 <?php
-    require_once '../header-up.php';
+    require_once '../../header-up.php';
 ?>
     <title>انواع ورود گروهی</title>
     <?php 
-    require_once '../header.php';
+    require_once '../../header.php';
 ?>
 <style>
     main{
@@ -37,7 +37,7 @@
             </section>
             <section id='FunctionalMenu'>
                 <div>
-                    <a href='passargad/' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\import\Import-passargad.php' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>

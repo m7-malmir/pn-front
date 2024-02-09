@@ -39,7 +39,7 @@
                         </button>
                         <p>خروجی</p>
                     </a>
-                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\Import.php' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\import\Import.php' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>
