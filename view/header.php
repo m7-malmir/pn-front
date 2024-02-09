@@ -1,8 +1,8 @@
-
-    <script src='<?= ROOT_URL; ?>/library/jquery/3.4.1.min.js'></script>
-    <script src="<?= ROOT_URL; ?>/js/main.js"></script>
-    <link rel="stylesheet" href="<?= ROOT_URL; ?>/css/style.css">
+<script src='<?= ROOT_URL; ?>/library/jquery/3.4.1.min.js'></script>
+<script src="<?= ROOT_URL; ?>/js/main.js"></script>
+<link rel="stylesheet" href="<?= ROOT_URL; ?>/css/style.css">
 </head>
+
 <body>
     <div class='navbar'>
         <div style='width:160px;display:flex;float:left;color: white;position:relative;height:55px;'
@@ -15,7 +15,12 @@
             </a>
             <div
                 style='width:calc(100% - 32px);height:32px;display:flex;margin:auto;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;'>
-                <div style='margin: auto;'>admin admin</div>
+                <div style='margin: auto;'>
+                    <?php if (isset($_SESSION["userid"])) {
+                        print_r($_SESSION["useruid"]);
+                    }
+                    ?>
+                </div>
             </div>
             <div style='width:32px;height:32px;margin:auto 5px;'>
                 <img src="<?= ROOT_URL; ?>/img/user_logo_white.webp" style='width:30px;height:30px;'></img>
@@ -62,17 +67,17 @@
                 </div>
                 <div class='dropdown-content'>
                     <div class='' id=''>
-                        <a href='index.html'>خانه</a>
-                        <a href='profile.html'>پروفایل</a>
-                        <a href='#'>خروج</a>
-                        <a href='paymentterminal.html'>کارتخوان</a>
-                        <a href='sidebyside.html'>چسباندن عکس کنار هم</a>
-                        <a href='webpasargad.html'>استعلام سریال </a>
-                        <a href='AutomaticTellerMachine.html'>خودپرداز</a>
+                        <a href='<?= ROOT_URL; ?>\view\index.php'>خانه</a>
+                        <a href='<?= ROOT_URL; ?>\view\profile\profile.php'>پروفایل</a>
+                        <a href="<?= ROOT_URL; ?>\controllers\includes\logout.inc.php">خروج</a>
+                        <a href='<?= ROOT_URL; ?>\view\PaymentTerminal\paymentterminal.php'>کارتخوان</a>
+                        <a href='<?= ROOT_URL; ?>\view\sidebyside.php'>چسباندن عکس کنار هم</a>
+                        <a href='<?= ROOT_URL; ?>\view\webpasargad.php'>استعلام سریال </a>
+                        <a href='<?= ROOT_URL; ?>\view\AutomaticTellerMachine.php'>خودپرداز</a>
                         <a href='#'>رجیستر پذیرنده</a>
                         <a href='#'>خروجی
                             ترمینال</a>
-                        <a href='fixpos.html'>تعمیرات کارتخوان</a>
+                        <a href='<?= ROOT_URL; ?>view\fixpos\fixpos.php'>تعمیرات کارتخوان</a>
                     </div>
                 </div>
             </div>
@@ -82,27 +87,32 @@
     <section id='navbar2' style=''>
         <div id='navbar2_content' style=''>
             <div>
-                <a href='/membership/'>داشبورد</a>
+                <a href='<?= ROOT_URL; ?>\view\index.php'>داشبورد</a>
             </div>
             <div>
-                <a href='/membership/profile/'>پروفایل</a>
+                <a href='<?= ROOT_URL; ?>view\profile\profile.php'>پروفایل</a>
             </div>
             <div>
-                <a style='' href='/membership/message/messenger/'>
+                <a style='' href='<?= ROOT_URL; ?>\view\message.php'>
                     پیام ها
                     (
                     0 )
                 </a>
             </div>
             <div>
-                <a style='' href='/membership/notification/'>
+                <a style='' href='<?= ROOT_URL; ?>\view\notification.php'>
                     اعلانات
                     (
                     100+ )
                 </a>
             </div>
-            <div><a href='/membership/admin/'>ادمین</a></div>
-            <div><a href='./?logout=on'>خروج</a></div>
+            <?php
+            if (isset($_SESSION["userid"]) && $_SESSION["userid"] == 'admin admin') { ?>
+
+                <div><a href='/membership/admin/'>ادمین</a></div>
+            <?php } ?>
+
+            <div><a href="<?= ROOT_URL; ?>controllers\includes\logout.inc.php">خروج</a></div>
         </div>
     </section>
 
@@ -119,31 +129,31 @@
         </div>
 
         <div class='header_smallsize_menu'>
-            <a href='index.html'>خانه</a>
+            <a href='<?= ROOT_URL; ?>\view\'>خانه</a>
         </div>
 
         <div class='header_smallsize_menu'>
-            <a href='profile.html'>پروفایل</a>
+            <a href='<?= ROOT_URL; ?>\view\profile\profile.php'>پروفایل</a>
         </div>
 
         <div class='header_smallsize_menu'>
-            <a href='#'>خروج</a>
+            <a href='<?= ROOT_URL; ?>controllers\includes\logout.inc.php'>خروج</a>
         </div>
 
         <div class='header_smallsize_menu'>
-            <a href='paymentterminal.html'>کارتخوان</a>
+            <a href='<?= ROOT_URL; ?>view\paymentTerminal\paymentterminal.php'>کارتخوان</a>
         </div>
 
         <div class='header_smallsize_menu'>
-            <a href='sidebyside.html'>چسباندن عکس کنار هم</a>
+            <a href='<?= ROOT_URL; ?>view\sidebyside.php'>چسباندن عکس کنار هم</a>
         </div>
 
         <div class='header_smallsize_menu'>
-            <a href='webpasargad.html'>استعلام سریال </a>
+            <a href='<?= ROOT_URL; ?>view\webpasargad.php'>استعلام سریال </a>
         </div>
 
         <div class='header_smallsize_menu'>
-            <a href='AutomaticTellerMachine.html'>خودپرداز</a>
+            <a href='<?= ROOT_URL; ?>view\AutomaticTellerMachine.php'>خودپرداز</a>
         </div>
 
         <div class='header_smallsize_menu'>
@@ -155,6 +165,6 @@
         </div>
 
         <div class='header_smallsize_menu'>
-            <a href='fixpos.html'>تعمیرات کارتخوان</a>
+            <a href='<?= ROOT_URL; ?>view\fixpos\fixpos.php'>تعمیرات کارتخوان</a>
         </div>
     </section>
