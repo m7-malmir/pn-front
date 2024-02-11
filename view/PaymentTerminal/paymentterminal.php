@@ -47,7 +47,7 @@
                     </a>
                 </div>
                 <div>
-                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\webapi.php' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\webapi\webapi.php' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>

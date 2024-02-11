@@ -1,5 +1,5 @@
 <?php
-require_once '../header-up.php';
+require_once '../../header-up.php';
 ?>
 <title>پی اس پی ها</title>
 <style>
@@ -30,7 +30,7 @@ require_once '../header-up.php';
 }
 </style>
 <?php 
-require_once '../header.php';
+require_once '../../header.php';
 ?>
     <main>
         <section id='MainSection'>
@@ -48,7 +48,7 @@ require_once '../header.php';
             </section>
             <section id='FunctionalMenu'>
                 <div>
-                    <a href='passargad/' class='classification'>
+                    <a href='<?= ROOT_URL; ?>view\paymentterminal\webapi\webapipassargad.php' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
                         </button>
