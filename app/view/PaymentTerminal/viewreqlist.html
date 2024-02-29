@@ -1,0 +1,456 @@
+
+<html lang='fa-IR'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='icon' href='../../../../../files/logo.webp' alt='نیک پیلوگو' size='16x16'>
+    <link rel="stylesheet" href="../css/style.css">
+    </link>
+    <title>درخواست</title>
+</head>
+<style>
+    main {
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+
+    <div class='navbar'>
+        <div style='width:160px;display:flex;float:left;color: white;position:relative;height:55px;'
+            onclick='ToggleNavBarMenu();'>
+            <a style='display:none;width:32px;height:32px;margin:auto;' href='/membership/notification/'>
+                <img style='width: 100%;margin-top: 5px;' src='/library/images/notification.webp'>
+                <div id='NotificationCounter'>
+                </div>
+                </img>
+            </a>
+            <div
+                style='width:calc(100% - 32px);height:32px;display:flex;margin:auto;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;'>
+                <div style='margin: auto;'>admin admin</div>
+            </div>
+            <div style='width:32px;height:32px;margin:auto 5px;'>
+                <img src='/library/images/user_logo_white.webp' style='width:30px;height:30px;'></img>
+            </div>
+        </div>
+        <div id='HeaderImage' style='display:none;'>
+            <a href='./?logout=on'>
+                <img src='/library/images/logout_white.webp'></img>
+            </a>
+            <a href='/membership/notification/'>
+                <img src='/library/images/notification.webp'>
+                <div id='NotificationCounter'>
+                    اعلانات
+                    (
+                    100+ )
+                </div>
+                </img>
+            </a>
+        </div>
+        <div id='header_hamburger_button' style='' onclick='ToggleHeaderSideMenu();'>
+            <div style=''></div>
+            <div style=''></div>
+            <div style=''></div>
+        </div>
+        <div id='header_bigsize'>
+            <div class='dropdown'>
+                <button class='dropbtn'>
+                    <a>منو عمومی</a>
+                    <i class='fa fa-caret-down'></i>
+                </button>
+                <div class='dropdown-content'>
+                    <div class='' id=''>
+                        <a href='/maintenance/external/paymentservice/'>تعمیرگاه سانیار سرویس</a>
+                    </div>
+                </div>
+            </div>
+            <div class='dropdown'>
+                <button class='dropbtn'>
+                    <a>منو</a>
+                    <i class='fa fa-caret-down'></i>
+                </button>
+                <div class='dropdown-content'>
+                    <div class='' id=''><a href='../../../../../'>منو</a></div>
+                </div>
+                <div class='dropdown-content'>
+                    <div class='' id=''><a href='../../../../../membership/'>خانه</a><a
+                            href='../../../../../membership/profile/'>پروفایل</a><a
+                            href='../../../../../library/logout.php'>خروج</a><a
+                            href='../../../../../membership/bank/PaymentTerminal/V1/'>کارتخوان</a><a
+                            href='../../../../../membership/tool/sidebyside/'>چسباندن عکس کنار هم</a><a
+                            href='../../../../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/'>استعلام
+                            سریال </a><a href='../../../../../membership/bank/AutomaticTellerMachine/V1/'>خودپرداز</a><a
+                            href='../../../../../Bank/Registry/'>رجیستر پذیرنده</a><a
+                            href='../../../../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off'>خروجی
+                            ترمینال</a><a href='../../../../../membership/maintenance/'>تعمیرات کارتخوان</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id='navbar2' style=''>
+        <div id='navbar2_content' style=''>
+            <div>
+                <a href='/membership/'>داشبورد</a>
+            </div>
+            <div>
+                <a href='/membership/profile/'>پروفایل</a>
+            </div>
+            <div>
+                <a style='' href='/membership/message/messenger/'>
+                    پیام ها
+                    (
+                    0 )
+                </a>
+            </div>
+            <div>
+                <a style='' href='/membership/notification/'>
+                    اعلانات
+                    (
+                    100+ )
+                </a>
+            </div>
+            <div><a href='/membership/admin/'>ادمین</a></div>
+            <div><a href='./?logout=on'>خروج</a></div>
+        </div>
+    </section>
+
+    <section id='header_smallsize'>
+
+        <div class='header_smallsize_topic'>
+            <a>منو</a>
+        </div>
+
+        <div style='width:80%;height:1px;margin: 3px auto;background-color:#333333;'></div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../../'>منو</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../../membership/'>خانه</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../../membership/profile/'>پروفایل</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../../library/logout.php'>خروج</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../../membership/bank/PaymentTerminal/V1/'>کارتخوان</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../../membership/tool/sidebyside/'>چسباندن عکس کنار هم</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/'>استعلام سریال </a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../../membership/bank/AutomaticTellerMachine/V1/'>خودپرداز</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../../Bank/Registry/'>رجیستر پذیرنده</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off'>خروجی
+                ترمینال</a>
+        </div>
+
+        <div class='header_smallsize_menu'>
+            <a href='../../../../../membership/maintenance/'>تعمیرات کارتخوان</a>
+        </div>
+    </section>
+    <main>
+        <style>
+            main {
+                display: flex;
+            }
+
+            .side_menu {
+                overflow-y: auto;
+                height: calc(100vh - 60px);
+                display: flex;
+                flex-direction: column;
+                background-color: #333333;
+                color: #ffffff;
+                position: fixed;
+                font-size: 14px;
+            }
+
+            .side_menu_topic {
+                display: flex;
+                width: 90%;
+                color: white;
+                margin: 1px auto;
+                border-radius: 3px;
+                text-decoration: none;
+            }
+
+            .side_menu_topic img {
+                margin: auto 8px;
+                width: 26px;
+                height: 26px;
+            }
+
+            .side_menu_topic:hover {
+                background-color: #484848;
+            }
+
+            @media screen and (min-width:768px) {
+                #MainSection {
+                    width: calc(100% - 240px);
+                    margin-right: 250px;
+                }
+
+                .side_menu {
+                    width: 240px;
+                }
+
+                .side_menu_topic p {
+                    display: block;
+                }
+            }
+
+            @media screen and (max-width:768px) {
+                #MainSection {
+                    width: calc(100% - 240px);
+                    margin-right: 250px;
+                }
+
+                .side_menu {
+                    width: 240px;
+                }
+
+                .side_menu_topic p {
+                    display: block;
+                }
+            }
+
+            @media screen and (max-width:440px) {
+                #MainSection {
+                    width: calc(100% - 50px);
+                    margin-right: 50px;
+                }
+
+                .side_menu {
+                    width: 50px;
+                }
+
+                .side_menu_topic p {
+                    display: none;
+                }
+            }
+        </style>
+        <section class='side_menu'>
+            <div style=''></div>
+            <a class='side_menu_topic' style='background-color:inherit;'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/paqi_logo.png'></img>
+                <p>منو کارتخوان</p>
+            </a>
+            <a style='width:90%;margin:10px auto;font-size:16px;text-decoration:none;color: white;text-align:center;border-bottom: 1px solid white;'
+                href='#'></a>
+            <a href='/membership/bank/PaymentTerminal/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/home.png'></img>
+                <p>میزکار</p>
+            </a>
+            <a href='/membership/bank/PaymentTerminal/V1/costumer/new/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/new_acceptor.png'></img>
+                <p>ثبت پذیرنده</p>
+            </a>
+            <a href='../../../../../membership/bank/PaymentTerminal/V1/terminal/new/?aWRjb2Rl=4280870160'
+                class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/new_terminal.png'></img>
+                <p>ثبت ترمینال جدید</p>
+            </a>
+            <a href='/membership/bank/PaymentTerminal/V1/costumer/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/acceptor.png'></img>
+                <p>لیست پذیرنده ها</p>
+            </a>
+            <a href='/membership/bank/PaymentTerminal/V1/terminal/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/pos.png'></img>
+                <p>لیست پایانه ها</p>
+            </a>
+            <a href='/membership/bank/PaymentTerminal/V1/request/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/request.png'></img>
+                <p>لیست درخواست ها</p>
+            </a>
+            <a href='/membership/bank/PaymentTerminal/V1/document/' class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/document.png'></img>
+                <p>لیست بایگانی</p>
+            </a>
+            <a href='../../../../../membership/bank/PaymentTerminal/V1/costumer/.php?aWRjb2Rl=4280870160'
+                class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/acceptor.png'></img>
+                <p>اطلاعات پذیرنده</p>
+            </a>
+            <a href='../../../../../membership/bank/PaymentTerminal/V1/terminal/.php?aWRjb2Rl=4280870160'
+                class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/terminal.png'></img>
+                <p>سایر پایانه ها</p>
+            </a>
+            <a href='../../../../../membership/bank/PaymentTerminal/V1/request/.php?aWRjb2Rl=4280870160'
+                class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/terminal.png'></img>
+                <p>سایر درخواست ها</p>
+            </a>
+            <a href='../../../../../membership/bank/PaymentTerminal/V1/document/.php?aWRjb2Rl=4280870160'
+                class='side_menu_topic'>
+                <img src='/membership/bank/PaymentTerminal/V1/images/menu/document.png'></img>
+                <p>سایر مدارک</p>
+            </a>
+
+        </section>
+        <section id='MainSection'>
+            <form style='display: none;' action='../costumer/.php' id='CostumerView' method='GET'>
+                <input style='display:none;' name='aWRjb2Rl' value='4280870160'></input>
+            </form>
+            <form style='display: none;' action='../document/.php' id='DocumentView' method='GET'>
+                <input style='display:none;' name='aWRjb2Rl' value='4280870160'></input>
+            </form>
+            <form style='display: none;' action='../request/.php' id='RequestView' method='GET'>
+                <input style='display:none;' name='aWRjb2Rl' value='4280870160'></input>
+            </form>
+            <form style='display: none;' action='../terminal/.php' id='TerminalView' method='GET'>
+                <input style='display:none;' name='aWRjb2Rl' value='4280870160'></input>
+            </form>
+            <form style='display: none;' action='../terminal/new/' id='terminal_new' method='GET'>
+                <input style='display:none;' name='aWRjb2Rl' value='4280870160'></input>
+            </form>
+            <form style='display: none;' target='_blank' action='Help' id='Help' method='GET'></form>
+            <form style='display: none;' id='CheckUp' action='accept/' method='POST'></form>
+            <form style='display: none;' id='Remove' action='remove/single/' method='POST'>
+                <input type='hidden' name='aWRjb2Rl' value='4280870160'></input>
+            </form>
+            <form style='display: none;' id='Attribute' action='attribution/accept.php' method='POST'>
+                <input type='hidden' name='aWRjb2Rl' value='4280870160'></input>
+            </form>
+            <form style='display: none;' id='Replacement' action='replacement/accept.php' method='POST'>
+                <input type='hidden' name='aWRjb2Rl' value='4280870160'></input>
+            </form>
+            <form style='display: none;' id='Reapply' action='reapply/' method='POST'></form>
+            <form style='display: none;' id='Redaction' action='Redaction/' method='GET'></form>
+            <form action='reject/' method='POST' style='width:100%;'>
+                <input type='hidden' name='aWRjb2Rl' value='4280870160'></input>
+                <article class='Cadre' style=''>
+                    <div style='display:flex;'>
+                        <p class='CadreTitle' id='7093' style='width: calc(100% - 180px);'>اطلاعات درخواست (7093)</p>
+                        <div style='display:flex;width:160px;'>
+                            <button name='c2lk' class='SendButton' form='CheckUp' value='7093' type='submit'
+                                style='background-image:url("images/GreenCheck.webp");'></button>
+                            <button name='c2lk' class='SendButton' value='7093' type='submit'
+                                style='background-image:url("images/block.webp");'></button>
+                            <button name='c2lk' class='SendButton' form='Remove' value='7093' type='submit'
+                                style='background-image:url("../../../../../library/images/red_cross.webp");'></button>
+                        </div>
+                    </div>
+                    <input type='hidden' name='c2lk' value='7093'></input>
+                    <div class='TableRow4'>
+                        <button type='submit' class='PagingButton' name='c2lk' value='3946' form='CostumerView'>اطلاعات
+                            پذیرنده</button>
+                        <button type='submit' class='PagingButton' name='c2lk' value='3946' form='TerminalView'>نمایش
+                            پایانه</button>
+                        <button type='submit' class='PagingButton' name='c2lk' value='3946' form='DocumentView'>نمایش
+                            مدارک</button>
+                        <button type='submit' class='PagingButton' form='terminal_new'>پایانه جدید</button>
+                    </div>
+                    <div class='TableRow4'>
+                        <input value='درخواست کننده'></input>
+                        <input value='غلامرضا حسنلو'></input>
+                        <input value='آخرین کاربر'></input>
+                        <input value=''></input>
+                    </div>
+                    <div class='TableRow4'>
+                        <input value='شماره قرارداد'></input>
+                        <input value='3946'></input>
+                        <input value='زمان درخواست'></input>
+                        <input value='1402-11-02 21:51'></input>
+                    </div>
+                    <div class='TableRow4'>
+                        <input value='نام پذیرنده'></input>
+                        <input value='مهدی'></input>
+                        <input value='نام خانوادگی پذیرنده'></input>
+                        <input value='جعفری'></input>
+                    </div>
+                    <div class='TableRow4'>
+                        <input value='کد ملی'></input>
+                        <input value='4280870160'></input>
+                        <input value='نوع شبکه'></input>
+                        <input value='GPRS'></input>
+                    </div>
+                    <div class='TableRow4'>
+                        <input value='وضعیت'></input>
+                        <input value='بررسی'></input>
+                        <input value='کاربر'></input>
+                        <input value='hasanlo'></input>
+                    </div>
+                    <div class='TableRow4'>
+                        <input value='نام بانک:'></input>
+                        <input value='پست بانک'></input>
+                        <input value='کد بانک'></input>
+                        <input value='1782'></input>
+                    </div>
+                    <div class='TableRow4'>
+                        <input value='پروژه:'></input>
+                        <input value='پاسارگاد'></input>
+                        <input value='کد پیگیری'></input>
+                        <input value=''></input>
+                    </div>
+                    <div class='TableRow4'>
+                        <input value='شماره حساب:'></input>
+                        <input value='2000189913435'></input>
+                        <input value='مدل دستگاه:'></input>
+                        <input name='' value=''></input>
+                    </div>
+                    <div class='TableRow4'>
+                        <input value='سریال فعلی:'></input>
+                        <input value=''></input>
+                        <input value='سریال جدید:'></input>
+                        <input value=''></input>
+                    </div>
+                    <div class='TableRow4'>
+                        <input value='پایانه:'></input>
+                        <input value=''></input>
+                        <input value='پذیرنده'></input>
+                        <input value=''></input>
+                    </div>
+                    <div class='TableRow4'>
+                        <input value='imei:'></input>
+                        <input value=''></input>
+                        <input value='شماره سیم کارت'></input>
+                        <input value=''></input>
+                    </div>
+                    <div class='TableRow2'>
+                        <input style='width:24%;' value='شماره شبا'></input>
+                        <input style='width:74%;' value='IR750210000002000189913435'></input>
+                    </div>
+                    <div class='TableRow2'>
+                        <input style='width:24%;' value='علل مردودی و توضیحات :'></input>
+                        <input style='width:74%;' name='reason' value=' ' placeholder=''></input>
+                    </div>
+                </article>
+            </form>
+        </section>
+    </main>
+</body>
+<script>
+    var HelpMenu = document.getElementById("HelpMenu");
+    function OpenMenu() {
+        HelpMenu.style.display = "block";
+    }
+
+    function CloseMenu() {
+        HelpMenu.style.display = "none";
+    }
+</script>
+
+</html>
