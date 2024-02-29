@@ -11,7 +11,7 @@ function esc($str)
 }
 function redirect($path)
 {
-    header("Location:" . ROOT . "/public/" . $path);
+    header("Location:" . ROOT_URL . "/public/" . $path);
     die;
 
 }

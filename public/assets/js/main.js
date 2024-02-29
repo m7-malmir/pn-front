@@ -22,7 +22,7 @@ function ToggleHeaderSideMenu(){
                 } else {
                 x.type = "password";
                 }
-            }
+            };
         //ارسال متغیر های مختلف
         $(document).ready(function (e) {
             $("#imgup").on('submit',(function(e) {

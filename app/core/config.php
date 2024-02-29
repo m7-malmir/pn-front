@@ -1,5 +1,5 @@
 <?php
-define('ROOT_URL','http://localhost/mvc-1-1/');
+define('ROOT_URL','http://localhost/pnikpay/');
 define('DBNAME','codexworld');
 define('DBHOST','localhost');
 define('DBUSER','root');

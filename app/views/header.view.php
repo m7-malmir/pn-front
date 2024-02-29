@@ -1,14 +1,18 @@
-<script src='<?= ROOT_URL; ?>/library/jquery/3.4.1.min.js'></script>
-<script src="<?= ROOT_URL; ?>/js/main.js"></script>
-<link rel="stylesheet" href="<?= ROOT_URL; ?>/css/style.css">
-</head>
+<link rel="stylesheet" href="<?= ROOT_URL; ?>public/assets/css/style.css">
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+<!-- <script src='<?= ROOT_URL; ?>public/assets/library/jquery/3.4.1.min.js'></script>  -->
+ <script src="<?= ROOT_URL; ?>public/assets/js/main.js"></script>
 
+</head>
 <body>
     <div class='navbar'>
         <div style='width:160px;display:flex;float:left;color: white;position:relative;height:55px;'
             onclick='ToggleNavBarMenu();'>
             <a style='display:none;width:32px;height:32px;margin:auto;' href='/membership/notification/'>
-                <img style='width: 100%;margin-top: 5px;' src="<?= ROOT_URL; ?>/img/notification.webp">
+                <img style='width: 100%;margin-top: 5px;' src="<?= ROOT_URL; ?>public/assets/img/notification.webp">
                 <div id='NotificationCounter'>
                 </div>
                 </img>
@@ -16,22 +20,19 @@
             <div
                 style='width:calc(100% - 32px);height:32px;display:flex;margin:auto;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;'>
                 <div style='margin: auto;'>
-                    <?php if (isset($_SESSION["userid"])) {
-                        print_r($_SESSION["useruid"]);
-                    }
-                    ?>
+                    <?= $username; ?>                  
                 </div>
             </div>
             <div style='width:32px;height:32px;margin:auto 5px;'>
-                <img src="<?= ROOT_URL; ?>/img/user_logo_white.webp" style='width:30px;height:30px;'></img>
+                <img src="<?= ROOT_URL; ?>public/assets/img/user_logo_white.webp" style='width:30px;height:30px;'></img>
             </div>
         </div>
         <div id='HeaderImage' style='display:none;'>
             <a href='./?logout=on'>
-                <img src='<?= ROOT_URL; ?>/img/logout_white.webp'></img>
+                <img src='<?= ROOT_URL; ?>public/assets/img/logout_white.webp'></img>
             </a>
             <a href='/membership/notification/'>
-                <img src='<?= ROOT_URL; ?>/img/notification.webp'>
+                <img src='<?= ROOT_URL; ?>public/assets/img/notification.webp'>
                 <div id='NotificationCounter'>
                     اعلانات
                     (

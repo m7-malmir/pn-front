@@ -8,13 +8,13 @@ class Login
         $data=[];
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $user = new User;
-            $arr['email']=$_POST['email'];
+            $arr['users_uid']=$_POST['users_uid'];
             $row=$user->first($arr);
                 //redirect('signup');
             if($row){
-                if($row->password === $_POST['password']) {
+                if($row->password === $_POST['users_pwd']) {
                     $_SESSION['USER'] = $row;
-                    redirect('home');
+                    redirect('index');
                 }
             }
             $user->errors='wrong email or pass';

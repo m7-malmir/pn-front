@@ -4,21 +4,15 @@ class User
 {
   use Model;
   protected $table = 'users';
-  protected $allowedColumns = ['email', 'password'];
+  protected $allowedColumns = ['users_uid', 'users_pwd'];
   public function validate($data)
   {
     $this->errors = [];
-    if (empty($data['email'])) {
-      $this->errors['email'] = "Email is required";
+    if (empty($data['users_uid'])) {
+      $this->errors['users_uid'] = "username is required";
     }
-    // if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-    //   $this->errors['email'] = "Email is not valid";
-    // }
-    if (empty($data['password'])) {
-      $this->errors['password'] = "Password is required";
-    }
-    if (empty($data['terms'])) {
-      $this->errors['terms'] = "please accept the terms and conditions";
+    if (empty($data['users_pwd'])) {
+      $this->errors['users_pwd'] = "Password is required";
     }
     if (empty($this->errors)) {
       return true;
