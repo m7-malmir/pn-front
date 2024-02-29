@@ -19,7 +19,7 @@
 		border-radius: 10px;
 	}
 	#ContactScroll::-webkit-scrollbar-thumb {
-		background: midnightblue; 
+		background: midnightblue;  
 		border-radius: 10px;
 	}
 	#ContactScroll::-webkit-scrollbar-thumb:hover {

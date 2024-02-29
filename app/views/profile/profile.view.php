@@ -1,18 +1,18 @@
 <?php 
-    require_once "../header-up.php";
+require_once("header-up.view.php");
 ?>
     <title>پروفایل | نیک پی</title>
     <meta name='description' content='پروفایل'>
     </meta>
     <meta name='robots' content='noindex, nofollow'>
 <?php 
-    require_once '../header.php';
+require_once("header.view.php");
 ?>
 <style>
-       main {
-            display: block;
-            margin: 0 auto;
-        }
+    main {
+        display: block;
+        margin: 0 auto;
+    }
 </style>
     <main>
         <div id='PasswordMenu'>
@@ -48,19 +48,19 @@
                 </div>
             </form>
         </div>
-        <div style='width:100%;height:250px;background-image:url("<?= ROOT_URL; ?>/img/header.webp");background-size:cover;'></div>
+        <div style='width:100%;height:250px;background-image:url("<?= ROOT_URL; ?>public/assets/img/header.webp");background-size:cover;'></div>
         <section id='view'>
             <article id='primary'>
                 <div id='PhotoProfile'>
                     <img src='<?= ROOT_URL; ?>/img/contact.webp'></img>
                 </div>
                 <a id='AddPhotoProfile' href='photo/change/'>
-                    <img style='width:100%;' src='<?= ROOT_URL; ?>/img/camera.webp'></img>
+                    <img style='width:100%;' src='<?= ROOT_URL; ?>public/assets/img/camera.webp'></img>
                 </a>
                 <table style='position:relative;top:-50px;'>
                     <tr>
                         <td style='width:24px;'>
-                            <img style='width:18px;margin:0 auto;' src='<?= ROOT_URL; ?>/img/contact.webp'></img>
+                            <img style='width:18px;margin:0 auto;' src='<?= ROOT_URL; ?>public/assets/img/contact.webp'></img>
                         </td>
                         <th>
                             مشخصات فردی <br>
@@ -70,7 +70,7 @@
                     </tr>
                     <tr>
                         <td style='width:24px;'>
-                            <img style='width:18px;margin:0 auto;' src='<?= ROOT_URL; ?>/img/info.webp'></img>
+                            <img style='width:18px;margin:0 auto;' src='<?= ROOT_URL; ?>public/assets/img/info.webp'></img>
                         </td>
                         <th>
                             درباره <br>
@@ -80,7 +80,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <img style='width:18px;margin:0 auto;' src='<?= ROOT_URL; ?>/img/lock.webp'></img>
+                            <img style='width:18px;margin:0 auto;' src='<?= ROOT_URL; ?>public/assets/img/lock.webp'></img>
                         </td>
                         <th>
                             <input style='background-color:transparent;border:none;' type='password' name='password'
@@ -88,7 +88,7 @@
                         </th>
                         <td>
                             <button onclick='OpenPasswordMenu();' class='FormButton'>
-                                <img style='width:18px;margin:0 auto;' src='<?= ROOT_URL; ?>/img/edit.webp'></img>
+                                <img style='width:18px;margin:0 auto;' src='<?= ROOT_URL; ?>public/assets/img/edit.webp'></img>
                             </button>
                         </td>
                     </tr>
