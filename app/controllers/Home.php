@@ -12,11 +12,19 @@ class Home
             $user = new User;
             $arr['users_uid']=$_POST['uid'];
             $row=$user->first($arr);
+            $row2=$user->checkAdmin();
+            $array = json_decode(json_encode( $row2), true);
+            if($row2){
+                if ($array[0]['users_uid']==$_POST['uid']) {
+                  var_dump( $_SESSION['admin']);
+                  }
+            }
+          
                 //redirect('signup');
             if($row){
                 if($row->users_pwd === $_POST['pwd']) {
                     $_SESSION['USER'] = $row;
-                    redirect('main');
+                redirect('main');
                 }
             }
             $user->errors='wrong email or pass';

@@ -2,9 +2,10 @@
 /**
  * Main class model
  */
-trait Model
+trait Model 
 {
     protected $table = 'users';
+    protected $table2 = 'members';
     protected $limit = 1;
     protected $offset = 0;
     public $errors = [];
@@ -71,5 +72,10 @@ trait Model
         $this->query($query, $data);
         //return false;
 
+    }
+    public function checkAdmin(){
+        $query = "SELECT users_uid FROM $this->table LEFT JOIN $this->table2 ON $this->table.user_role = $this->table2.id where title='admin'";
+         $res=$this->query($query);
+     return $res;
     }
 }

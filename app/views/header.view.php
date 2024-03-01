@@ -106,10 +106,12 @@
                     100+ )
                 </a>
             </div>
-            <?php
-            if (isset($_SESSION["userid"]) && $_SESSION["userid"] == 'admin admin') { ?>
+           <?php 
+         $array = json_decode(json_encode( $admin), true);
+         //print_r($array);
+           if ($array[0]['users_uid']===$username) { ?>
 
-                <div><a href='/membership/admin/'>ادمین</a></div>
+            <div><a href='/membership/admin/'>ادمین</a></div>
             <?php } ?>
 
             <div><a href="<?= ROOT_URL; ?>public/logout">خروج</a></div>

@@ -1,12 +1,10 @@
 <link rel="stylesheet" href="<?= ROOT_URL; ?>public/assets/css/style.css">
-<script
-  src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <!-- <script src='<?= ROOT_URL; ?>public/assets/library/jquery/3.4.1.min.js'></script>  -->
- <script src="<?= ROOT_URL; ?>public/assets/js/main.js"></script>
-
+<script src="<?= ROOT_URL; ?>public/assets/js/main.js"></script>
 </head>
+
 <body>
     <div class='navbar'>
         <div style='width:160px;display:flex;float:left;color: white;position:relative;height:55px;'
@@ -19,7 +17,9 @@
             </a>
             <div style='width:calc(100% - 32px);height:32px;display:flex;margin:auto;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;'>
                 <div style='margin: auto;'>
-                    <?= $username; ?>                  
+                    <?php 
+                    //$admin; 
+                    ?>
                 </div>
             </div>
             <div style='width:32px;height:32px;margin:auto 5px;'>
@@ -106,8 +106,9 @@
                     100+ )
                 </a>
             </div>
+            <?= $admin ?>
             <?php
-            if (isset($_SESSION["userid"]) && $_SESSION["userid"] == 'admin admin') { ?>
+            if (!empty($admin)) { ?>
 
                 <div><a href='/membership/admin/'>ادمین</a></div>
             <?php } ?>
@@ -140,8 +141,8 @@
             <a href='<?= ROOT_URL; ?>public\logout>خروج</a>
         </div>
 
-        <div class='header_smallsize_menu'>
-            <a href='<?= ROOT_URL; ?>public\paymentTerminal\paymentterminal'>کارتخوان</a>
+        <div class=' header_smallsize_menu'>
+                <a href='<?= ROOT_URL; ?>public\paymentTerminal\paymentterminal'>کارتخوان</a>
         </div>
 
         <div class='header_smallsize_menu'>

@@ -1,4 +1,5 @@
 <?php
+
 define('ROOT_URL','http://localhost/pnikpay/');
 define('DBNAME','codexworld');
 define('DBHOST','localhost');

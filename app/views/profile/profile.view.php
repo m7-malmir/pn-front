@@ -52,7 +52,7 @@ require_once("header.view.php");
         <section id='view'>
             <article id='primary'>
                 <div id='PhotoProfile'>
-                    <img src='<?= ROOT_URL; ?>/img/contact.webp'></img>
+                    <img src='<?= ROOT_URL; ?>public/assets/img/contact.webp'></img>
                 </div>
                 <a id='AddPhotoProfile' href='photo/change/'>
                     <img style='width:100%;' src='<?= ROOT_URL; ?>public/assets/img/camera.webp'></img>
