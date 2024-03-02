@@ -107,9 +107,9 @@
                 </a>
             </div>
            <?php 
-         $array = json_decode(json_encode( $admin), true);
-         //print_r($array);
-           if ($array[0]['users_uid']===$username) { ?>
+         //$array = json_decode(json_encode( $admin), true);
+         //var_dump($admin);
+           if ($admin[0]['users_uid']===$username) { ?>
 
             <div><a href='/membership/admin/'>ادمین</a></div>
             <?php } ?>

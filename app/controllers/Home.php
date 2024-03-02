@@ -16,7 +16,8 @@ class Home
             $array = json_decode(json_encode( $row2), true);
             if($row2){
                 if ($array[0]['users_uid']==$_POST['uid']) {
-                  var_dump( $_SESSION['admin']);
+                  $_SESSION['admin']= $array;
+                  //var_dump($array);
                   }
             }
           
