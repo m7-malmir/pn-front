@@ -1,11 +1,11 @@
 <?php 
-    require_once 'header-up.view.php';
+    require_once 'header-up.php';
 ?>
     <title>منو عابر بانک | نیک پی</title>
     <meta name='robots' content='noindex, nofollow'>
     </meta>
     <?php 
-    require_once 'header.view.php';
+    require_once 'header.php';
 ?>
     <main>
         <section class='side_menu'>

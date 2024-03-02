@@ -6,8 +6,7 @@ class profile
     public function index()
     {
         $data['username']=empty($_SESSION['USER']) ? 'user':  $_SESSION['USER']->users_uid;
-        $this->view('profile/profile',$data);
-
-       
+        $data['admin']=empty($_SESSION['admin']) ? '':  $_SESSION['admin'];
+        $this->view('profile/profile',);   
     }
 }

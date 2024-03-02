@@ -1,10 +1,10 @@
 <?php
-    require_once 'header-up.view.php';
+    require_once 'header-up.php';
 ?>
 <title> پنل کاربری | نیک پی</title>
 <meta name='robots' content='noindex, nofollow'>
 <?php 
-    require_once 'header.view.php';
+    require_once 'header.php';
 ?>
     <section>
         <h2 style='margin-inline-start: 2.5%;'>داشبورد</h2>

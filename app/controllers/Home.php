@@ -5,7 +5,6 @@ class Home
     use Controller;
     public function index()
     {
-
        // $data['username']=empty($_SESSION['USER']) ? 'user':  $_SESSION['USER']->email;
         $data=[];
         if ($_SERVER['REQUEST_METHOD'] == "POST") {

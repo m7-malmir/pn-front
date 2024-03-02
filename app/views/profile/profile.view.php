@@ -1,12 +1,15 @@
 <?php 
-require_once("header-up.view.php");
+
+$ds = DIRECTORY_SEPARATOR;
+$base_dir = realpath(dirname(__FILE__)  . $ds . '..') . $ds;
+require_once("{$base_dir}header-up.php");
 ?>
     <title>پروفایل | نیک پی</title>
     <meta name='description' content='پروفایل'>
     </meta>
     <meta name='robots' content='noindex, nofollow'>
 <?php 
-require_once("header.view.php");
+require_once("{$base_dir}header.php");
 ?>
 <style>
     main {

@@ -1,9 +1,9 @@
 <?php 
-    require_once 'header-up.view.php';
+    require_once 'header-up.php';
 ?>
     <title>ستعلام سریال پاسارگاد</title>
     <?php 
-    require_once 'header.view.php';
+    require_once 'header.php';
 ?>
     <main style='display:flex;flex-direction:column;'>
         <section>
