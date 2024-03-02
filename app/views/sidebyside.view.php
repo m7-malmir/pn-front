@@ -10,7 +10,7 @@
     <main>
         <section id='section' style=''>
             <form id='SideBySideForm' name='SideBySideForm' enctype='multipart/form-data'>
-                <img src='<?= ROOT_URL; ?>/img/logu.webp'></img>
+                <img src='<?= ROOT_URL; ?>public/assets/img/logu.webp'></img>
                 <label>
                     عکس اول
                 </label>

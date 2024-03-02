@@ -70,14 +70,14 @@
                         <a href='<?= ROOT_URL; ?>public\main'>خانه</a>
                         <a href='<?= ROOT_URL; ?>public\profile\profile'>پروفایل</a>
                         <a href="<?= ROOT_URL; ?>public\logout">خروج</a>
-                        <a href='<?= ROOT_URL; ?>public\PaymentTerminal\paymentterminal'>کارتخوان</a>
+                        <a href='<?= ROOT_URL; ?>public\paymentterminal\paymentterminal'>کارتخوان</a>
                         <a href='<?= ROOT_URL; ?>public\sidebyside'>چسباندن عکس کنار هم</a>
                         <a href='<?= ROOT_URL; ?>public\webpasargad'>استعلام سریال </a>
                         <a href='<?= ROOT_URL; ?>public\AutomaticTellerMachine'>خودپرداز</a>
                         <a href='#'>رجیستر پذیرنده</a>
                         <a href='#'>خروجی
                             ترمینال</a>
-                        <a href='<?= ROOT_URL; ?>view\fixpos\fixpos'>تعمیرات کارتخوان</a>
+                        <a href='<?= ROOT_URL; ?>public\fixpos\fixpos'>تعمیرات کارتخوان</a>
                     </div>
                 </div>
             </div>

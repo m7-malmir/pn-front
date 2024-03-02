@@ -90,33 +90,33 @@ require_once 'header.php';
     <section class='side_menu'>
         <div style=''></div>
         <a class='side_menu_topic' style='background-color:inherit;'>
-            <img src='<?= ROOT_URL; ?>/img/paqi_logo.png'></img>
+            <img src='<?= ROOT_URL; ?>public/assets/img/paqi_logo.png'></img>
             <p>منو اعلانات</p>
         </a>
         <a style='width:90%;margin:20px auto;font-size:16px;text-decoration:none;color: white;text-align:center;border-bottom: 1px solid white;'
             href='#'></a>
         <a href='/membership/notification/' class='side_menu_topic'>
-            <img src='<?= ROOT_URL; ?>img/home.png'></img>
+            <img src='<?= ROOT_URL; ?>public/assets/img/home.png'></img>
             <p>میزکار</p>
         </a>
         <a href='../../membership/notification/Inscription/Acceptor/' class='side_menu_topic'>
-            <img src='<?= ROOT_URL; ?>img/new_acceptor.png'></img>
+            <img src='<?= ROOT_URL; ?>public/assets/img/new_acceptor.png'></img>
             <p>پذیرنده جدید()</p>
         </a>
         <a href='../../membership/notification/Resume/' class='side_menu_topic'>
-            <img src='<?= ROOT_URL; ?>img/pos.png'></img>
+            <img src='<?= ROOT_URL; ?>public/assets/img/pos.png'></img>
             <p>رزومه کاری()</p>
         </a>
         <a href='../../membership/notification/Activation/' class='side_menu_topic'>
-            <img src='<?= ROOT_URL; ?>img/request.png'></img>
+            <img src='<?= ROOT_URL; ?>public/assets/img/request.png'></img>
             <p>فعال سازی()</p>
         </a>
         <a href='../../membership/notification/Registry/' class='side_menu_topic'>
-            <img src='<?= ROOT_URL; ?>img/document.png'></img>
+            <img src='<?= ROOT_URL; ?>public/assets/img/document.png'></img>
             <p>طرح رجیستری()</p>
         </a>
         <a href='../../membership/notification/RepositoryEntry/' class='side_menu_topic'>
-            <img src='<?= ROOT_URL; ?>img/document.png'></img>
+            <img src='<?= ROOT_URL; ?>public/assets/img/document.png'></img>
             <p>ورود به انبار ()</p>
         </a>
     </section>
@@ -129,32 +129,32 @@ require_once 'header.php';
             </a>
             <a style='display:none;' href='Export/'>
                 <button id='ReturnFormButton'>
-                    <img src='<?= ROOT_URL; ?>/img/Excel.webp' style='width:100%;'></img>
+                    <img src='<?= ROOT_URL; ?>public/assets/img/Excel.webp' style='width:100%;'></img>
                 </button>
             </a>
             <a style='display:none;' href='/membership/accounting/invoice/Sell/import/'>
                 <button id='ReturnFormButton'>
-                    <img src='<?= ROOT_URL; ?>/img/import11.webp' style='width:100%;'></img>
+                    <img src='<?= ROOT_URL; ?>public/assets/img/import11.webp' style='width:100%;'></img>
                 </button>
             </a>
             <a>
                 <button id='ReturnFormButton' form="CancelForm">
-                    <img src='<?= ROOT_URL; ?>/img/NoFilter.webp' style='width:100%;'></img>
+                    <img src='<?= ROOT_URL; ?>public/assets/img/NoFilter.webp' style='width:100%;'></img>
                 </button>
             </a>
             <a>
                 <button id='ReturnFormButton' form="SearchForm">
-                    <img src='<?= ROOT_URL; ?>/img/magnifier11.webp' style='width:100%;'></img>
+                    <img src='<?= ROOT_URL; ?>public/assets/img/magnifier11.webp' style='width:100%;'></img>
                 </button>
             </a>
             <a href='../Search/'>
                 <button id='ReturnFormButton'>
-                    <img src='<?= ROOT_URL; ?>/img/option11.webp' style='width:100%;'></img>
+                    <img src='<?= ROOT_URL; ?>public/assets/img/option11.webp' style='width:100%;'></img>
                 </button>
             </a>
             <a>
                 <button onclick="ToggleSideToolbar('SideToolbar');" id='ReturnFormButton' style='float: right;'>
-                    <img src='<?= ROOT_URL; ?>/img/more.webp' style='width:100%;'></img>
+                    <img src='<?= ROOT_URL; ?>public/assets/img/more.webp' style='width:100%;'></img>
                 </button>
             </a>
         </section>

@@ -49,7 +49,7 @@
                 </div>
                 <a href='./.' style='margin-right: auto;'>
                     <button id='ReturnFormButton' style='float: left;width:32px;height:32px;'>
-                        <img src='<?= ROOT_URL; ?>img/return.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/return.webp' style='width:100%;'></img>
                     </button>
                 </a>
             </div>
@@ -67,7 +67,7 @@
                 <form action='Contact' method='GET'
                     style='background-color: white;width:28px;height:28px;margin: auto;'>
                     <button type='submit' class='StandardButton'
-                        style=';background-image:url("<?= ROOT_URL; ?>img/user_logo_265X265.webp");'></button>
+                        style=';background-image:url("<?= ROOT_URL; ?>public/assets/img/user_logo_265X265.webp");'></button>
                 </form>
             </div>
             <div id='testsort' style='width:100%;overflow-y: scroll;height: 100%;'>

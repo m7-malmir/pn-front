@@ -1,61 +1,63 @@
 <?php
-    require_once '../header-up.php';
+$ds = DIRECTORY_SEPARATOR;
+$base_dir = realpath(dirname(__FILE__)  . $ds . '..') . $ds;
+require_once("{$base_dir}header-up.php");
 ?>
     <title>خدمات پس از فروش</title>
     <?php 
-    require_once '../header.php';
+ require_once("{$base_dir}header.php");
 ?>
     <main>
         <section class='side_menu'>
             <div style=''></div>
             <a class='side_menu_topic' style='background-color:inherit;'>
-                <img src='<?= ROOT_URL; ?>img/paqi_logo.png'></img>
+                <img src='<?= ROOT_URL; ?>public/assets/img/paqi_logo.png'></img>
                 <p>منو تعمیرگاه</p>
             </a>
             <a style='width:90%;margin:20px auto;font-size:16px;text-decoration:none;color: white;text-align:center;border-bottom: 1px solid white;'
                 href='#'></a>
             <a href='/membership/maintenance/' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/home.png'></img>
+                <img src='<?= ROOT_URL; ?>public/assets/img/home.png'></img>
                 <p>میزکار</p>
             </a>
             <a href='/membership/maintenance/New/' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/new_acceptor.png'></img>
+                <img src='<?= ROOT_URL; ?>public/assets/img/new_acceptor.png'></img>
                 <p>ثبت تعمیری</p>
             </a>
             <a href='/membership/maintenance/reception/' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/acceptor.png'></img>
+                <img src='<?= ROOT_URL; ?>public/assets/img/acceptor.png'></img>
                 <p>بخش پذیرش</p>
             </a>
             <a href='/membership/maintenance/triage/' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/acceptor.png'></img>
+                <img src='<?= ROOT_URL; ?>public/assets/img/acceptor.png'></img>
                 <p>تریاژ</p>
             </a>
             <a href='/membership/maintenance/workshop/' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/acceptor.png'></img>
+                <img src='<?= ROOT_URL; ?>public/assets/img/acceptor.png'></img>
                 <p>تعمیرگاه</p>
             </a>
             <a href='/membership/maintenance/Declaration/' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/acceptor.png'></img>
+                <img src='<?= ROOT_URL; ?>public/assets/img/acceptor.png'></img>
                 <p>اعلام هزینه</p>
             </a>
             <a href='/membership/maintenance/QualityControl/' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/acceptor.png'></img>
+                <img src='<?= ROOT_URL; ?>public/assets/img/acceptor.png'></img>
                 <p>کنترل کیفیت</p>
             </a>
             <a href='/membership/maintenance/clearance/' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/new_acceptor.png'></img>
+                <img src='<?= ROOT_URL; ?>public/assets/img/new_acceptor.png'></img>
                 <p>بخش ترخیص</p>
             </a>
             <a href='/membership/maintenance/archive/' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/new_acceptor.png'></img>
+                <img src='<?= ROOT_URL; ?>public/assets/img/new_acceptor.png'></img>
                 <p>بخش تحویل</p>
             </a>
             <a href='/membership/maintenance/Report/' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/acceptor.png'></img>
+                <img src='<?= ROOT_URL; ?>public/assets/img/acceptor.png'></img>
                 <p>گزارشگیری</p>
             </a>
             <a href='/membership/maintenance/Setting/' class='side_menu_topic'>
-                <img src='<?= ROOT_URL; ?>img/acceptor.png'></img>
+                <img src='<?= ROOT_URL; ?>public/assets/img/acceptor.png'></img>
                 <p>تنظیمات</p>
             </a>
 
@@ -65,32 +67,32 @@
             <section>
                 <a onclick='history.back();'>
                     <button id='ReturnFormButton'>
-                        <img src='<?= ROOT_URL; ?>img/return.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/return.webp' style='width:100%;'></img>
                     </button>
                 </a>
                 <a>
                     <button id='ReturnFormButton' form='Export'>
-                        <img src='<?= ROOT_URL; ?>img/Excel.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/Excel.webp' style='width:100%;'></img>
                     </button>
                 </a>
                 <a style='display:none;' href='/membership/accounting/invoice/Sell/import/'>
                     <button id='ReturnFormButton'>
-                        <img src='<?= ROOT_URL; ?>img/import11.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/import11.webp' style='width:100%;'></img>
                     </button>
                 </a>
                 <a>
                     <button id='ReturnFormButton' form="CancelForm">
-                        <img src='<?= ROOT_URL; ?>img/NoFilter.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/NoFilter.webp' style='width:100%;'></img>
                     </button>
                 </a>
                 <a>
                     <button id='ReturnFormButton' form="SearchForm">
-                        <img src='<?= ROOT_URL; ?>img/magnifier11.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/magnifier11.webp' style='width:100%;'></img>
                     </button>
                 </a>
                 <a>
                     <button onclick="ToggleSideToolbar('SideToolbar');" id='ReturnFormButton' style='float: right;'>
-                        <img src='<?= ROOT_URL; ?>img/more.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/more.webp' style='width:100%;'></img>
                     </button>
                 </a>
             </section>
