@@ -109,7 +109,8 @@
            <?php 
          //$array = json_decode(json_encode( $admin), true);
          //var_dump($admin);
-           if ($admin[0]['users_uid']===$username) { ?>
+         $user=$admin[0]['users_uid']??'';
+           if ($user===$username) { ?>
 
             <div><a href='/membership/admin/'>ادمین</a></div>
             <?php } ?>
