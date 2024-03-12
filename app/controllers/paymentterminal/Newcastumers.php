@@ -1,6 +1,6 @@
 <?php
 
-class Paymentterminal 
+class Newcastumers 
 {
     use Controller;
     public function index()
@@ -8,7 +8,7 @@ class Paymentterminal
 
     $data['username']=empty($_SESSION['USER']) ? 'user':  $_SESSION['USER']->users_uid;
     $data['admin']=empty($_SESSION['admin']) ? '':  $_SESSION['admin'];
-     $this->view('paymentterminal/paymentterminal',$data);
-  
+     $this->view('paymentterminal/newcastumers',$data);
+
     }
 }

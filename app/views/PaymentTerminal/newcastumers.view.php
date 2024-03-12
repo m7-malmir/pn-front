@@ -1,12 +1,15 @@
 <?php
-    require_once '../header-up.php';
+$ds = DIRECTORY_SEPARATOR;
+$base_dir = realpath(dirname(__FILE__)  . $ds . '..') . $ds;
+require_once("{$base_dir}header-up.php");
 ?>
     <title>تعریف پذیرنده</title>
-    <?php 
-    require_once '../header.php';
+    <meta name='robots' content='noindex, nofollow'>
+    </meta>
+<?php 
+ require_once("{$base_dir}header.php");
 ?>
-    <main>
-
+    <main> 
         <?php include 'sidemenu.php' ?>
         <section id="MainSection">
             <section id='InscriptionSection'>

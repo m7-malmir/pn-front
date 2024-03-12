@@ -4,7 +4,7 @@ $base_dir = realpath(dirname(__FILE__)  . $ds . '..') . $ds;
 require_once("{$base_dir}header-up.php");
 ?>
     <title>خدمات پس از فروش</title>
-    <?php 
+<?php 
  require_once("{$base_dir}header.php");
 ?>
     <main>
