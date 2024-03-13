@@ -1,45 +1,14 @@
-
-<!DOCTYPE html>
-<html lang='fa-IR'>
-
-<head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='icon' href='https://www.pnikpay.com/files/logo.webp' alt='نیک پی لوگو' size='16x16'>
-    </link>
-    <link rel="stylesheet" href="../../css/style.css">
-    <title>اپلیکیشن کارتخوان | نیک پی</title>
-    <meta name='description' content='این منو تمامی اپلیکیشن های مربوط به کارتخوان را در اختیار کاربران می گذارد'>
-    </meta>
-    <meta name='keywords' content=''>
+<?php
+$ds = DIRECTORY_SEPARATOR;
+$base_dir = realpath(dirname(__FILE__)  . $ds . '..') . $ds;
+require_once("{$base_dir}header-up.php");
+?>
+     <title>اپلیکیشن کارتخوان | نیک پی</title>
     <meta name='robots' content='noindex, nofollow'>
-    <link rel='canonical' href='/membership/bank/PaymentTerminal/Forms/'>
-    </link>
-    <meta property='og:locale' content='fa_IR'>
     </meta>
-    <meta property='og:type' content='article'>
-    </meta>
-    <meta property='og:title' content='اپلیکیشن کارتخوان | نیک پی'>
-    </meta>
-    <meta property='og:description'
-        content='این منو تمامی اپلیکیشن های مربوط به کارتخوان را در اختیار کاربران می گذارد'>
-    </meta>
-    <meta property='og:url' content='/membership/bank/PaymentTerminal/Forms/'>
-    </meta>
-    <meta property='og:site_name' content='نیک پی'>
-    </meta>
-    <meta property='og:image' content='https://www.pnikpay.com/files/logo.webp'>
-    </meta>
-    <meta name='twitter:card' content='summary'>
-    </meta>
-    <meta name='twitter:description'
-        content='این منو تمامی اپلیکیشن های مربوط به کارتخوان را در اختیار کاربران می گذارد'>
-    </meta>
-    <meta name='twitter:title' content='اپلیکیشن کارتخوان | نیک پی'>
-    </meta>
-    <meta name='twitter:image' content='https://www.pnikpay.com/files/logo.webp'>
-    </meta>
-</head>
+<?php 
+ require_once("{$base_dir}header.php");
+?>
 <style>
     main{
         margin: 0 auto;
