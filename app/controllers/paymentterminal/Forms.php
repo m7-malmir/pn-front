@@ -10,4 +10,4 @@ class Forms
     $data['admin']=empty($_SESSION['admin']) ? '':  $_SESSION['admin'];
     $this->view('paymentterminal/forms',$data);
     }
-} 
+}
