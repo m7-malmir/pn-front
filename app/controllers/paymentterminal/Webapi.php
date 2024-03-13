@@ -1,6 +1,6 @@
 <?php
 
-class Postalcode 
+class Webapi 
 {
     use Controller;
     public function index()
@@ -8,7 +8,7 @@ class Postalcode
     global $data;
     $data['username']=empty($_SESSION['USER']) ? 'user':  $_SESSION['USER']->users_uid;
     $data['admin']=empty($_SESSION['admin']) ? '':  $_SESSION['admin'];
-    $this->view('paymentterminal/postalcode',$data);
+    $this->view('paymentterminal/webapi',$data);
     
     }
 } 

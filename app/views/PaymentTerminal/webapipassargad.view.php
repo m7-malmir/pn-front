@@ -1,7 +1,13 @@
 <?php
-    require_once '../../header-up.php';
+$ds = DIRECTORY_SEPARATOR;
+$base_dir = realpath(dirname(__FILE__)  . $ds . '..') . $ds;
+require_once("{$base_dir}header-up.php");
 ?>
     <title>پاسارگاد</title>
+<?php 
+ require_once("{$base_dir}header.php");
+?>
+ 
     <style>
     main{
 	display:block;
@@ -29,20 +35,18 @@
     }
 }
 </style>
-<?php 
-    require_once '../../header.php';
-?>
+
     <main>
         <section id='MainSection'>
             <section>
                 <a onclick='history.back();'>
                     <button id='ReturnFormButton'>
-                        <img src='<?= ROOT_URL; ?>img/return.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/return.webp' style='width:100%;'></img>
                     </button>
                 </a>
                 <a href='setting/'>
                     <button id='ReturnFormButton' style='float: right;'>
-                        <img src='<?= ROOT_URL; ?>img/setting_logo_black_512X512.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/setting_logo_black_512X512.webp' style='width:100%;'></img>
                     </button>
                 </a>
             </section>
@@ -50,13 +54,13 @@
                 <div>
                     <a href='group/contact/' class='classification'>
                         <button style=''>
-                            <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
+                            <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>ثبت گروهی مخاطبین جدید</p>
                     </a>
                     <a href='group/update/status/' class='classification'>
                         <button style=''>
-                            <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
+                            <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>بروز رسانی گروهی</p>
                     </a>
@@ -64,13 +68,13 @@
                 <div>
                     <a href='update/' class='classification'>
                         <button style=''>
-                            <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
+                            <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>اصلاحات</p>
                     </a>
                     <a href='./AllocateSerial/' class='classification'>
                         <button style=''>
-                            <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
+                            <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>تخصیص</p>
                     </a>
@@ -78,13 +82,13 @@
                 <div>
                     <a href='./ReplacementSerial/' class='classification'>
                         <button style=''>
-                            <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
+                            <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>جایگزینی سریال</p>
                     </a>
                     <a href='group/update/reconfig/' class='classification'>
                         <button style=''>
-                            <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
+                            <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>ویرایش پذیرنده</p>
                     </a>
@@ -92,13 +96,13 @@
                 <div>
                     <a href='single/ResetPassword/' class='classification'>
                         <button style=''>
-                            <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
+                            <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>باز نشانی رمز</p>
                     </a>
                     <a href='Transaction/' class='classification'>
                         <button style=''>
-                            <img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
+                            <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>ریز تراکنش</p>
                     </a>
