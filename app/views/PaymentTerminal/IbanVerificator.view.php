@@ -1,11 +1,11 @@
 <?php
-    require_once '../header-up.php';
+$ds = DIRECTORY_SEPARATOR;
+$base_dir = realpath(dirname(__FILE__)  . $ds . '..') . $ds;
+require_once("{$base_dir}header-up.php");
 ?>
-    <title>استعلام شبا</title>
-    <script src="<?= ROOT_URL; ?>js/jq.1.9.1.js"></script>
-    <script src="<?= ROOT_URL; ?>js/inputmask.js"></script>
+      <title>استعلام شبا</title>
 <?php 
-    require_once '../header.php';
+ require_once("{$base_dir}header.php");
 ?>
 <body>
     <style>

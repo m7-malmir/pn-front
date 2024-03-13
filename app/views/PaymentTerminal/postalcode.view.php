@@ -1,9 +1,11 @@
 <?php
-    require_once '../header-up.php';
+$ds = DIRECTORY_SEPARATOR;
+$base_dir = realpath(dirname(__FILE__)  . $ds . '..') . $ds;
+require_once("{$base_dir}header-up.php");
 ?>
     <title>تأییدیه کد پستی</title>
 <?php 
-    require_once '../header.php';
+ require_once("{$base_dir}header.php");
 ?>
     <style>
         main {

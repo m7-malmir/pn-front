@@ -21,27 +21,27 @@ require_once("{$base_dir}header-up.php");
         <section id="MainSection">
             <section id='FunctionalMenu'>
                 <div>
-                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\postalcode.php' class='classification'>
+                    <a href='<?= ROOT_URL; ?>public\PaymentTerminal\postalcode' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>تأییدیه پستی</p>
                     </a>
-                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\IbanVerificator.php' class='classification'>
-                        <button style=''>
+                    <a href='<?= ROOT_URL; ?>public\PaymentTerminal\IbanVerificator' class='classification'>
+                        <button style="">
                             <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>تأییدیه شبا</p>
                     </a>
                 </div>
                 <div>
-                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\export.php' class='classification'>
+                    <a href='<?= ROOT_URL; ?>public\PaymentTerminal\export' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>خروجی</p>
                     </a>
-                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\import\Import.php' class='classification'>
+                    <a href='<?= ROOT_URL; ?>public\PaymentTerminal\import\Import' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
@@ -49,13 +49,13 @@ require_once("{$base_dir}header-up.php");
                     </a>
                 </div>
                 <div>
-                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\webapi\webapi.php' class='classification'>
+                    <a href='<?= ROOT_URL; ?>public\PaymentTerminal\webapi\webapi' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>وب سرویس</p>
                     </a>
-                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\Activation.html' class='classification'>
+                    <a href='<?= ROOT_URL; ?>public\PaymentTerminal\Activation' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
@@ -63,13 +63,13 @@ require_once("{$base_dir}header-up.php");
                     </a>
                 </div>
                 <div>
-                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\Application.html' class='classification'>
+                    <a href='<?= ROOT_URL; ?>public\PaymentTerminal\Application' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>اپلیکیشن</p>
                     </a>
-                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\Forms.html' class='classification'>
+                    <a href='<?= ROOT_URL; ?>public\PaymentTerminal\Forms' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
@@ -77,13 +77,13 @@ require_once("{$base_dir}header-up.php");
                     </a>
                 </div>
                 <div>
-                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\Repository.html' class='classification'>
+                    <a href='<?= ROOT_URL; ?>public\PaymentTerminal\Repository' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>انبار</p>
                     </a>
-                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\ElectronicalMail.html' class='classification'>
+                    <a href='<?= ROOT_URL; ?>public\PaymentTerminal\ElectronicalMail' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
@@ -91,7 +91,7 @@ require_once("{$base_dir}header-up.php");
                     </a>
                 </div>
                 <div>
-                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\Marketer.html' class='classification'>
+                    <a href='<?= ROOT_URL; ?>public\PaymentTerminal\Marketer' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
@@ -99,7 +99,7 @@ require_once("{$base_dir}header-up.php");
                     </a>
                 </div>
                 <div>
-                    <a href='<?= ROOT_URL; ?>view\PaymentTerminal\Setting.html' class='classification'>
+                    <a href='<?= ROOT_URL; ?>public\PaymentTerminal\Setting' class='classification'>
                         <button style=''>
                             <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
