@@ -1,12 +1,11 @@
 <?php
-
-class Newcastumers 
+class Ministerial
 {
     use Controller;
     public function index()
     {
     $data['username']=empty($_SESSION['USER']) ? 'user':  $_SESSION['USER']->users_uid;
     $data['admin']=empty($_SESSION['admin']) ? '':  $_SESSION['admin'];
-    $this->view('paymentterminal/newcastumers',$data);
+    $this->view('managment/ministerial',$data);
     }
 }

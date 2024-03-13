@@ -7,7 +7,7 @@ require_once("{$base_dir}header-up.php");
     <meta name='robots' content='noindex, nofollow'>
     </meta>
 <?php 
- require_once("{$base_dir}header.php");
+ require_once("{$base_dir}header.php"); 
 ?>
     <main> 
         <?php include 'sidemenu.php' ?>

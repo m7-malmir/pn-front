@@ -68,7 +68,7 @@
                 <div class='dropdown-content'>
                     <div class='' id=''>
                         <a href='<?= ROOT_URL; ?>public\main'>خانه</a>
-                        <a href='<?= ROOT_URL; ?>public\profile\profile'>پروفایل</a>
+                        <a href='<?= ROOT_URL; ?>public\profile'>پروفایل</a>
                         <a href="<?= ROOT_URL; ?>public\logout">خروج</a>
                         <a href='<?= ROOT_URL; ?>public\paymentterminal\paymentterminal'>کارتخوان</a>
                         <a href='<?= ROOT_URL; ?>public\sidebyside'>چسباندن عکس کنار هم</a>
@@ -107,12 +107,10 @@
                 </a>
             </div>
            <?php 
-         //$array = json_decode(json_encode( $admin), true);
-         //var_dump($admin);
          $user=$admin[0]['users_uid']??'';
            if ($user===$username) { ?>
 
-            <div><a href='/membership/admin/'>ادمین</a></div>
+            <div><a href='<?= ROOT_URL; ?>public/managment/managment'>ادمین</a></div>
             <?php } ?>
 
             <div><a href="<?= ROOT_URL; ?>public/logout">خروج</a></div>
