@@ -92,7 +92,7 @@ require_once("{$base_dir}header-up.php");
                 </div>
                 <div>
                     <a href='<?= ROOT_URL; ?>public\PaymentTerminal\Marketer' class='classification'>
-                        <button style=''>
+                        <button style="">
                             <img src='<?= ROOT_URL; ?>public/assets/img/pos1.webp'></img>
                         </button>
                         <p>پایانه های بازاریاب ها</p>
