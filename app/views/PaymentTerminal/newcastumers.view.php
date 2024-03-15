@@ -10,21 +10,24 @@ require_once("{$base_dir}header-up.php");
  require_once("{$base_dir}header.php"); 
 
 ?>
-    <main> 
+<main> 
         <?php include 'sidemenu.php' ?>
         <section id="MainSection">
             <section id='InscriptionSection'>
-   <?php    
-if(isset($_GET['entity'])){
-    $ds = DIRECTORY_SEPARATOR;
-$base_dir = realpath(dirname(__FILE__)  . $ds) . $ds;
-    include "{$base_dir}newcnation.php";
-} else{
+   <?php 
+   if(isset($_GET['entity'])){
+    if($_GET['entity']!==null){
+        $ds = DIRECTORY_SEPARATOR;
+    $base_dir = realpath(dirname(__FILE__)  . $ds) . $ds;
+    require_once "{$base_dir}newcnation.php";
+   }  
+
+}else{
   ?>
-    <form action='' method='GET' style='display:flex<?php //if(isset($_GET['entity'])){echo 'none';}else{echo 'flex';} ?>'>
+    <form action='' method='GET' style='display:flex'>
                         <button class='SubmitBtn' name='entity' value='1'>حقیقی</button>
                     </form>
-                    <form action='' method='GET' style='display:flex<?php //if(isset($_GET['entity'])){echo 'none';}else{echo 'flex';} ?>'>
+                    <form action='' method='GET' style='display:flex'>
                         <input type='hidden' name='nationality' value='0'></option>
                         <input type='hidden' name='gender' value='0'></option>
                         <button class='SubmitBtn' name='entity' value='2'>حقوقی</button>

@@ -1,11 +1,13 @@
 <?php
-if(isset($_GET['next'])) {
+
+if(isset($_GET['nationality'])){
+if($_GET['nationality']!=null  && $_GET['gender']!=null){      
     $ds = DIRECTORY_SEPARATOR;
     $base_dir = realpath(dirname(__FILE__)  . $ds) . $ds;
-    include "{$base_dir}newcproject.php";
-}else{
-?>
-                <form action='<?php __FILE__ ?>' method='GET' style='display:<?php //if(isset($_GET['next'])){echo 'none';} ?>'>
+    require_once "{$base_dir}newcproject.php";
+}
+}else{?>
+                <form  method='GET' style='display:<?php //if(isset($_GET['next'])){echo 'none';} ?>'>
                     <article class='label' style='display:flex;flex-direction:column;'>
                         <input type='hidden' name='entity' value='1'></input>
                         <div style='display:flex;flex-direction:column;'>
@@ -25,10 +27,11 @@ if(isset($_GET['next'])) {
                     </article>
                     <article id='PagingButton'>
                         <button class='SubmitBtn' type='button' onclick="history.back();">قبلی</button>
-                        <button class='SubmitBtn' name="next" type='submit'>بعدی</button>
+                        <button class='SubmitBtn' type='submit'>بعدی</button>
                     </article>
                 </form>
                 <?php
-                        }
-                        ?>
+               // var_dump($_GET);
+}
+?>
 
