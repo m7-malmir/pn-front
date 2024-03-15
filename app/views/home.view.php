@@ -67,10 +67,7 @@
                 ?>
   <input class='login_input' style='' name='submit' id='submit' type='submit' value='ورود'></input>
                <?php } ?>
-              
-              
             </form>
-    
             <form action='' method='POST'>
                 <select id='LanguageSelector' name='PHPSelectedLanguage' onchange="this.form.submit();">
                     <option value='persian' <?php if(isset($_SESSION['farsi'])){

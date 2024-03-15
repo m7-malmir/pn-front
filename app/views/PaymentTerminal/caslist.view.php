@@ -1,10 +1,15 @@
 <?php
-    require_once '../header-up.php';
+$ds = DIRECTORY_SEPARATOR;
+$base_dir = realpath(dirname(__FILE__)  . $ds . '..') . $ds;
+require_once("{$base_dir}header-up.php");
 ?>
-    <title>پذیرندگان</title>
-    <?php 
-    require_once '../header.php';
+        <title>پذیرندگان</title>
+    <meta name='robots' content='noindex, nofollow'>
+    </meta>
+<?php 
+ require_once("{$base_dir}header.php");
 ?>
+
     <main>
 
     <?php include 'sidemenu.php' ?>
@@ -14,37 +19,37 @@
             <section>
                 <a style='display:none;' href='../admin/'>
                     <button id='ReturnFormButton'>
-                        <img src='<?= ROOT_URL; ?>img/return.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/return.webp' style='width:100%;'></img>
                     </button>
                 </a>
                 <a style='display:none;' href='Export/'>
                     <button id='ReturnFormButton'>
-                        <img src='<?= ROOT_URL; ?>img/Excel.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/Excel.webp' style='width:100%;'></img>
                     </button>
                 </a>
                 <a style='display:none;' href='/membership/accounting/invoice/Sell/import/'>
                     <button id='ReturnFormButton'>
-                        <img src='<?= ROOT_URL; ?>img/import11.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/import11.webp' style='width:100%;'></img>
                     </button>
                 </a>
                 <a>
                     <button id='ReturnFormButton' form="CancelForm">
-                        <img src='<?= ROOT_URL; ?>img/NoFilter.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/NoFilter.webp' style='width:100%;'></img>
                     </button>
                 </a>
                 <a>
                     <button id='ReturnFormButton' form="SearchForm">
-                        <img src='<?= ROOT_URL; ?>img/magnifier11.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/magnifier11.webp' style='width:100%;'></img>
                     </button>
                 </a>
                 <a href='../Search/'>
                     <button id='ReturnFormButton'>
-                        <img src='<?= ROOT_URL; ?>img/option11.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/option11.webp' style='width:100%;'></img>
                     </button>
                 </a>
                 <a>
                     <button onclick="ToggleSideToolbar('SideToolbar');" id='ReturnFormButton' style='float: right;'>
-                        <img src='<?= ROOT_URL; ?>img/more.webp' style='width:100%;'></img>
+                        <img src='<?= ROOT_URL; ?>public/assets/img/more.webp' style='width:100%;'></img>
                     </button>
                 </a>
             </section>
