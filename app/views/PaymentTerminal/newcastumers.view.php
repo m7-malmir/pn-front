@@ -8,20 +8,30 @@ require_once("{$base_dir}header-up.php");
     </meta>
 <?php 
  require_once("{$base_dir}header.php"); 
+
 ?>
     <main> 
         <?php include 'sidemenu.php' ?>
         <section id="MainSection">
             <section id='InscriptionSection'>
-                <article class='label' style='display:flex;flex-direction:column;'>
-                    <form action='nationality/' method='GET' style='display:flex;'>
+   <?php    
+if(isset($_GET['entity'])){
+    $ds = DIRECTORY_SEPARATOR;
+$base_dir = realpath(dirname(__FILE__)  . $ds) . $ds;
+    include "{$base_dir}newcnation.php";
+} else{
+  ?>
+    <form action='' method='GET' style='display:flex<?php //if(isset($_GET['entity'])){echo 'none';}else{echo 'flex';} ?>'>
                         <button class='SubmitBtn' name='entity' value='1'>حقیقی</button>
                     </form>
-                    <form action='project/' method='GET' style='display:flex;'>
+                    <form action='' method='GET' style='display:flex<?php //if(isset($_GET['entity'])){echo 'none';}else{echo 'flex';} ?>'>
                         <input type='hidden' name='nationality' value='0'></option>
                         <input type='hidden' name='gender' value='0'></option>
                         <button class='SubmitBtn' name='entity' value='2'>حقوقی</button>
                     </form>
+<?php }
+?>
+                <article class='label' style='display:flex;flex-direction:column;'>
                 </article>
             </section>
         </section>

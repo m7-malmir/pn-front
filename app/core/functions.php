@@ -13,6 +13,5 @@ function redirect($path)
 {
     header("Location:" . ROOT_URL . "/public/" . $path);
     die;
-
 }
 
