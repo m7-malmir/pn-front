@@ -63,7 +63,8 @@
                 <?php if(isset($_SESSION['eng'])){?>
                     <input class='login_input' style='' name='submit' id='submit' type='submit' value='enter'></input>
                    
-              <?php  }else{
+              <?php 
+               }else{
                 ?>
   <input class='login_input' style='' name='submit' id='submit' type='submit' value='ورود'></input>
                <?php } ?>
