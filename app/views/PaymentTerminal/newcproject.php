@@ -25,8 +25,6 @@ if($_GET['project']!=null){
                         <input class='SubmitBtn' name="submit2" type='submit' value="بعدی"></input>
                     </article>
                     <?php
-      
-                // var_dump($_GET);
 
                   
                  }

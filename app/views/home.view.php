@@ -52,12 +52,12 @@
 
             <form id='imgup' method="post" enctype='multipart/form-data'>
                 <div style='margin: 0 auto;'>
-                    <img style='width:100%;' src='<?= ROOT_URL ?>public/assets/img/logo.webp'></img>
+                    <img style='width:100%;' src='<?= ROOT_URL; ?>public/assets/img/logo.webp'></img>
                 </div>
                 <input class='login_input' type='text' name='uid' id='username' placeholder=''></input>
                 <div id='login_pswd'>
                     <input type='password' id='password' name='pwd' placeholder=''></input>
-                    <img src='<?= ROOT_URL ?>public/assets/img/eye-icon.webp' style='' onclick='myFunction()'></img>
+                    <img src='<?= ROOT_URL; ?>public/assets/img/eye-icon.webp' style='' onclick='myFunction()'></img>
                 </div>
                 <section id='result'></section>
                 <?php if(isset($_SESSION['eng'])){?>
