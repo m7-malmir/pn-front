@@ -6,6 +6,15 @@ require_once("{$base_dir}header-up.php");
     <title>تعریف پذیرنده</title>
     <meta name='robots' content='noindex, nofollow'>
     </meta>
+    <style>
+        @media screen and (min-width: 768px){
+            .VerifyButton {
+    margin: 0 auto;
+    padding: 0;
+}
+        }
+
+    </style>
 <?php 
  require_once("{$base_dir}header.php"); 
 
