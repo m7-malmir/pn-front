@@ -30,7 +30,7 @@
                 <section id='result2' style=''></section>
                 <section id='result3' style=''></section>
                 <section id='result4' style=''></section>
-                <form id='imgup' name='imgup' enctype="multipart/form-data">
+                <form method="post" id='' name='imgup' enctype="multipart/form-data">
                     <article class='label' style=''>
                         <p class='LabelTitle'>مشخصات پذیرنده</p>
                         <input type='hidden' id='entity' name='entity' value='1'></input>
