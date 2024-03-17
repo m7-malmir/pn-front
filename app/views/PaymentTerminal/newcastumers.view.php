@@ -13,7 +13,6 @@ require_once("{$base_dir}header-up.php");
     padding: 0;
 }
         }
-
     </style>
 <?php 
  require_once("{$base_dir}header.php"); 
