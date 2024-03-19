@@ -1,4 +1,8 @@
-
+<style>
+    input{
+        padding: 0!important;
+    }
+</style>
                 <form id='Query3' style='margin:5px 0;' name='imgup3' enctype="multipart/form-data">
                     <article class='label' style='margin:0;color: #344767;padding: 0 0;'>
                         <div class='TableRow2'>
@@ -11,7 +15,7 @@
                 <form id='Query2' style='margin:5px 0;' name='imgup3' enctype="multipart/form-data">
                     <article class='label' style='margin:0;color: #344767;padding: 0 0;'>
                         <div class='TableRow2'>
-                            <input name='postalcode' id='postalcode2' pattern='[0-9]{10}' maxlength='10'
+                            <input name='postalcode' id='postalcode2' pattern='' maxlength='10'
                                 placeholder='کد پستی' value='' autocomplete='off'></input>
                             <button class='VerifyButton' onclick='copyInputValue2();'>استعلام کد پستی</button>
                         </div>
@@ -21,7 +25,7 @@
                     <article class='label' style='margin:0;color: #344767;padding: 0 0;'>
                         <div class='TableRow2'>
                             <input oninput='CheckIdcode(this.id);Copying(this.value);' id='idcode4' type='tel'
-                                name='idcode' pattern='[0-9]{10}' maxlength='10' placeholder="کد ملی" autocomplete='off'
+                                name='idcode' pattern='' maxlength='10' placeholder="کد ملی" autocomplete='off'
                                 value=''></input>
                             <button form='Query4' class='VerifyButton'>جستجو شخص حقیقی</button>
                         </div>
@@ -545,12 +549,12 @@
                             <div class='table_row_2_partition'>
                                 <label>شماره ثابت 8 رقمی (بدون پیش شماره)*</label>
                                 <input type='tel' style='direction:ltr;' id='telephone' name='telephone' value=''
-                                    pattern='[0-9]{8}' maxlength='8' autocomplete='off' required></input>
+                                    pattern='' maxlength='8' autocomplete='off' required></input>
                             </div>
                             <div class='table_row_2_partition'>
                                 <label>تلفن همراه*</label>
                                 <input type='tel' style='direction:ltr' id='mobile' name='mobile' value=''
-                                    pattern='[0-9]{11}' maxlength='11' autocomplete='off' required></input>
+                                    pattern='' maxlength='11' autocomplete='off' required></input>
                             </div>
                         </div>
                         <div class='TableRow2'>
@@ -562,7 +566,7 @@
                             </div>
                             <div class='table_row_2_partition'>
                                 <label>کد مالیاتی*</label>
-                                <input type='tel' id='taxcode' name='taxcode' pattern='[0-9]{10}' maxlength='10'
+                                <input type='tel' id='taxcode' name='taxcode' pattern='' maxlength='10'
                                     value='' autocomplete='off' required></input></td>
                             </div>
                         </div>
@@ -587,7 +591,7 @@
                             </div>
                             <div class='table_row_2_partition'>
                                 <label>کد پستی*</label>
-                                <input type='tel' id='postalcode' name='postalcode' pattern='[0-9]{10}' maxlength='10'
+                                <input type='tel' id='postalcode' name='postalcode' pattern='' maxlength='10'
                                     value=''
                                     oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'
                                     autocomplete='off' required></input></td>
@@ -6218,7 +6222,7 @@
                 </form>
 
 </body>
-<script>
+<!-- <script>
     //کپی کردن اطلاعات در فیلد دیگر
 
     function copyInputValue2() {
@@ -6719,6 +6723,6 @@
             SelectListFilter.style.display = "none";
         }*/
     }
-</script>
+</script> -->
 
 </html>
