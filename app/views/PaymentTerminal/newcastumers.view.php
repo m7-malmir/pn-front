@@ -4,7 +4,6 @@ $base_dir = realpath(dirname(__FILE__) . $ds . '..') . $ds;
 require_once ("{$base_dir}header-up.php");
 ?>
 <title>تعریف پذیرنده</title>
-<meta name='robots' content='noindex, nofollow'>
 </meta>
 <style>
     @media screen and (min-width: 768px) {
@@ -16,7 +15,6 @@ require_once ("{$base_dir}header-up.php");
 </style>
 <?php
 require_once ("{$base_dir}header.php");
-
 ?>
 <main>
     <?php include 'sidemenu.php' ?>
@@ -29,7 +27,6 @@ require_once ("{$base_dir}header.php");
                     $base_dir = realpath(dirname(__FILE__) . $ds) . $ds;
                     require_once "{$base_dir}newcnation.php";
                 }
-
             } else {
                 ?>
                 <form action='' method='GET' style='display:flex'>
@@ -48,7 +45,5 @@ require_once ("{$base_dir}header.php");
     </section>
 </main>
 </body>
-
 <script src="./js/main.js"></script>
-
 </html>

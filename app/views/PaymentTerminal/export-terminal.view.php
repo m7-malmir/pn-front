@@ -2,7 +2,7 @@
     require_once '../header-up.php';
 ?>
 	<title>مشترک ترمینال</title>
-    <?php 
+<?php 
     require_once '../header.php';
 ?>
 <main>
@@ -48,7 +48,7 @@
 					<button style=''>
 						<img src='<?= ROOT_URL; ?>img/pos1.webp'></img>
 					</button>
-					<p> بازاریاب </p>
+					<p>بازاریاب</p>
 				</a>
 						<a href='Project/' class='classification'>
 				<button style=''>

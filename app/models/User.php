@@ -3,7 +3,7 @@
 class User
 {
   use Model;
-  protected $table = 'users';
+  protected $table = 'users'; 
   protected $allowedColumns = ['users_uid', 'users_pwd'];
   public function validate($data)
   {

@@ -3,7 +3,7 @@
 class Home
 {
     use Controller;
-    public function index()
+    public function index() 
     {
         $data = [];
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -16,7 +16,6 @@ class Home
                 if ($row2) {
                     if ($array[0]['users_uid'] == $_POST['uid']) {
                         $_SESSION['admin'] = $array;
-
                     }
                 }
                 if ($row) {

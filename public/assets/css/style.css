@@ -53,6 +53,7 @@ main {
 .dropdown {
     float: right;
     overflow: hidden;
+    max-height: 55px;
 }
 
 .dropdown .dropbtn {
@@ -71,6 +72,7 @@ main {
 }
 
 .dropdown-content {
+    top: 55px;
     display: none;
     position: absolute;
     background-color: #f9f9f9;

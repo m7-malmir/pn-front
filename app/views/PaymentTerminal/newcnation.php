@@ -1,10 +1,9 @@
 <?php
-
 if(isset($_GET['nationality'])){
 if($_GET['nationality']!=null  && $_GET['gender']!=null){      
     $ds = DIRECTORY_SEPARATOR;
     $base_dir = realpath(dirname(__FILE__)  . $ds) . $ds;
-    require_once "{$base_dir}newcproject.php";
+    require_once "{$base_dir}newcproject.php"; 
 }
 }else{?>
                 <form  method='GET' style='display:<?php //if(isset($_GET['next'])){echo 'none';} ?>'>
