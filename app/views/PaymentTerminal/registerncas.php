@@ -1,5 +1,3 @@
-
-
 <style>
     input{
         padding: 0!important;
@@ -24,7 +22,7 @@
 		<form id='Query4' style='margin:5px 0;'  name='imgup3' enctype="multipart/form-data"  >
 			<article class='label' style='margin:0;color: #344767;padding: 0 0;'>
 				<div class='TableRow2'>
-					<input  type='text' name='idcode' pattern='' maxlength='10' placeholder="کد ملی"  autocomplete='off' value='' ></input>
+					<input  type='text' name='idcode'  maxlength='10' placeholder="کد ملی"  ></input>
 					<button form='Query4' class='VerifyButton' >جستجو شخص حقیقی</button>
 				</div>
 			</article>
@@ -32,23 +30,23 @@
 		<section id='result2' style=''></section>
 		<section id='result3' style=''></section>
 		<section id='result4' style=''></section>
-		<form id='imgup' name='imgup' enctype="multipart/form-data">
+		<form method="post" id='' name='imgup' enctype="multipart/form-data">
 			<article class='label' style=''>
 				<p class='LabelTitle'>مشخصات پذیرنده</p>
                 <input type='hidden' id='entity' name='entity' value='<?= $_GET['entity']; ?>'></input>
                         <input type='hidden' id='nationality' name='nationality' value='<?= $_GET['nationality']; ?>'></input>
                         <input type='hidden' id='gender' name='gender' value='<?= $_GET['gender']; ?>'></input>
                         <input type='hidden' id='project' name='project' value='<?= $_GET['project']; ?>'></input>
-														<div class='TableRow2'>
+						<div class='TableRow2'>
 						<div class='table_row_2_partition' >
 							<label>کد ملی</label>
-							<input type='text'  name='idcode' pattern='' maxlength='10' autocomplete='off' value='' required readonly></input>
+							<input type='text'  name='customer_nation_code'  maxlength='10' autocomplete='off' value=''  ></input>
 						</div>
-													<div class='table_row_2_partition' style=''>
+								<div class='table_row_2_partition' style=''>
 								<label>نام کاربری</label>
 								<div class='customselect' style=''>
 									<div id='customselectsearch11' class='customselectsearch' onclick='togglecustomselectlist("11");' >
-										<input oninput='LiveFilter("11");' id='SearchboxFilter11' placeholder='انتخاب کنید' ></input>
+										<input name="customer_agent" oninput='LiveFilter("11");' id='SearchboxFilter11' placeholder='انتخاب کنید' ></input>
 										<img src='/library/images/DownArrowHead11.webp'></img>
 									</div>
 									<div id='customselectsearchlist11' class='customselectsearchlist' >
@@ -348,113 +346,113 @@
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>نام مدیر عامل/نام پذیرنده*</label>
-						<input id='name' name='name' autocomplete='off' value='' required></input>
+						<input id='name' name='customer_manager_name' autocomplete='off' value='' required></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>نام خانوادگی پذیرنده/ مدیر عامل*</label>
-						<input id='lastname' name='lastname' autocomplete='off' value='' required></input>
+						<input id='lastname' name='customer_manager_family' autocomplete='off' value='' required></input>
 					</div>
 				</div>
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>تاریخ تولد*</label>
-						<input class='date' id='birthday' name='birthday' value='' ></input>
+						<input class='date' id='birthday' name='customer_birth' value='' ></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>نام پدر*</label>
-						<input id='fathername' name='fathername' value='' autocomplete='off' required></input>
+						<input id='fathername' name='customer_fname' value='' autocomplete='off' required></input>
 					</div>
 				</div>
 				<div class='TableRow2' style=''>
 					<div class='table_row_2_partition' >
 						<label>شماره شناسنامه</label>
-						<input type='number'  min='1' max='9999999999' id='oldidcode' name='oldidcode' value='' style='' autocomplete='off' required ></input>
+						<input type='number'  min='1' max='9999999999' id='oldidcode' name='customer_certid' value='' style='' autocomplete='off' required ></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>سریال شناسنامه (6 رقم)</label>
-						<input type='number' min='9999' max='999999' id='BirthCertificateSeries' name='BirthCertificateSeries'  value='' autocomplete='off' style='' required ></input>
+						<input type='number' min='9999' max='999999' id='BirthCertificateSeries' name='customer_cert_serial'  value='' autocomplete='off' style='' required ></input>
 					</div>
 				</div>
 				<div class='TableRow2' style=''>
 					<div class='table_row_2_partition' >
 						<label>حرف شناسنامه</label>
-						<select id='BirthCertificateLetter' name='BirthCertificateLetter' required >
+						<select id='BirthCertificateLetter' name='customer_cert_letter' required >
 							<option value='الف'>الف</option><option value='ب'>ب</option><option value='ل'>ل</option><option value='د'>د</option><option value='ر'>ر</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='9'>9</option><option value='10'>10</option><option value='11'>11</option><option value='ش'>ش</option>						</select>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>ردیف شناسنامه (2 رقم)</label>
-						<input type='number' min='9' max='99' id='BirthCertificateRow' name='BirthCertificateRow' autocomplete='off' value='' style='' required ></input>
+						<input type='number' min='9' max='99' id='BirthCertificateRow' name='customer_cert_row' autocomplete='off' value='' style='' required ></input>
 					</div>
 				</div>
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>محل تولد*</label>
-						<input  id='birthplace' name='birthplace' autocomplete='off'  value='' required></input></td>
+						<input  id='birthplace' name='customer_birth_loc' autocomplete='off'  value='' required></input></td>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>کشور محل تولد</label>
-						<select id='Country' name='Country' >
+						<select id='Country' name='customer_birth_country'>
 							<option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option>						</select>
 					</div>
 				</div>
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>شماره ثابت  8 رقمی (بدون پیش شماره)*</label>
-						<input type='text' style='direction:ltr;' id='' name='telephone' value='' pattern='' maxlength='8' autocomplete='off' required ></input>
+						<input type='text' style='direction:ltr;' name='customer_tel' value=''  autocomplete='off' required ></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>تلفن همراه*</label>
-						<input type='text' style='direction:ltr' id='' name='mobile' value='' pattern='' maxlength='11' autocomplete='off' required></input>
+						<input type='text' style='direction:ltr'  name='customer_mobile'   autocomplete='off' required></input>
 					</div>
 				</div>
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>نام فروشگاه*</label>
-						<input id='companyname' name='companyname' maxlength='24' value='' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' autocomplete='off' required></input>
+						<input id='companyname' name='customer_store_name' maxlength='24' value='' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' autocomplete='off' required></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>کد مالیاتی*</label>
-						<input type='text'  id='' name='taxcode' pattern='' maxlength='10' value='' autocomplete='off' required></input></td>
+						<input type='text'   name='tax_code'   autocomplete='off' required></input></td>
 					</div>
 				</div>
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>کد شعبه بانکی*</label>
-						<input type='number' id='bankcode' name='bankcode' value='' autocomplete='off' required></input>
+						<input type='number' id='bankcode' name='customer_bank_code' value='' autocomplete='off' required></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>شماره حساب*</label>
-						<input type='number' id='ban' name='ban' value='' maxlength='20' oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" autocomplete='off' required></input>
+						<input type='number'  name='customer_num_acount'   autocomplete='off' required></input>
 					</div>
 				</div>
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>شماره شبا بدون IR*</label>
-						<input id='iban' class='iban' name='iban' value='' style='direction:ltr;' autocomplete='off' required></input>
+						<input id='iban' class='iban' name='customer_iban' value='' style='direction:ltr;' autocomplete='off' required></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>کد پستی*</label>
-						<input type='text'  id='' name='postalcode' pattern='' maxlength='10' value='' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' autocomplete='off' required></input></td>
+						<input type='text'   name='customer_postal_code'   value=''  autocomplete='off' required></input></td>
 					</div>
 				</div>
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>نام بانک</label>
-						<input id='bank' name='bank' disabled autocomplete='off'></input>
+						<input id='bank' name='customer_bank_name' disabled autocomplete='off'></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>شماره جواز کسب</label>
-						<input id='business_license_id' name='business_license_id' value='' autocomplete='off' ></input>
+						<input id='business_license_id' name='customer_num_auth' value='' autocomplete='off' ></input>
 					</div>
 				</div>
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>تاریخ شروع جواز کسب</label>
-						<input class='date' name='business_license_register_date' id='business_license_register_date' value='' autocomplete='off'></input>
+						<input class='date' name='customer_d_s_num_auth' id='business_license_register_date' value='' autocomplete='off'></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>تاریخ پایان جواز کسب</label>
-						<input class='date' name='business_license_expire_date' id='business_license_expire_date' value='' autocomplete='off'></input>
+						<input class='date' name='customer_d_e_num_auth' id='business_license_expire_date' value='' autocomplete='off'></input>
 					</div>
 				</div>
 								
@@ -464,7 +462,7 @@
 						<div class='customselect' style=''>
 							<div id='customselectsearch13' class='customselectsearch' onclick='togglecustomselectlist("13");' >
 								<input oninput='LiveFilter("13");' id='SearchboxFilter13' placeholder='انتخاب کنید' ></input>
-								<input type='hidden' id='guildcode' name='guildcode' ></input>
+								<input type='hidden' id='guildcode' name='customer_cat' ></input>
 								<img src='/library/images/DownArrowHead11.webp'></img>
 							</div>
 							<div id='customselectsearchlist13' class='customselectsearchlist' >
@@ -1707,7 +1705,7 @@
 						<label>شهر*</label>
 						<div class='customselect' style=''>
 							<div id='customselectsearch14' class='customselectsearch' onclick='togglecustomselectlist("14");' >
-								<input oninput='LiveFilter("14");' id='SearchboxFilter14' placeholder='انتخاب کنید' ></input>
+								<input name="customer_city" oninput='LiveFilter("14");' id='SearchboxFilter14' placeholder='انتخاب کنید' ></input>
 								<input type='hidden' id='shaparakarea' name='shaparakarea' ></input>
 								<img src='/library/images/DownArrowHead11.webp'></img>
 							</div>
@@ -4021,7 +4019,7 @@
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' style='width:98%;'>
 						<label>نشانی*</label>
-						<input id='address' name='address' value='' autocomplete='off' maxlength='400' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' required></input></td>
+						<input id='address' name='customer_address' value='' autocomplete='off' maxlength='400' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' required></input></td>
 					</div>
 				</div>
 				<div class='TableRow2' style='display:none;'>
@@ -4040,7 +4038,7 @@
 						<label>مدل دستگاه*</label>
 						<div class='customselect' style=''>
 							<div id='customselectsearch15' class='customselectsearch' onclick='togglecustomselectlist("15");' >
-								<input oninput='LiveFilter("15");' id='SearchboxFilter15' placeholder='انتخاب کنید' ></input>
+								<input name="customer_device_model" oninput='LiveFilter("15");' id='SearchboxFilter15' placeholder='انتخاب کنید' ></input>
 								<input type='hidden' id='posmodel' name='posmodel' ></input>
 								<img src='/library/images/DownArrowHead11.webp'></img>
 							</div>
@@ -4054,7 +4052,7 @@
 					</div>
 					<div class='table_row_2_partition' >
 						<label>نوع قرارداد*</label>
-						<select id='contract_kind' name='contract_kind' >
+						<select id='contract_kind' name='customer_contract_type' >
 							<option value='1'>فروش</option><option value='2'>امانی</option>						</select>
 					</div>
 				</div>
@@ -4066,44 +4064,44 @@
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>نام معرف</label>
-						<input id='presentername' name='presentername' autocomplete='off' required ></input>
+						<input id='presentername' name='cus_repres1_name' autocomplete='off' required ></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>نام خانوادگی معرف</label>
-						<input id='presenterfamilyname' name='presenterfamilyname' required autocomplete='off'></input>
+						<input id='presenterfamilyname' name='cus_repres1_family' required autocomplete='off'></input>
 					</div>
 				</div>
 				
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>نام پدر معرف</label>
-						<input id='presenterfathername' name='presenterfathername' autocomplete='off' required ></input>
+						<input id='presenterfathername' name='cus_repres1_fname' autocomplete='off' required ></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>کد ملی معرف</label>
-						<input id='presenteridcode' name='presenteridcode' oninput='CheckIdcode(this.id);' autocomplete='off' required ></input>
+						<input id='presenteridcode' name='cus_repres1_id' oninput='CheckIdcode(this.id);' autocomplete='off' required ></input>
 					</div>
 				</div>
 				
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>شماره ثابت  8 رقمی (با پیش شماره)</label>
-						<input id='presenterphone' name='presenterphone' style='direction:ltr;' maxlength='11' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' autocomplete='off' required></input>
+						<input id='presenterphone' name='cus_repres1_tel' style='direction:ltr;' maxlength='11' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' autocomplete='off' required></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>تلفن همراه</label>
-						<input id='presentermobile' name='presentermobile' style='direction:ltr;' maxlength='11' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' autocomplete='off' required></input>
+						<input id='presentermobile' name='cus_repres1_mobile' style='direction:ltr;' maxlength='11' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' autocomplete='off' required></input>
 					</div>
 				</div>
 				
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>نام فروشگاه</label>
-						<input id='presentershop' name='presentershop' autocomplete='off' required></input>
+						<input id='presentershop' name='cus_repres1_store_name' autocomplete='off' required></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>نشانی معرف بدون وارد کردن استان و شهر</label>
-						<input id='presenteraddress' name='presenteraddress' autocomplete='off' required></input>
+						<input id='presenteraddress' name='cus_repres1_address' autocomplete='off' required></input>
 					</div>
 				</div>
 			</article>
@@ -4114,44 +4112,44 @@
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>نام معرف دوم</label>
-						<input id='presentername2' name='presentername2' autocomplete='off' required ></input>
+						<input id='presentername2' name='cus_repres2_name' autocomplete='off' required ></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>نام خانوادگی معرف دوم</label>
-						<input id='presenterfamilyname2' name='presenterfamilyname2' required autocomplete='off'></input>
+						<input id='presenterfamilyname2' name='cus_repres2_family' required autocomplete='off'></input>
 					</div>
 				</div>
 				
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>نام پدر معرف دوم</label>
-						<input id='presenterfathername2' name='presenterfathername2' autocomplete='off' required ></input>
+						<input id='presenterfathername2' name='cus_repres2_fname' autocomplete='off' required ></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>کد ملی معرف دوم</label>
-						<input id='presenteridcode2' name='presenteridcode2' oninput='CheckIdcode(this.id);' autocomplete='off' required ></input>
+						<input id='presenteridcode2' name='cus_repres2_id' oninput='CheckIdcode(this.id);' autocomplete='off' required ></input>
 					</div>
 				</div>
 				
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>شماره ثابت  8 رقمی (با پیش شماره) معرف دوم</label>
-						<input id='presenterphone2' name='presenterphone2' style='direction:ltr;' maxlength='11' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' autocomplete='off' required></input>
+						<input id='presenterphone2' name='cus_repres2_tel' style='direction:ltr;' maxlength='11' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' autocomplete='off' required></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>تلفن همراه معرف دوم</label>
-						<input id='presentermobile2' name='presentermobile2' style='direction:ltr;' maxlength='11' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' autocomplete='off' required></input>
+						<input id='presentermobile2' name='cus_repres2_mobile' style='direction:ltr;' maxlength='11' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' autocomplete='off' required></input>
 					</div>
 				</div>
 				
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>نام فروشگاه معرف دوم</label>
-						<input id='presentershop2' name='presentershop2' autocomplete='off' required></input>
+						<input id='presentershop2' name='cus_repres2_store_name' autocomplete='off' required></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>نشانی معرف دوم بدون وارد کردن استان و شهر</label>
-						<input id='presenteraddress2' name='presenteraddress2' autocomplete='off' required></input>
+						<input id='presenteraddress2' name='cus_repres2_address' autocomplete='off' required></input>
 					</div>
 				</div>
 			</article>
@@ -4161,11 +4159,11 @@
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>حساب دوم</label>
-						<input id='ban2' name='ban2' autocomplete='off'></input>
+						<input id='ban2' name='customer_count2' autocomplete='off'></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>شبا دوم</label>
-						<input id='iban2' name='iban2' autocomplete='off'></input>
+						<input id='iban2' name='customer_iban2' autocomplete='off'></input>
 					</div>
 				</div>
 			</article>
@@ -4174,11 +4172,11 @@
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>حساب سوم</label>
-						<input id='ban4' name='ban4' autocomplete='off'></input>
+						<input id='ban4' name='customer_count3' autocomplete='off'></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>شبا سوم</label>
-						<input id='iban4' name='iban4' autocomplete='off'></input>
+						<input id='iban4' name='customer_iban3' autocomplete='off'></input>
 					</div>
 				</div>
 			</article>
@@ -4187,11 +4185,11 @@
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>سریال</label>
-						<input id='serialnumber' name='serialnumber' ></input>
+						<input id='serialnumber' name='customer_serial' ></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>وضعیت</label>
-						<select name='owner_change' id='owner_change'>
+						<select name='status' id='owner_change'>
 							<option value='1'>ندارد</option>
 							<option value='2'>دارد</option>
 						</select>

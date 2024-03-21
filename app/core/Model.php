@@ -42,7 +42,7 @@ trait Model
         if($res){return  $res[0];}
         return false;
     }
-    public function insert($data):void
+    public function insert($data)
     {
         // if (!empty($this->allowedColumns)) {
         //     foreach ($data as $key => $value) {
@@ -55,6 +55,7 @@ trait Model
         $query = "INSERT INTO $this->table3 (" . implode(',', $keys) . ") VALUES (:" . implode(',:', $keys) . ")";
         //show($query);
         $this->query($query, $data);
+        return false;
     }
     public function update($id, $data, $id_column = '')
     {
