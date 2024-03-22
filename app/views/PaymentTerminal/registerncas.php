@@ -500,7 +500,89 @@
 						<input class='date' name='customer_d_e_num_auth' id='business_license_expire_date' value='' autocomplete='off'></input>
 					</div>
 				</div>
-								
+			<?php if($_GET['entity']==2){ ?>		
+				
+
+			<div class='TableRow2'>
+						<div class='table_row_2_partition' >
+							<label>شماره ثبت شرکت*</label>
+							<input id='companyregistrationid' name='customer_company_regist_id' autocomplete='off' required></input>
+						</div>
+						<div class='table_row_2_partition' >
+							<label>نام شرکت</label>
+							<input id='company' name='customer_company_name' autocomplete='off'></input>
+						</div>
+					</div>
+					<div class='TableRow2'>
+						<div class='table_row_2_partition' >
+							<label>شناسه ملی*</label>
+							<input id='companyidcode' name='customer_company_id' autocomplete='off' required></input>
+						</div>
+						<div class='table_row_2_partition' >
+							<label>تاریخ ثبت شرکت</label>
+							<input id='companyregistrationdate' name='customer_company_regist_date' autocomplete='off'></input>
+						</div>
+					</div>
+					<div class='TableRow2'>
+						<div class='table_row_2_partition' >
+							<label>کد اقتصادی (اختیاری)</label>
+							<input id='companyeconomyid' name='customer_company_economy_id' autocomplete='off'></input>
+						</div>
+						<div class='table_row_2_partition' style='visibility:hidden;'></div>
+					</div>
+					<div class='TableRow2'>
+						<div class='table_row_2_partition' >
+							<label>نام شریک دوم*</label>
+							<input id='NameShareHolder2' name='customer_name_share2' autocomplete='off' required></input>
+						</div>
+						<div class='table_row_2_partition' >
+							<label>نام خانوادگی شریک دوم*</label>
+							<input id='FamilyNameShareHolder2' name='customer_family_share2' autocomplete='off' required></input>
+						</div>
+					</div>
+					<div class='TableRow2'>
+						<div class='table_row_2_partition' >
+							<label>نام پدر شریک دوم*</label>
+							<input id='FatherNameShareHolder2' name='customer_fn_share2' autocomplete='off' required></input>
+						</div>
+						<div class='table_row_2_partition' >
+							<label>جنسیت شریک دوم*</label>
+							<input id='GenderShareHolder2' name='customer_gender_share2' autocomplete='off' required></input>
+						</div>
+					</div>
+					<div class='TableRow2'>
+						<div class='table_row_2_partition' >
+							<label>روز تولد شریک دوم*</label>
+							<input class='date' id='BirthdayShareHolder2' name='customer_birth_share2' autocomplete='off' required></input>
+						</div>
+						<div class='table_row_2_partition' >
+							<label>کد ملی شریک دوم*</label>
+							<input id='NationalCodeShareHolder2' name='customer_nation_code_share2' autocomplete='off' required></input>
+						</div>
+					</div>
+					<div class='TableRow2'>
+						<div class='table_row_2_partition' >
+							<label>تلفن ثابت شریک دوم*</label>
+							<input id='TelephoneShareHolder2' name='customer_tell_share2' autocomplete='off' required></input>
+						</div>
+						<div class='table_row_2_partition' >
+							<label>موبایل شریک دوم*</label>
+							<input id='MobileShareHolder2' name='customer_mobile_share2' autocomplete='off' required></input>
+						</div>
+					</div>
+					<div class='TableRow2'>
+						<div class='table_row_2_partition' >
+							<label>شماره حساب شریک دوم*</label>
+							<input id='BanShareHolder2' name='customer_count_share2' autocomplete='off' required></input>
+						</div>
+						<div class='table_row_2_partition' >
+							<label>شماره شبا شریک دوم*</label>
+							<input class='iban' id='IbanShareHolder2' name='customer_iban_share2' autocomplete='off' required></input>
+						</div>
+					</div>
+
+
+			<?php } ?>
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>صنف*</label>
