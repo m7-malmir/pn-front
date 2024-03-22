@@ -38,10 +38,19 @@
                         <input type='hidden' id='gender' name='gender' value='<?= $_GET['gender']; ?>'></input>
                         <input type='hidden' id='project' name='project' value='<?= $_GET['project']; ?>'></input>
 						<div class='TableRow2'>
-						<div class='table_row_2_partition' >
+							<?php if($_GET['nationality']==0){?>
+								<div class='table_row_2_partition' >
 							<label>کد ملی</label>
 							<input type='text'  name='customer_nation_code'  maxlength='10' autocomplete='off' value=''  ></input>
 						</div>
+							<?php }elseif($_GET['nationality']==1){ ?>
+								<div class='table_row_2_partition'>
+                                <label>کد فراگیر اتباع خارجی</label>
+                                <input type='number' id='foreigneridcode' name='customer_nation_code' maxlength='12'
+                                    placeholder="" autocomplete='off'></input>
+                            </div>
+								<?php } ?>
+					
 								<div class='table_row_2_partition' style=''>
 								<label>نام کاربری</label>
 								<div class='customselect' style=''>
@@ -338,11 +347,26 @@
 															محمد حسین زاءری														</span>
 																											<span onclick='togglecustomselectlist("11");customselectoption("SearchboxFilter11","محمد حسین زاءری");customselectoption("username","");togglecolorcustomselectoption(this,"11","single");'>
 															محمد حسین زاءری														</span>
-																						</div>
+									</div>
 								</div>
+							
 							</div>
 											</div>
 								<input style='display:none;' id='username' name='username' class='CustomTableTh' value='' ></input>
+			<?php if($_GET['nationality']==1){?>
+				<div class='TableRow2'>
+                	<div class='table_row_2_partition'>
+                     <label>کد گذرنامه (بصورت عددی)</label>
+                       <input type='number' id='passportid' maxlength='25' name='customer_pasport_code'
+                                    autocomplete='off'></input>
+                         </div>
+                        <div class='table_row_2_partition'>
+                        <label>تاریخ انقضا گذرنامه</label>
+                    	<input id='passportexpdate' class='date' name='customer_pasport_date_ex'
+                                    autocomplete='off'></input>
+                     </div>
+                </div>			
+				<?php } ?>	
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>نام مدیر عامل/نام پذیرنده*</label>
@@ -363,6 +387,7 @@
 						<input id='fathername' name='customer_fname' value='' autocomplete='off' required></input>
 					</div>
 				</div>
+				<?php if($_GET['nationality']==0){?>
 				<div class='TableRow2' style=''>
 					<div class='table_row_2_partition' >
 						<label>شماره شناسنامه</label>
@@ -384,16 +409,36 @@
 						<input type='number' min='9' max='99' id='BirthCertificateRow' name='customer_cert_row' autocomplete='off' value='' style='' required ></input>
 					</div>
 				</div>
+				<?php } ?>
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>محل تولد*</label>
 						<input  id='birthplace' name='customer_birth_loc' autocomplete='off'  value='' required></input></td>
 					</div>
+					<?php if($_GET['nationality']==0){?>
 					<div class='table_row_2_partition' >
 						<label>کشور محل تولد</label>
 						<select id='Country' name='customer_birth_country'>
 							<option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option><option value='ایران' selected>ایران</option>						</select>
 					</div>
+					<?php }elseif($_GET['nationality']==1){ ?>
+
+						<div class='table_row_2_partition'>
+                                <label>کشور محل تولد</label>
+                                <select id='Country' name='Country'>
+                                    <option value=''>انتخاب کشور</option>
+                                    <option value='ایران'>ایران</option>
+                                    <option value='افغانستان'>افغانستان</option>
+                                    <option value='پاکستان'>پاکستان</option>
+                                    <option value='ترکمسنتان'>ترکمسنتان</option>
+                                    <option value='سوریه'>سوریه</option>
+                                    <option value='عراق'>عراق</option>
+                                    <option value='لبنان'>لبنان</option>
+                                    <option value='چین'>چین</option>
+                                </select>
+                            </div>
+
+							<?php } ?>		
 				</div>
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
