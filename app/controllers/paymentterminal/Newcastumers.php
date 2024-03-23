@@ -7,13 +7,11 @@ class Newcastumers
       
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $data=$_POST;
-        //     echo '<pre>';
-        //    var_export($_POST);
-        //     echo '</pre>';
             $user = new Customer;
             $row = $user->insert($data) ;
-            if($row){
-                echo 'ok';
+            var_dump($row);
+            if($row==false){
+                redirect('paymentterminal/Upload');
             }
         }
         
