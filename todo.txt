@@ -1,0 +1,24 @@
+1-liste pazirandeha
+
+2-liste payaneha
+	2-1-bargozari
+	2-2-madarek
+	2-3-pazirandeh
+			2-3-1-edit information
+			2-3-2-delete information
+
+	2-4-namayesh 
+			2-4-1-edit payaneh info
+			2-4-2-delete payaneh info
+	2-5-right menu expanded
+
+3-liste darkhastha
+			3-1-paziresh
+			3-2-mardod
+			3-2-delete
+			 
+4-baygani
+		4-1-read all file from database
+			 
+
+

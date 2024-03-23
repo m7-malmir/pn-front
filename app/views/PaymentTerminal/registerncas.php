@@ -22,7 +22,7 @@
 		<form id='Query4' style='margin:5px 0;'  name='imgup3' enctype="multipart/form-data"  >
 			<article class='label' style='margin:0;color: #344767;padding: 0 0;'>
 				<div class='TableRow2'>
-					<input  type='text' name='idcode'  maxlength='10' placeholder="کد ملی"  ></input>
+					<input oninput="CheckIdcode(this.id);Copying(this.value);" id="idcode4" type="tel" name='customer_nation_code' pattern="[0-9]{10}" maxlength="10" placeholder="کد ملی" autocomplete="off" value="">
 					<button form='Query4' class='VerifyButton' >جستجو شخص حقیقی</button>
 				</div>
 			</article>
@@ -41,13 +41,14 @@
 							<?php if($_GET['nationality']==0){?>
 								<div class='table_row_2_partition' >
 							<label>کد ملی</label>
-							<input type='text'  name='customer_nation_code'  maxlength='10' autocomplete='off' value=''  ></input>
+							<input type='tel'  name='customer_nation_code' pattern='[0-9]{10}' maxlength='10' autocomplete='off' value='' required ></input>
 						</div>
 							<?php }elseif($_GET['nationality']==1){ ?>
 								<div class='table_row_2_partition'>
                                 <label>کد فراگیر اتباع خارجی</label>
                                 <input type='number' id='foreigneridcode' name='customer_nation_code' maxlength='12'
                                     placeholder="" autocomplete='off'></input>
+									
                             </div>
 								<?php } ?>
 					
@@ -55,7 +56,7 @@
 								<label>نام کاربری</label>
 								<div class='customselect' style=''>
 									<div id='customselectsearch11' class='customselectsearch' onclick='togglecustomselectlist("11");' >
-										<input name="" oninput='LiveFilter("11");' id='SearchboxFilter11' placeholder='انتخاب کنید' ></input>
+										<input oninput='LiveFilter("11");' id='SearchboxFilter11' placeholder='انتخاب کنید' ></input>
 										<img src='/library/images/DownArrowHead11.webp'></img>
 									</div>
 									<div id='customselectsearchlist11' class='customselectsearchlist' >
@@ -443,11 +444,11 @@
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' >
 						<label>شماره ثابت  8 رقمی (بدون پیش شماره)*</label>
-						<input type='text' style='direction:ltr;' name='customer_tel' value=''  autocomplete='off' required ></input>
+						<input type='tel' style='direction:ltr;' id='telephone' name='customer_tel' value='' pattern='[0-9]{8}' maxlength='8' autocomplete='off' required  ></input>
 					</div>
 					<div class='table_row_2_partition' >
 						<label>تلفن همراه*</label>
-						<input type='text' style='direction:ltr'  name='customer_mobile'   autocomplete='off' required></input>
+						<input type='tel' style='direction:ltr' id='mobile' name='customer_mobile'  value='' pattern='[0-9]{11}' maxlength='11' autocomplete='off' required></input>
 					</div>
 				</div>
 				<div class='TableRow2'>
@@ -457,7 +458,7 @@
 					</div>
 					<div class='table_row_2_partition' >
 						<label>کد مالیاتی*</label>
-						<input type='text'   name='tax_code'   autocomplete='off' required></input></td>
+						<input type='tel'  id='taxcode' name='tax_code' pattern='[0-9]{10}' maxlength='10' value='' autocomplete='off' required></input></td>
 					</div>
 				</div>
 				<div class='TableRow2'>
@@ -467,7 +468,7 @@
 					</div>
 					<div class='table_row_2_partition' >
 						<label>شماره حساب*</label>
-						<input type='number'  name='customer_num_acount'   autocomplete='off' required></input>
+						<input type='number' id='ban'  name='customer_num_acount' value='' maxlength='20' oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" autocomplete='off' required' required></input>
 					</div>
 				</div>
 				<div class='TableRow2'>
@@ -477,7 +478,7 @@
 					</div>
 					<div class='table_row_2_partition' >
 						<label>کد پستی*</label>
-						<input type='text'   name='customer_postal_code'   value=''  autocomplete='off' required></input></td>
+						<input type='tel'  id='postalcode'  name='customer_postal_code'  pattern='[0-9]{10}' maxlength='10' value='' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' autocomplete='off' required></input></td>
 					</div>
 				</div>
 				<div class='TableRow2'>
@@ -1825,7 +1826,7 @@
 													خدمات پرداخت الکترونیکی (پرداخت یاری) 98020001												</span>
 																							<span onclick='togglecustomselectlist("13");customselectoption("SearchboxFilter13","رزرو جهت کسب و کارهای ویژه");customselectoption("guildcode","98030001");togglecolorcustomselectoption(this,"13","single");'>
 													رزرو جهت کسب و کارهای ویژه 98030001												</span>
-																		</div>
+							</div>
 						</div>
 					</div>
 					<div class='table_row_2_partition' >
@@ -4137,7 +4138,7 @@
 													چهارمحال وبختیاری بازفت												</span>
 																							<span onclick='togglecustomselectlist("14");customselectoption("SearchboxFilter14","آزادشهر");customselectoption("shaparakarea","124001");togglecolorcustomselectoption(this,"14","single");'>
 													گلستان آزادشهر												</span>
-																		</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -4146,7 +4147,7 @@
 				<div class='TableRow2'>
 					<div class='table_row_2_partition' style='width:98%;'>
 						<label>نشانی*</label>
-						<input id='address' name='customer_address' value='' autocomplete='off' maxlength='400' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' required></input></td>
+						<input id='address' name='customer_address'  value='' autocomplete='off' maxlength='400' oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);' required></input></td>
 					</div>
 				</div>
 				<div class='TableRow2' style='display:none;'>
@@ -4206,7 +4207,7 @@
 					</div>
 					<div class='table_row_2_partition' >
 						<label>کد ملی معرف</label>
-						<input id='presenteridcode' name='cus_repres1_id' oninput='CheckIdcode(this.id);' autocomplete='off' required ></input>
+						<input id='presenteridcode' name='cus_repres1_id' oninput='CheckIdcode(this.id);' autocomplete='off' required  ></input>
 					</div>
 				</div>
 				
@@ -4330,7 +4331,7 @@
 		</form>
 
 </body>
-<!-- <script>
+<script>
 //کپی کردن اطلاعات در فیلد دیگر
 
 	function copyInputValue2() {
@@ -4836,5 +4837,5 @@ function LiveFilter(id) {
 		SelectListFilter.style.display = "none";
 	}*/
 }
-</script> -->
+</script>
 </html>
