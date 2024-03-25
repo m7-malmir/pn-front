@@ -11,6 +11,14 @@ trait Model
     protected $offset = 0;
     public $errors = [];
     use Database;
+    public function select()
+    {
+        $query = "select * from $this->table3";
+        $res= $this->query($query);
+        //show($res);
+        if($res){return  $res;}
+        return false;
+    }
     public function where($data)
     {
         $keys = array_keys($data);

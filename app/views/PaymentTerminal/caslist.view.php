@@ -2,6 +2,7 @@
 $ds = DIRECTORY_SEPARATOR;
 $base_dir = realpath(dirname(__FILE__)  . $ds . '..') . $ds;
 require_once("{$base_dir}header-up.php");
+print($necas['necas']); 
 ?>
         <title>پذیرندگان</title>
     <meta name='robots' content='noindex, nofollow'>
@@ -114,7 +115,7 @@ require_once("{$base_dir}header-up.php");
                                 <div class='Counter'>1</div>
                             </td>
                             <td><input class='tb_inpt' value='3256313639'></input></td>
-                            <td><input class='tb_inpt' value='پرستو&nbsp;قاسم پور'></input></td>
+                            <td><input class='tb_inpt' value=''></input></td>
                             <td class='MiddleScreen'><input class='tb_inpt' value='پوشاک ایلیا'></input></td>
                             <td><input class='tb_inpt' value='09384311013'></input></td>
                             <td><input class='tb_inpt' value='6718783971'></input></td>
