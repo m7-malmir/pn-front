@@ -3,7 +3,10 @@
         padding: 0!important;
     }
 </style>
-		<form id='Query3'style='margin:5px 0;'  name='imgup3' enctype="multipart/form-data"  >
+<script src="<?= ROOT_URL; ?>public/assets/js/jq.3.3.1.min.js"></script>
+<script src="<?= ROOT_URL; ?>public/assets/js/jq.1.9.1.js"></script>
+<script src="<?= ROOT_URL; ?>public/assets/js/jq.3.1.62.js"></script>
+		<form id='Query3'style='margin:5px 0;'  name='imgup3' enctype="multipart/form-data">
 			<article class='label' style='margin:0;color: #344767;padding: 0 0;'>
 				<div class='TableRow2'>
 					<input style='direction:ltr;' class='iban' name='iban' value='' id='iban3' placeholder='شبا' autocomplete='off' ></input>
@@ -11,7 +14,7 @@
 				</div>
 			</article>
 		</form>
-		<form id='Query2' style='margin:5px 0;'  name='imgup3' enctype="multipart/form-data"  >
+		<form id='Query2' style='margin:5px 0;'  name='imgup3' enctype="multipart/form-data">
 			<article class='label' style='margin:0;color: #344767;padding: 0 0;'>
 				<div class='TableRow2'>
 					<input name='postalcode' id='' pattern='' maxlength='10' placeholder='کد پستی' value='' autocomplete='off' ></input>
@@ -19,7 +22,7 @@
 				</div>
 			</article>
 		</form>
-		<form id='Query4' style='margin:5px 0;'  name='imgup3' enctype="multipart/form-data"  >
+		<form id='Query4' style='margin:5px 0;'  name='imgup3' enctype="multipart/form-data">
 			<article class='label' style='margin:0;color: #344767;padding: 0 0;'>
 				<div class='TableRow2'>
 					<input oninput="CheckIdcode(this.id);Copying(this.value);" id="idcode4" type="tel" name='customer_nation_code' pattern="[0-9]{10}" maxlength="10" placeholder="کد ملی" autocomplete="off" value="">
@@ -4838,4 +4841,5 @@ function LiveFilter(id) {
 	}*/
 }
 </script>
+
 </html>
