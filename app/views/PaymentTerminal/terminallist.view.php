@@ -520,7 +520,7 @@ require_once ("{$base_dir}header.php");
                                     class='more_button' name='aWRjb2Rl' value='2790249695'>
                                     بیشتر
                                 </button>
-                                <input type='hidden' name='c2lk' value='4057' style=''></input>
+                                <input type='hidden' name='c2lk' value='<?= $key['customer_id']; ?>' style=''></input>
                             </form>
                             <div id='TheFunctionalMenu149' value='4057' class='slidemenu_table' style='width: 300px;'>
                                 <form action='view.php#4057'
@@ -529,7 +529,7 @@ require_once ("{$base_dir}header.php");
                                     <button class='more_button' name='aWRjb2Rl' value='2790249695'>
                                         نمایش
                                     </button>
-                                    <input type='hidden' name='c2lk' value='4057' style=''></input>
+                                    <input type='hidden' name='c2lk' value='<?= $key['customer_id']; ?>' style=''></input>
                                 </form>
                                 <form action='/membership/bank/PaymentTerminal/V1/costumer/view.php'
                                     style='margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);'
@@ -537,7 +537,7 @@ require_once ("{$base_dir}header.php");
                                     <button class='more_button' name='aWRjb2Rl' value='2790249695'>
                                         پذیرنده
                                     </button>
-                                    <input type='hidden' name='c2lk' value='4057' style=''></input>
+                                    <input type='hidden' name='c2lk' value='<?= $key['customer_id']; ?>' style=''></input>
                                 </form>
                                 <form action='/membership/bank/PaymentTerminal/V1/document/view.php'
                                     style='margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);'
@@ -545,7 +545,7 @@ require_once ("{$base_dir}header.php");
                                     <button class='more_button' name='aWRjb2Rl' value='2790249695'>
                                         مدارک
                                     </button>
-                                    <input type='hidden' name='c2lk' value='4057' style=''></input>
+                                    <input type='hidden' name='c2lk' value='<?= $key['customer_id']; ?>' style=''></input>
                                 </form>
                                 <form action='/membership/bank/PaymentTerminal/V1/document/upload/'
                                     style='margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);'
@@ -553,7 +553,7 @@ require_once ("{$base_dir}header.php");
                                     <button class='more_button' name='aWRjb2Rl' value='2790249695'>
                                         بارگذاری
                                     </button>
-                                    <input type='hidden' name='c2lk' value='4057' style=''></input>
+                                    <input type='hidden' name='c2lk' value='<?= $key['customer_id']; ?>' style=''></input>
                                 </form>
                             </div>
                         </td>
