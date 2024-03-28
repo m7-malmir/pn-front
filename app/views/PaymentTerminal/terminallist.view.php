@@ -499,7 +499,7 @@ require_once ("{$base_dir}header.php");
                                 <img src='<?= ROOT_URL; ?>public/assets/img/Sepehr.webp'></img>
                             </div>
                         </td>
-                        <td class='LittleScreens'><input value="1403-01-09 16:46"></input></td>
+                        <td class='LittleScreens'><input value="<?= $key['date']; ?>"></input></td>
                         <td class=''><input value="<?= $key['customer_name']; ?>"></input></td>
                         <td class=''><input value='ارسال به شرکت'></input></td>
                         <td><input value='<?= $key['customer_nation_code']; ?>'></input></td>
@@ -572,7 +572,7 @@ require_once ("{$base_dir}header.php");
                                 <img src='<?= ROOT_URL; ?>public/assets/img/Fanava.webp'></img>
                             </div>
                         </td>
-                        <td class='LittleScreens'><input value="1403-01-08 13:46"></input></td>
+                        <td class='LittleScreens'><input value="<?= $key['date']; ?>"></input></td>
                         <td class=''><input value="مهدی نادرپور"></input></td>
                         <td class=''><input value='ارسال به شرکت'></input></td>
                         <td><input value='1590149610'></input></td>
