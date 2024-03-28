@@ -1,7 +1,8 @@
-1-liste pazirandeha
+1-liste pazirandeha 👍
 	1-1-namayesh
 	1-2-delete
 	1-3-edit
+	
 2-liste payaneha
 	2-1-bargozari
 	2-2-madarek
@@ -21,6 +22,11 @@
 			 
 4-baygani
 		4-1-read all file from database
+		
+		
+		
+import xlsx
+export xlsx
 			 
 
 

@@ -2,7 +2,10 @@
 $ds = DIRECTORY_SEPARATOR;
 $base_dir = realpath(dirname(__FILE__)  . $ds . '..') . $ds;
 require_once("{$base_dir}header-up.php");
-print($necas['necas']); 
+ $cas_data_arr = json_decode(json_encode($data['casdata']), true);
+ if (isset($_GET['aWRjb2Rl'])){
+    echo 'ok';
+ }
 ?>
         <title>پذیرندگان</title>
     <meta name='robots' content='noindex, nofollow'>
@@ -110,25 +113,30 @@ print($necas['necas']);
                                 </th>
                             </tr>
                         </form>
+                        <?php
+                           $i = 0;
+                        foreach ($cas_data_arr as $variable => $key) {
+                            $i++;
+                             ?>
                         <tr>
                             <td>
-                                <div class='Counter'>1</div>
+                                <div class='Counter'><?= $i; ?></div>
                             </td>
-                            <td><input class='tb_inpt' value='3256313639'></input></td>
-                            <td><input class='tb_inpt' value=''></input></td>
-                            <td class='MiddleScreen'><input class='tb_inpt' value='پوشاک ایلیا'></input></td>
-                            <td><input class='tb_inpt' value='09384311013'></input></td>
-                            <td><input class='tb_inpt' value='6718783971'></input></td>
-                            <td><input class='tb_inpt' value='3253775133'></input></td>
+                            <td><input class='tb_inpt' value='<?= $key['customer_nation_code']; ?>'></input></td>
+                            <td><input class='tb_inpt' value='<?= $key['customer_manager_name']; ?>&nbsp<?= $key['customer_manager_family']; ?>'></input></td>
+                            <td class='MiddleScreen'><input class='tb_inpt' value='<?= $key['customer_store_name']; ?>'></input></td>
+                            <td><input class='tb_inpt' value='<?= $key['customer_mobile']; ?>'></input></td>
+                            <td><input class='tb_inpt' value='<?= $key['customer_postal_code']; ?>'></input></td>
+                            <td><input class='tb_inpt' value='<?= $key['tax_code']; ?>'></input></td>
                             <td id='functional_th_td' style='z-index:2;height: 28px;left:0;position: sticky;'>
-                                <form action='.php' style='margin-bottom:0;' method='GET'>
-                                    <button id='more_button' class='more_button' name='aWRjb2Rl' value='3256313639'>
+                                <form action='' style='margin-bottom:0;' method='GET'>
+                                    <button id='more_button' class='more_button' name='aWRjb2Rl' value='<?= $key['customer_id']; ?>'>
                                         نمایش
                                     </button>
                                 </form>
                             </td>
                         </tr>
-
+                            <?php } ?>
                     </table>
                 </div>
             </section>

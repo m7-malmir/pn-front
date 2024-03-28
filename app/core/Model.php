@@ -14,10 +14,10 @@ trait Model
     public function select()
     {
         $query = "select * from $this->table3";
-        $res= $this->query($query);
-        //show($res);
-        if($res){return  $res;}
-        return false;
+        return $this->query($query);
+        //print_r($res);
+       // $res;
+        // return false;
     }
     public function where($data)
     {
