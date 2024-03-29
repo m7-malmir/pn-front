@@ -1,5 +1,5 @@
 1-liste pazirandeha ✅
-	1-1-namayesh
+	1-1-namayesh✅
 	1-2-delete
 	1-3-edit
 	
@@ -15,16 +15,15 @@
 			2-4-2-delete payaneh info
 	2-5-right menu expanded
 
-3-liste darkhastha
+3-liste darkhastha ✅
 			3-1-paziresh
 			3-2-mardod
 			3-2-delete
 			 
-4-baygani
+4-baygani ✅
 		4-1-read all file from database
 		
-		
-		
+				
 import xlsx
 export xlsx
 			 

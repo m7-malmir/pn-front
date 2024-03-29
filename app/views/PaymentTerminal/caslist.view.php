@@ -3,13 +3,11 @@ $ds = DIRECTORY_SEPARATOR;
 $base_dir = realpath(dirname(__FILE__)  . $ds . '..') . $ds;
 require_once("{$base_dir}header-up.php");
  $cas_data_arr = json_decode(json_encode($data['casdata']), true);
- if (isset($_GET['aWRjb2Rl'])){
-    echo 'ok';
- }
+
 ?>
-        <title>پذیرندگان</title>
-    <meta name='robots' content='noindex, nofollow'>
-    </meta>
+<title>پذیرندگان</title>
+<meta name='robots' content='noindex, nofollow'>
+</meta>
 <?php 
  require_once("{$base_dir}header.php");
 ?>
@@ -129,7 +127,7 @@ require_once("{$base_dir}header-up.php");
                             <td><input class='tb_inpt' value='<?= $key['customer_postal_code']; ?>'></input></td>
                             <td><input class='tb_inpt' value='<?= $key['tax_code']; ?>'></input></td>
                             <td id='functional_th_td' style='z-index:2;height: 28px;left:0;position: sticky;'>
-                                <form action='' style='margin-bottom:0;' method='GET'>
+                                <form action='pazilist' style='margin-bottom:0;' method='GET'>
                                     <button id='more_button' class='more_button' name='aWRjb2Rl' value='<?= $key['customer_id']; ?>'>
                                         نمایش
                                     </button>

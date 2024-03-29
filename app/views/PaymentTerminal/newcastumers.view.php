@@ -4,7 +4,7 @@ $base_dir = realpath(dirname(__FILE__) . $ds . '..') . $ds;
 require_once ("{$base_dir}header-up.php");
 ?>
 <title>تعریف پذیرنده</title>
-</meta>
+
 <style>
     @media screen and (min-width: 768px) {
         .VerifyButton {
@@ -17,7 +17,7 @@ require_once ("{$base_dir}header-up.php");
 require_once ("{$base_dir}header.php");
 ?>
 <main>
-    <?php include 'sidemenu.php' ?>
+    <?php include 'sidemenu.php' ?> 
     <section id="MainSection">
         <section id='InscriptionSection'>
             <?php
@@ -45,5 +45,4 @@ require_once ("{$base_dir}header.php");
     </section>
 </main>
 </body>
-<script src="./js/main.js"></script>
 </html>
