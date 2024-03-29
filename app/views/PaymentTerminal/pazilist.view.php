@@ -2,10 +2,14 @@
 $ds = DIRECTORY_SEPARATOR;
 $base_dir = realpath(dirname(__FILE__) . $ds . '..') . $ds;
 require_once ("{$base_dir}header-up.php");
+
 $cas_data_arr = json_decode(json_encode($data['casdata']), true);
 $key_id=$_GET['aWRjb2Rl'];
 ?>
 <title>پذیرنده</title>
+<script src="<?= ROOT_URL; ?>public/assets/js/jq.3.3.1.min.js"></script>
+<script src="<?= ROOT_URL; ?>public/assets/js/jq.1.9.1.js"></script>
+<script src="<?= ROOT_URL; ?>public/assets/js/inputmask.js"></script>
 <style>
     @media screen and (min-width: 768px) {
         .VerifyButton {
@@ -16,10 +20,18 @@ $key_id=$_GET['aWRjb2Rl'];
 </style>
 <?php
 require_once ("{$base_dir}header.php");
+
+
+if($_GET['kind'] ?? ''){   
+
+    $ds = DIRECTORY_SEPARATOR;
+    $base_dir = realpath(dirname(__FILE__)  . $ds) . $ds;
+    require_once "{$base_dir}editpazlist.php"; 
+
+}else{
+
 ?>
-<script src="<?= ROOT_URL; ?>public/assets/js/jq.3.3.1.min.js"></script>
-<script src="<?= ROOT_URL; ?>public/assets/js/jq.1.9.1.js"></script>
-<script src="<?= ROOT_URL; ?>public/assets/js/inputmask.js"></script>
+
 <main>
 <?php include 'sidemenu2.php' ?>
 		<section id='MainSection'>
@@ -39,7 +51,13 @@ require_once ("{$base_dir}header.php");
 				<input style='display:none;' name='aWRjb2Rl' value='+1 (162) 777-5604'></input>
 			</form>
 			<form style='display: none;' action='delete.php' id='DeleteCostumer' method='POST'></form>
-			<form action='edit/' method='GET' style='display:flex;flex-direction:column;width:100%;'
+			<?php
+					foreach ($cas_data_arr as $key=> $value) {
+
+						if($value['customer_id']==$key_id){
+	
+					?>
+			<form action='' method='GET' style='display:flex;flex-direction:column;width:100%;'
 				enctype='multipart/form-data'>
 				<article class='Cadre' style='color: #344767;'>
 					<div style='display:flex;'>
@@ -47,7 +65,7 @@ require_once ("{$base_dir}header.php");
 						<div style='display:flex;width:200px;'>
 							<button class='SendButton' form='DeleteCostumer' name='sid' value="3811"
 								style="background-image:url('<?= ROOT_URL; ?>public/assets/img/red_cross.webp')"></button>
-							<button class='SendButton' name='aWRjb2Rl' value="+1 (162) 777-5604"
+							<button class='SendButton' name='aWRjb2Rl' value="<?= $value['customer_nation_code']; ?>"
 								style="background-image:url('<?= ROOT_URL; ?>public/assets/img/edit.webp')"></button>
 						</div>
 					</div>
@@ -60,12 +78,7 @@ require_once ("{$base_dir}header.php");
 							مدارک</button>
 						<button type='submit' class='PagingButton' form='terminal_new'>پایانه جدید</button>
 					</div>
-					<?php
-					foreach ($cas_data_arr as $key=> $value) {
-
-						if($value['customer_id']==$key_id){
-	
-					?>
+		
 					<div class='TableRow4'>
 						<input value='تاریخ ثبت:'></input>
 						<input value='1403-01-04'></input>
@@ -150,7 +163,7 @@ require_once ("{$base_dir}header.php");
 						<div style='display:flex;width:200px;'>
 							<button class='SendButton' form='DeleteCostumer' name='sid' value="3811"
 								style="background-image:url('<?= ROOT_URL; ?>public/assets/img/red_cross.webp')"></button>
-							<button class='SendButton' name='aWRjb2Rl' value="+1 (162) 777-5604"
+							<button class='SendButton' name='aWRjb2Rl' value="<?= $value['customer_nation_code']; ?>"
 								style="background-image:url('<?= ROOT_URL; ?>public/assets/img/edit.webp')"></button>
 						</div>
 					</div>
@@ -191,7 +204,7 @@ require_once ("{$base_dir}header.php");
 						<div style='display:flex;width:200px;'>
 							<button class='SendButton' form='DeleteCostumer' name='sid' value="3811"
 								style="background-image:url('<?= ROOT_URL; ?>public/assets/img/red_cross.webp')"></button>
-							<button class='SendButton' name='aWRjb2Rl' value="+1 (162) 777-5604"
+							<button class='SendButton' name='aWRjb2Rl' value="<?= $value['customer_nation_code']; ?>"
 								style="background-image:url('<?= ROOT_URL; ?>public/assets/img/edit.webp')"></button>
 						</div>
 					</div>
@@ -226,7 +239,7 @@ require_once ("{$base_dir}header.php");
 						<div style='display:flex;width:200px;'>
 							<button class='SendButton' form='DeleteCostumer' name='sid' value="3811"
 								style="background-image:url('<?= ROOT_URL; ?>public/assets/img/red_cross.webp')"></button>
-							<button class='SendButton' name='aWRjb2Rl' value="+1 (162) 777-5604"
+							<button class='SendButton' name='aWRjb2Rl' value="<?= $value['customer_nation_code']; ?>+1 (162) 777-5604"
 								style="background-image:url('<?= ROOT_URL; ?>public/assets/img/edit.webp')"></button>
 						</div>
 					</div>
@@ -261,7 +274,7 @@ require_once ("{$base_dir}header.php");
 						<div style='display:flex;width:200px;'>
 							<button class='SendButton' form='DeleteCostumer' name='sid' value="3811"
 								style="background-image:url('<?= ROOT_URL; ?>public/assets/img/red_cross.webp')"></button>
-							<button class='SendButton' name='aWRjb2Rl' value="+1 (162) 777-5604"
+							<button class='SendButton' name='aWRjb2Rl' value="<?= $value['customer_nation_code']; ?>"
 								style="background-image:url('<?= ROOT_URL; ?>public/assets/img/edit.webp')"></button>
 						</div>
 					</div>
@@ -297,6 +310,7 @@ require_once ("{$base_dir}header.php");
 				</table>
 			</form>
 		</section>
+		<?php } ?>  
 	</main>
 </body>
 
