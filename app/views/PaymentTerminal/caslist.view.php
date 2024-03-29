@@ -130,7 +130,7 @@ require_once("{$base_dir}header-up.php");
                                 <form action='pazilist' style='margin-bottom:0;' method='GET'>
                                     <button id='more_button' class='more_button' name='aWRjb2Rl' value='<?= $key['customer_id']; ?>'>
                                         نمایش
-                                    </button>
+                                    </button> 
                                 </form>
                             </td>
                         </tr>

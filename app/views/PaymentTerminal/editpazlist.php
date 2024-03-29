@@ -4,11 +4,9 @@
             margin: 0 auto;
         }
 </style>
-
-
     <main>
         <form action='delete.php' id='DeleteCostumer' method='POST'></form>
-        <form action='modify.php' method='POST'
+        <form action='' method='POST'
             style='display:flex;flex-direction:column;max-width:1024px;margin:50px auto;' enctype='multipart/form-data'>
             <section class='InfomrationTable'>
                 <article>
@@ -18,6 +16,13 @@
                             style="background-image:url('<?= ROOT_URL; ?>public/assets/img/GreenCheck.webp')"></button>
                     </div>
                 </article>
+                <?php
+
+					foreach ($cas_data_arr as $key=> $value) {
+
+						if($value['customer_id']==$key_id){
+
+					?>
                 <div class='TablingInfo'>
                     <table>
                         <tr>
@@ -36,29 +41,29 @@
                         </tr>
                         <tr>
                             <th>نام</th>
-                            <td><input name='name' value='عادل' required></input></td>
+                            <td><input name='customer_manager_name' value='<?= $value['customer_manager_name']; ?>' required></input></td>
                             <input type='hidden' id='nameEN' value='aadl'></input>
                             <input type='hidden' id='lastnameEN' value='amiri'></input>
                         </tr>
                         <tr>
                             <th>نام پدر</th>
-                            <td><input name='fathername' value='ماهر' required></input></td>
+                            <td><input name='customer_fname' value='<?= $value['customer_fname']; ?>' required></input></td>
                             <input type='hidden' id='fathernameEN' value='mahr'></input>
                         </tr>
                         <tr>
                             <th>کد ملی</th>
-                            <td><input readonly value='2790249695' maxlength='10'
+                            <td><input readonly name="customer_nation_code" value='<?= $value['customer_nation_code']; ?>' maxlength='10'
                                     oninput='javascript: if (10 < this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'
                                     required></input></td>
                         <tr>
                             <th>محل تولد</th>
-                            <td><input name='birthplace' value='خوی'></input></td>
+                            <td><input name='customer_birth_loc' value='خوی'></input></td>
                         </tr>
                         <input name='idcode' value='2790249695' type='hidden'></input>
                         <tr>
                             <th>کشور</th>
                             <td>
-                                <select name='Country'>
+                                <select name='customer_birth_country'>
                                     <option value=''>انتخاب کشور</option>
                                     <option value='ایران' selected>ایران</option>
                                     <option value='افغانستان'>افغانستان</option>
@@ -74,7 +79,7 @@
                         <tr>
                             <th>حرف شناسنامه</th>
                             <td>
-                                <select name='BirthCertificateLetter'>
+                                <select name='customer_cert_letter'>
                                     <option value='الف'>الف</option>
                                     <option value='ب'>ب</option>
                                     <option value='ل'>ل</option>
@@ -114,30 +119,30 @@
                         </tr>
                         <tr>
                             <th>نام خانوادگی</th>
-                            <td><input name='lastname' value='امیری' required></input></td>
+                            <td><input name='customer_manager_family' value='<?= $value['customer_manager_family']; ?>' required></input></td>
                         </tr>
                         <tr>
                             <th>تاریخ تولد</th>
-                            <td><input id='birthday' class='birthday' name='birthday' value='1369/11/10'
+                            <td><input id='birthday' class='birthday' name='customer_birth' value='1369/11/10'
                                     required></input></td>
                         </tr>
                         <tr>
                             <th>ش. شناسنامه</th>
-                            <td><input name='oldidcode' value='2790249695' required></input></td>
+                            <td><input name='customer_certid' value='<?= $value['customer_certid']; ?>' required></input></td>
                         </tr>
                         <tr>
                             <th>کد پستی</th>
-                            <td><input name='postalcode' value='5819644135' maxlength='10'
+                            <td><input name='customer_postal_code' value='<?= $value['customer_postal_code']; ?>' maxlength='10'
                                     oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'></input>
                             </td>
                         </tr>
                         <tr>
                             <th>سریال شناسنامه</th>
-                            <td><input name='BirthCertificateSeries' value='810893'></input></td>
+                            <td><input name='customer_cert_serial' value='<?= $value['customer_cert_serial']; ?>'></input></td>
                         </tr>
                         <tr>
                             <th>ردیف شناسنامه</th>
-                            <td><input name='BirthCertificateRow' value='44'></input></td>
+                            <td><input name='customer_cert_row' value='<?= $value['customer_cert_row']; ?>'></input></td>
                         </tr>
                     </table>
                 </div>
@@ -154,41 +159,41 @@
                     <table>
                         <tr>
                             <th>نام</th>
-                            <td><input name='presentername' value='ماهر'></input></td>
+                            <td><input name='cus_repres1_name' value='<?= $value['cus_repres1_name']; ?>'></input></td>
                         </tr>
                         <tr>
                             <th>نام پدر</th>
-                            <td><input name='presenterfathername' value='ستار'></input></td>
+                            <td><input name='cus_repres1_fname' value='<?= $value['cus_repres1_fname']; ?>'></input></td>
                         </tr>
                         <tr>
                             <th>تلفن ثابت</th>
-                            <td><input name='presenterphone' maxlength='11' value='04436254145'
+                            <td><input name='cus_repres1_tel' maxlength='11' value='<?= $value['cus_repres1_tel']; ?>'
                                     oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'></input>
                             </td>
                         </tr>
                         <tr>
                             <th>نشانی</th>
-                            <td colspan='2'><input name='presenteraddress' value='چایباشی شهدای ناجا'></input></td>
+                            <td colspan='2'><input name='cus_repres1_address' value='<?= $value['cus_repres1_address']; ?>'></input></td>
                         </tr>
                     </table>
                     <table>
                         <tr>
                             <th>نام خانوادگی</th>
-                            <td><input name='presenterfamilyname' value='امیری'></input></td>
+                            <td><input name='cus_repres1_family' value='<?= $value['cus_repres1_family']; ?>'></input></td>
                         </tr>
                         <tr>
                             <th>کد ملی</th>
-                            <td><input name='presenteridcode' value='2802159348'></input></td>
+                            <td><input name='cus_repres1_id' value='<?= $value['cus_repres1_id']; ?>'></input></td>
                         </tr>
                         <tr>
                             <th>موبایل</th>
-                            <td><input name='presentermobile' maxlength='11' value='09046297283'
+                            <td><input name='cus_repres1_mobile' maxlength='11' value='<?= $value['cus_repres1_mobile']; ?>'
                                     oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'></input>
                             </td>
                         </tr>
                         <tr>
                             <th>فروشگاه</th>
-                            <td><input name='presentershop' value='قناری ماهر'></input></td>
+                            <td><input name='cus_repres1_store_name' value='<?= $value['cus_repres1_store_name']; ?>'></input></td>
                         </tr>
                     </table>
                 </div>
@@ -205,41 +210,41 @@
                     <table>
                         <tr>
                             <th>نام</th>
-                            <td><input name='presentername2' value='گل بهار'></input></td>
+                            <td><input name='cus_repres2_name' value='<?= $value['cus_repres2_name']; ?>'></input></td>
                         </tr>
                         <tr>
                             <th>نام پدر</th>
-                            <td><input name='presenterfathername2' value='محسن'></input></td>
+                            <td><input name='cus_repres2_fname' value='<?= $value['cus_repres2_fname']; ?>'></input></td>
                         </tr>
                         <tr>
                             <th>تلفن ثابت</th>
-                            <td><input name='presenterphone2' maxlength='11' value='04436525852'
+                            <td><input name='cus_repres2_tel' maxlength='11' value='<?= $value['cus_repres2_tel']; ?>'
                                     oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'></input>
                             </td>
                         </tr>
                         <tr>
                             <th>نشانی</th>
-                            <td colspan='2'><input name='presenteraddress2' value='چایباشی پاسداران'></input></td>
+                            <td colspan='2'><input name='cus_repres2_address' value='<?= $value['cus_repres2_address']; ?>'></input></td>
                         </tr>
                     </table>
                     <table>
                         <tr>
                             <th>نام خانوادگی</th>
-                            <td><input name='presenterfamilyname2' value='رضایی'></input></td>
+                            <td><input name='cus_repres2_family' value='<?= $value['cus_repres2_family']; ?>'></input></td>
                         </tr>
                         <tr>
                             <th>کد ملی</th>
-                            <td><input name='presenteridcode2' value='2803293633'></input></td>
+                            <td><input name='cus_repres2_id' value='<?= $value['cus_repres2_id']; ?>'></input></td>
                         </tr>
                         <tr>
                             <th>موبایل</th>
-                            <td><input name='presentermobile2' maxlength='11' value='09900467702'
+                            <td><input name='cus_repres2_mobile' maxlength='11' value='<?= $value['cus_repres2_mobile']; ?>'
                                     oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'></input>
                             </td>
                         </tr>
                         <tr>
                             <th>فروشگاه</th>
-                            <td><input name='presentershop2' value='خیاطی'></input></td>
+                            <td><input name='cus_repres2_store_name' value='<?= $value['cus_repres1_store_name']; ?>'></input></td>
                         </tr>
                     </table>
                 </div>
@@ -307,13 +312,13 @@
                     <table>
                         <tr>
                             <th>کد مالیاتی</th>
-                            <td><input name='taxcode' value='3352157127' required></input></td>
+                            <td><input name='tax_code' value='<?= $value['tax_code']; ?>' required></input></td>
                         </tr>
                         <tr>
                             <th>تلفن ثابت</th>
                             <td>
                                 <div style='width:calc(100% - 100px);display:flex;'>
-                                    <input name='telephone' style='width:calc(100% - 50px);' value='36352514'
+                                    <input name='customer_tel' style='width:calc(100% - 50px);' value='<?= $value['customer_tel']; ?>'
                                         maxlength='8'
                                         oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'></input>
                                     <input style='width:50px;' value='044
@@ -324,16 +329,16 @@
                         </tr>
                         <tr>
                             <th>نام فروشگاه</th>
-                            <td><input name='companyname' value='دست فروشی دیواربه دیوار' required></input></td>
+                            <td><input name='companyname' value='<?= $value['customer_store_name']; ?>' required></input></td>
                         </tr>
                         <tr>
                             <th>استان</th>
-                            <td><input name='province' value='آذربایجان غربی'></input></td>
+                            <td><input name='province' value=''></input></td>
                         </tr>
                         <tr>
                             <th>نشانی</th>
-                            <td colspan='2'><input name='address'
-                                    value='استان آذربایجان غربی، بخش خوی، شهر خوی، منطقه مرکزی، محله سعدیه، خیابان منتظری، بلوار 22 بهمن، پلاک 210.0، طبقه همکف'
+                            <td colspan='2'><input name='customer_address'
+                                    value='<?= $value['customer_address']; ?>'
                                     required></input></td>
                         </tr>
                     </table>
@@ -351,7 +356,7 @@
                         </tr>
                         <tr>
                             <th>موبایل</th>
-                            <td><input name='mobile' value='09923769171' maxlength='11'
+                            <td><input name='customer_mobile' value='<?= $value['customer_mobile']; ?>' maxlength='11'
                                     oninput='javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'></input>
                             </td>
                             </td>
@@ -363,7 +368,7 @@
                                     style='position:sticky;display:flex;flex-direction:column;width:100%;'>
                                     <input style='width:100%;' id="SearchFilter11" name="SearchFilter"
                                         placeholder="جستجو شهر" onkeyup="filterItems11(this);" autocomplete='off'
-                                        value=''>
+                                        value='<?= $value['customer_city']; ?>'>
                                     <select id="SelectFilter11" name="SelectFilter11" size="4" onChange="update11();"
                                         style='width:100%;display:none;height:150px;position:absolute;top:36px;'
                                         required>
@@ -1525,6 +1530,10 @@
                             <th>-</th>
                             <td><input></input></td>
                         </tr>
+                        <?php
+						}
+					}
+					?>
                     </table>
                 </div>
             </section>
@@ -1730,6 +1739,8 @@
         var sel12 = document.getElementById('SelectFilter12');
         for (var i = 0, iLen = sel12.options.length; i < iLen; i++) {
             optionsCache12.push(sel12.options[i]);
+        }else{
+            echo 'not ok';
         }
     }
 

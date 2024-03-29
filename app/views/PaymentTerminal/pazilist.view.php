@@ -65,7 +65,7 @@ if($_GET['kind'] ?? ''){
 						<div style='display:flex;width:200px;'>
 							<button class='SendButton' form='DeleteCostumer' name='sid' value="3811"
 								style="background-image:url('<?= ROOT_URL; ?>public/assets/img/red_cross.webp')"></button>
-							<button class='SendButton' name='aWRjb2Rl' value="<?= $value['customer_nation_code']; ?>"
+							<button class='SendButton' name='aWRjb2Rl' value="<?= $value['customer_id']; ?>"
 								style="background-image:url('<?= ROOT_URL; ?>public/assets/img/edit.webp')"></button>
 						</div>
 					</div>
