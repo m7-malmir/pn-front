@@ -2,9 +2,8 @@
 $ds = DIRECTORY_SEPARATOR;
 $base_dir = realpath(dirname(__FILE__) . $ds . '..') . $ds;
 require_once ("{$base_dir}header-up.php");
-
-$cas_data_arr = json_decode(json_encode($data['casdata']), true);
-$key_id=$_GET['aWRjb2Rl'];
+$cas_data_arr = json_decode(json_encode($data['casdata'] ?? ''), true);
+$key_id=$_GET['aWRjb2Rl'] ?? '';
 ?>
 <title>پذیرنده</title>
 <script src="<?= ROOT_URL; ?>public/assets/js/jq.3.3.1.min.js"></script>
@@ -20,18 +19,15 @@ $key_id=$_GET['aWRjb2Rl'];
 </style>
 <?php
 require_once ("{$base_dir}header.php");
-
-
-if($_GET['kind'] ?? ''){   
-
+if($_GET['sid'] ?? ''){   
+    $ds = DIRECTORY_SEPARATOR;
+    $base_dir = realpath(dirname(__FILE__)  . $ds) . $ds;
+    require_once "{$base_dir}deletepazlist.php";
+}elseif($_GET['kind'] ?? ''){   
     $ds = DIRECTORY_SEPARATOR;
     $base_dir = realpath(dirname(__FILE__)  . $ds) . $ds;
     require_once "{$base_dir}editpazlist.php"; 
-
-}else{
-
-?>
-
+}else{ ?>
 <main>
 <?php include 'sidemenu2.php' ?>
 		<section id='MainSection'>
@@ -50,7 +46,7 @@ if($_GET['kind'] ?? ''){
 			<form style='display: none;' action='../terminal/new/' id='terminal_new' method='GET'>
 				<input style='display:none;' name='aWRjb2Rl' value='+1 (162) 777-5604'></input>
 			</form>
-			<form style='display: none;' action='delete.php' id='DeleteCostumer' method='POST'></form>
+			<form style='display: none;' name="sid" action='' id='DeleteCostumer' method='get'></form>
 			<?php
 					foreach ($cas_data_arr as $key=> $value) {
 

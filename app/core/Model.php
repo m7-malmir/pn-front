@@ -63,14 +63,25 @@ trait Model
         $this->query($query, $data);
         return false;
     }
-    public function update($id, $data, $id_column = '')
+    public function update($customer_id, $data, $id_column = 'customer_id')
     {
+        $keys=array_keys($data);
+        $query="update $this->table3 set ";
+        foreach ($keys as $key) {
+            $query .= "$key" . " = :" . "$key " . ", ";
+        }
+        $query = trim($query, ", ");
+        $query .= " where $id_column = :$id_column ";
+        $data[$id_column]= $customer_id;
+        //echo $query;
+        $this->query($query, $data);
+        return false;
     }
-    public function delete($id, $id_column = '')
+    public function delete($customer_id, $id_column = 'customer_id')
     {
-        $data[$id_column] = $id;
-        $query = "DELETE FROM $this->table WHERE $id_column=:$id_column";
-        // echo $query;
+        $data[$id_column] = $customer_id;
+        $query = "DELETE FROM $this->table WHERE $id_column=:customer_id";
+        echo $query;
         $this->query($query, $data);
         //return false;
     }
