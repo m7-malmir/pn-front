@@ -5,7 +5,7 @@
 trait Model 
 {
     protected $table = 'users';
-    protected $table2 = 'members';
+    protected $table2 = 'users_role';
     protected $table3 = 'customer'; 
     protected $limit = 1;
     protected $offset = 0;
@@ -15,9 +15,11 @@ trait Model
     {
         $query = "select * from $this->table3";
         return $this->query($query);
-        //print_r($res);
-       // $res;
-        // return false;
+    }
+    public function selectUsers()
+    {
+        $query = "select * from $this->table";
+        return $this->query($query);
     }
     public function where($data)
     {
@@ -59,7 +61,6 @@ trait Model
         }
         $keys = array_keys($data);
         $query = "INSERT INTO $this->table3 (" . implode(',', $keys) . ") VALUES (:" . implode(',:', $keys) . ")";
-        //show($query);
         $this->query($query, $data);
         return false;
     }

@@ -17,6 +17,6 @@ class User
     if (empty($this->errors)) {
       return true;
     }
-    return false;
+    return false; 
   }
 }

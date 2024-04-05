@@ -64,15 +64,15 @@ function ToggleHeaderSideMenu(){
 				<div style='margin: auto;' >admin admin</div>
 			</div>
 			<div style='width:32px;height:32px;margin:auto 5px;'>
-									<img src='/library/images/user_logo_white.webp' style='width:30px;height:30px;'></img>
+									<img src='<?= ROOT_URL; ?>public/assets/img/user_logo_white.webp' style='width:30px;height:30px;'></img>
 							</div>
 		</div>
 		<div id='HeaderImage' style='display:none;'>
 			<a href='./?logout=on'>
-				<img src='/library/images/logout_white.webp'></img>
+				<img src='<?= ROOT_URL; ?>public/assets/img/logout_white.webp'></img>
 			</a>
 			<a href='/membership/notification/'>
-				<img src='/library/images/notification.webp'>
+				<img src='<?= ROOT_URL; ?>public/assets/img/notification.webp'>
 					<div id='NotificationCounter' >
 						اعلانات 
 						(

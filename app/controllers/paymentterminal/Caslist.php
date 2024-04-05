@@ -12,7 +12,7 @@ class Caslist
         $casdata = $ncas->select();
         $_SESSION['casdata']= $casdata;
         $data['casdata']=$_SESSION['casdata'];
-        $this->view('paymentterminal/caslist',$data);
+        $this->view('paymentterminal/caslist',$data); 
 
     }
 }
