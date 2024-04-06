@@ -531,13 +531,10 @@ require_once ("{$base_dir}header.php");
                                     </button>
                                     <input type='hidden' name='' value='' style=''></input>
                                 </form>
-                                <form action='/membership/bank/PaymentTerminal/V1/costumer/view.php'
-                                    style='margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);'
-                                    method='GET'>
-                                    <button class='more_button' name='aWRjb2Rl' value='<?= $key['customer_id']; ?>'>
+                                <form action='pazilist' style='margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);' method='GET'>
+                                    <button id='more_button' class='more_button' name='aWRjb2Rl' value='<?= $key['customer_id']; ?>'>
                                         پذیرنده
-                                    </button>
-                                    <input type='hidden' name='c2lk' value='<?= $key['customer_id']; ?>' style=''></input>
+                                    </button> 
                                 </form>
                                 <form action='/membership/bank/PaymentTerminal/V1/document/view.php'
                                     style='margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);'

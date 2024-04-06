@@ -11,7 +11,7 @@ require_once("{$base_dir}header-up.php");
 <?php 
  require_once("{$base_dir}header.php");
 ?>
-
+ 
     <main>
  
     <?php include 'sidemenu.php' ?>

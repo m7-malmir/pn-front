@@ -1,19 +1,19 @@
 1-liste pazirandeha ✅
 	1-1-namayesh✅
 	1-2-delete
-	1-3-edit
+	1-3-edit✅
 	
 2-liste payaneha ✅
 	2-1-bargozari
 	2-2-madarek
-	2-3-pazirandeh
-			2-3-1-edit information
-			2-3-2-delete information
+	2-3-pazirandeh✅
+			2-3-1-edit information✅
+			2-3-2-delete information✅
 
-	2-4-namayesh 
-			2-4-1-edit payaneh info
-			2-4-2-delete payaneh info
-	2-5-right menu expanded
+	2-4-namayesh ✅
+			2-4-1-edit payaneh info ✅
+			2-4-2-delete payaneh info 
+	2-5-right menu expanded✅
 
 3-liste darkhastha ✅
 			3-1-paziresh
