@@ -52,7 +52,7 @@
                             </tr>
                             <tr>
                                 <th>کد ملی</th>
-                                <td><input readonly name="customer_nation_code" value='<?= $value['customer_nation_code']; ?>' maxlength='10'
+                                <td><input  name="customer_nation_code" value='<?= $value['customer_nation_code']; ?>' maxlength='10'
                                         oninput='javascript: if (10 < this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);'
                                         required></input>
                                 
