@@ -4,6 +4,7 @@ if($_GET['project']!=null){
      $ds = DIRECTORY_SEPARATOR;
      $base_dir = realpath(dirname(__FILE__)  . $ds) . $ds;
      require_once "{$base_dir}registerncas.php";
+
 }
     }else{ 
 ?>
@@ -14,11 +15,12 @@ if($_GET['project']!=null){
                         <input type='hidden' name='gender' value='<?= $_GET['gender']; ?>'></option>
                         <div class='TableRow2'>
                         <select name="project" required="">
-                            <option value="">انتخاب پروژه</option>
-                            <option name="سپهر">سپهر</option>
-                            <option name="فن آوا">فن آوا</option>
-                            <option name="پاسارگاد">پاسارگاد</option>
-                            <option name="پرداخت نوین">پرداخت نوین</option>	
+                        <option value="">انتخاب پروژه</option>
+                        <?php
+							$user_data_arr = json_decode(json_encode($data['selectproject']), true);
+							foreach ($user_data_arr as $variable => $key) { ?>
+                            <option value="<?=  $key["project_id"]; ?>" name=""><?=  $key["project_name"]; ?></option>
+                            <?php } ?>
                         </select>
                         </div>
                     </article>

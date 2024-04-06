@@ -40,10 +40,10 @@
 <form method="post" id='' name='imgup' enctype="multipart/form-data">
 	<article class='label' style=''>
 		<p class='LabelTitle'>مشخصات پذیرنده</p>
-		<input type='hidden' id='entity' name='entity' value='<?= $_GET['entity']; ?>'></input>
-		<input type='hidden' id='nationality' name='nationality' value='<?= $_GET['nationality']; ?>'></input>
-		<input type='hidden' id='gender' name='gender' value='<?= $_GET['gender']; ?>'></input>
-		<input type='hidden' id='project' name='project' value='<?= $_GET['project']; ?>'></input>
+		<input type='hidden' id='entity' name='customer_type' value='<?= $_GET['entity']; ?>'></input>
+		<input type='hidden' id='nationality' name='customer_nation' value='<?= $_GET['nationality']; ?>'></input>
+		<input type='hidden' id='gender' name='customer_gender' value='<?= $_GET['gender']; ?>'></input>
+		<input type='hidden' id='project' name='customer_service' value='<?= $_GET['project']; ?>'></input>
 		<input type='hidden' id='' name='customer_requests' value='1'></input>
 		<input type='hidden' id='' name='customer_terminals' value='1'></input>
 		
@@ -67,6 +67,7 @@
 			<div class='table_row_2_partition' style=''>
 				<label>نام کاربری</label>
 						<select name="customer_agent">
+						<option value="">انتخاب کاربر</option>
 						<?php
 							$user_data_arr = json_decode(json_encode($data['usersdata']), true);
 							foreach ($user_data_arr as $variable => $key) {

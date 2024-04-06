@@ -7,6 +7,7 @@ trait Model
     protected $table = 'users';
     protected $table2 = 'users_role';
     protected $table3 = 'customer'; 
+    protected $table4 = 'project'; 
     protected $limit = 1;
     protected $offset = 0;
     public $errors = [];
@@ -19,6 +20,11 @@ trait Model
     public function selectUsers()
     {
         $query = "select * from $this->table";
+        return $this->query($query);
+    }
+    public function selectProject()
+    {
+        $query = "select * from $this->table4";
         return $this->query($query);
     }
     public function where($data)
@@ -88,7 +94,7 @@ trait Model
     }
     public function checkAdmin(){
         $query = "SELECT users_uid FROM $this->table LEFT JOIN $this->table2 ON $this->table.user_role = $this->table2.id where title='admin'";
-         $res=$this->query($query);
+        $res=$this->query($query);
      return $res;
     }
 }

@@ -23,6 +23,12 @@ class Newcastumers
     $usersdata = $nuser->selectUsers();
     $_SESSION['usersdata']= $usersdata;
     $data['usersdata']=$_SESSION['usersdata'];
+
+    $spro = new User();
+    $selectproject = $spro->selectProject();
+    $_SESSION['selectproject']= $selectproject;
+    $data['selectproject']=$_SESSION['selectproject'];
+
     $this->view('paymentterminal/newcastumers',$data);
     }
 }
