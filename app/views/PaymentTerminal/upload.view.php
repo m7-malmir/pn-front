@@ -1,16 +1,15 @@
-
-<link rel="stylesheet" href="<?= ROOT_URL; ?>public/assets/css/style.css">
-<script
-  src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-  crossorigin="anonymous"></script>
-<!-- <script src='<?= ROOT_URL; ?>public/assets/library/jquery/3.4.1.min.js'></script>  -->
- <script src="<?= ROOT_URL; ?>public/assets/js/main.js"></script>
-    <title>بارگذاری</title>
-	<style>
+<?php
+$ds = DIRECTORY_SEPARATOR;
+$base_dir = realpath(dirname(__FILE__) . $ds . '..') . $ds;
+require_once ("{$base_dir}header-up.php");
+$cas_data_arr = json_decode(json_encode($data['casdata'] ?? ''), true);
+$key_id=$_GET['aWRjb2Rl'] ?? '';
+?>
+   <title>بارگذاری</title>
+<style>
 main{
-	display:block;
-	margin: 0 auto;
+	display:block!important;
+	margin: 0 auto!important;
 }
 .action_button {
     width: 160px;
@@ -23,167 +22,10 @@ main{
     text-shadow: 1px 1px white;
     font-weight: 900;
 }
-	</style>
-<script>
-/*
-document.documentElement.classList.add("light-mode");
-function ToggleTheme(){
-	document.documentElement.classList.add("dark-mode");
-}
-*/
-//console.log(localStorage.getItem("color-scheme"));
-//console.log(window.matchMedia("(prefers-color-scheme:light)").matches);
-//console.log(window.matchMedia("(prefers-color-scheme:dark)").matches);
-
-function ToggleNavBarMenu(){
-	var navbar2 = document.getElementById("navbar2");
-	if(navbar2.style.display == 'flex'){
-		navbar2.style.display = 'none';
-	}else{
-		navbar2.style.display = 'flex';
-	}
-}
-function ToggleHeaderSideMenu(){
-	var navbar2 = document.getElementById("header_smallsize");
-	if(navbar2.style.display == 'flex'){
-		navbar2.style.display = 'none';
-	}else{
-		navbar2.style.display = 'flex';
-	}
-}
-</script>
-<div class='navbar' >
-			<div style='width:160px;display:flex;float:left;color: white;position:relative;height:55px;' onclick='ToggleNavBarMenu();' >
-			<a style='display:none;width:32px;height:32px;margin:auto;' href='/membership/notification/'>
-				<img style='width: 100%;margin-top: 5px;' src='/library/images/notification.webp'>
-					<div id='NotificationCounter' >
-					</div>
-				</img>
-			</a>
-			<div style='width:calc(100% - 32px);height:32px;display:flex;margin:auto;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;'>
-				<div style='margin: auto;' >admin admin</div>
-			</div>
-			<div style='width:32px;height:32px;margin:auto 5px;'>
-									<img src='<?= ROOT_URL; ?>public/assets/img/user_logo_white.webp' style='width:30px;height:30px;'></img>
-							</div>
-		</div>
-		<div id='HeaderImage' style='display:none;'>
-			<a href='./?logout=on'>
-				<img src='<?= ROOT_URL; ?>public/assets/img/logout_white.webp'></img>
-			</a>
-			<a href='/membership/notification/'>
-				<img src='<?= ROOT_URL; ?>public/assets/img/notification.webp'>
-					<div id='NotificationCounter' >
-						اعلانات 
-						(
-							100+						)
-					</div>
-				</img>
-			</a>
-		</div>
-	<div id='header_hamburger_button' style='' onclick='ToggleHeaderSideMenu();' >
-		<div style=''></div>
-		<div style=''></div>
-		<div style=''></div>
-	</div>
-		<div id='header_bigsize'>
-		<div class='dropdown'>
-			<button class='dropbtn'>
-				<a>منو عمومی</a>
-				<i class='fa fa-caret-down'></i>
-			</button>
-			<div class='dropdown-content'>
-				<div class='' id=''>
-					<a href='/maintenance/external/paymentservice/'>تعمیرگاه سانیار سرویس</a>
-				</div>
-			</div>
-		</div>
-	<div class='dropdown'>
-				<button class='dropbtn'>
-					<a>منو</a>
-					<i class='fa fa-caret-down'></i>
-				</button><div class='dropdown-content'><div class='' id=''><a href='../../../../../../'>منو</a></div></div><div class='dropdown-content'><div class='' id=''><a href='../../../../../../membership/'>خانه</a><a href='../../../../../../membership/profile/'>پروفایل</a><a href='../../../../../../library/logout.php'>خروج</a><a href='../../../../../../membership/bank/PaymentTerminal/V1/'>کارتخوان</a><a href='../../../../../../membership/tool/sidebyside/'>چسباندن عکس کنار هم</a><a href='../../../../../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/'>استعلام سریال </a><a href='../../../../../../membership/bank/AutomaticTellerMachine/V1/'>خودپرداز</a><a href='../../../../../../Bank/Registry/'>رجیستر پذیرنده</a><a href='../../../../../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off'>خروجی ترمینال</a><a href='../../../../../../membership/maintenance/'>تعمیرات کارتخوان</a></div></div></div>	</div>
-</div>
-
-<section id='navbar2' style=''>
-	<div id='navbar2_content' style='' >
-		<div>
-			<a href='/membership/'>داشبورد</a>
-		</div>
-		<div>
-			<a href='/membership/profile/'>پروفایل</a>
-		</div>
-		<div>
-			<a style='' href='/membership/message/messenger/'>
-				پیام ها 
-				(
-					0				)
-			</a>
-		</div>
-		<div>
-			<a style='' href='/membership/notification/'>
-				اعلانات 
-				(
-					100+				)
-			</a>
-		</div>
-					<div ><a href='/membership/admin/'>ادمین</a></div>
-				<div ><a href='./?logout=on'>خروج</a></div>
-	</div>
-</section>
-
-<section id='header_smallsize'>
-
-				<div class='header_smallsize_topic'>
-					<a>منو</a>
-				</div>
-			
-				<div style='width:80%;height:1px;margin: 3px auto;background-color:#333333;'></div>
-			
-					<div class='header_smallsize_menu'>
-						<a href='../../../../../../' >منو</a>
-					</div>
-				
-						<div class='header_smallsize_menu'>
-							<a href='../../../../../../membership/' >خانه</a>
-						</div>
-					
-						<div class='header_smallsize_menu'>
-							<a href='../../../../../../membership/profile/' >پروفایل</a>
-						</div>
-					
-						<div class='header_smallsize_menu'>
-							<a href='../../../../../../library/logout.php' >خروج</a>
-						</div>
-					
-						<div class='header_smallsize_menu'>
-							<a href='../../../../../../membership/bank/PaymentTerminal/V1/' >کارتخوان</a>
-						</div>
-					
-						<div class='header_smallsize_menu'>
-							<a href='../../../../../../membership/tool/sidebyside/' >چسباندن عکس کنار هم</a>
-						</div>
-					
-						<div class='header_smallsize_menu'>
-							<a href='../../../../../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/' >استعلام سریال </a>
-						</div>
-					
-						<div class='header_smallsize_menu'>
-							<a href='../../../../../../membership/bank/AutomaticTellerMachine/V1/' >خودپرداز</a>
-						</div>
-					
-						<div class='header_smallsize_menu'>
-							<a href='../../../../../../Bank/Registry/' >رجیستر پذیرنده</a>
-						</div>
-					
-						<div class='header_smallsize_menu'>
-							<a href='../../../../../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off' >خروجی ترمینال</a>
-						</div>
-					
-						<div class='header_smallsize_menu'>
-							<a href='../../../../../../membership/maintenance/' >تعمیرات کارتخوان</a>
-						</div>
-					</section>
+</style>
+<?php
+require_once ("{$base_dir}header.php");
+?>
 <main>
 <form action='../../../../../../membership/bank/PaymentTerminal/contract/Sepehr/index.php' style='display:none;' id='ContractForm4055' target='_blank' method='GET'></form>
 <form action='/membership/bank/PaymentTerminal/contract/Sepehr/installation.php' style='display:none;' id='InstalationForm4055' target='_blank' method='GET'></form>
