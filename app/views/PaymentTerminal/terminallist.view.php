@@ -460,129 +460,79 @@ require_once ("{$base_dir}header.php");
                     </tr>
                 </form>
               
-                <tr style="">
-                    <td style='width:50px;'>
-                        <div class='Counter' style='background-color:orange;color: white;'>50</div>
-                    </td>
-                    <td class='MiddleScreens' style='width:35px;'>
-                        <div class='ImageField'>
-                            <img src='/membership/bank/images/Passargad.webp'></img>
-                        </div>
-                    </td>
-                    <td class='LittleScreens'><input value="1402-12-07 13:38"></input></td>
-                    <td class=''><input value="امیر حاجی حسین لو"></input></td>
-                    <td class=''><input value='ارسال به شاپرک'></input></td>
-                    <td><input value='2800568607'></input></td>
-                    <td><input value='رحیم زینال زاده&nbsp;زینال زاده'></input></td>
-                    <td class=''><input value='میوه فروشی'></input></td>
-                    <td class=''><input value=''></input></td>
-                    <td class=''><input value=''></input></td>
-                    <td class=''><input value=''></input></td>
-                    <td class=''><input value=''></input></td>
-                    <td class=''><input style='width:250px;' value=''></input></td>
-                    <td class=''><input style='width:225px;' value='IR080180000000005012579804'></input></td>
-                    <td class=''><input value='05012579804'></input></td>
-                    <td class=''><input value='NEWLAND/ME31/GPRS'></input></td>
-                    <td class=''><input value=''></input></td>
-                    <td id='functional_th_td' style='z-index:50;height: 28px;left:0;position: sticky;'>
-                        <form action='view.php#4015' style='margin-bottom:0;' method='GET'>
-                            <button id='more_button0' onclick='toggleTheFunctionalMenu1(0);' type='button'
-                                class='more_button' name='aWRjb2Rl' value='2800568607'>
-                                بیشتر
-                            </button>
-                            <input type='hidden' name='c2lk' value='4015' style=''></input>
-                        </form>
-                        <div id='TheFunctionalMenu10' value='4015' class='slidemenu_table' style='width: 300px;'>
-                            <form action='view.php#4015'
-                                style='margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);'
-                                method='GET'>
-                                <button class='more_button' name='aWRjb2Rl' value='2800568607'>
-                                    نمایش
+                <?php
+                           $i = 0;
+                        foreach ($cas_data_arr as $variable => $key) {
+                            $i++;
+                             ?>
+                                    <tr style="">
+                        <td style='width:50px;'>
+                            <div class='Counter' style='background-color:yellow;color: black;'><?= $i; ?></div>
+                        </td>
+                        <td class='MiddleScreens' style='width:35px;'>
+                            <div class='ImageField'>
+                                <img src='<?= ROOT_URL; ?>public/assets/img/Sepehr.webp'></img>
+                            </div>
+                        </td>
+                        <td class='LittleScreens'><input value="<?= $key['date']; ?>"></input></td>
+                        <td class=''><input value="<?= $key['customer_name']; ?>"></input></td>
+                        <td class=''><input value='ارسال به شرکت'></input></td>
+                        <td><input value='<?= $key['customer_nation_code']; ?>'></input></td>
+                        <td><input value='<?= $key['customer_manager_name']; ?>&nbsp<?= $key['customer_manager_family']; ?>'></input></td>
+                        <td class=''><input value='<?= $key['customer_store_name']; ?>'></input></td>
+                        <td class=''><input value=''></input></td>
+                        <td class=''><input value=''></input></td>
+                        <td class=''><input value=''></input></td>
+                        <td class=''><input value=''></input></td>
+                        <td class=''><input style='width:250px;' value=''></input></td>
+                        <td class=''><input style='width:225px;' value='IR<?= $key['customer_iban']; ?>'></input></td>
+                        <td class=''><input value='<?= $key['customer_num_acount']; ?>'></input></td>
+                        <td class=''><input value='<?= $key['customer_device_model']; ?>'></input></td>
+                        <td class=''><input value=''></input></td>
+                        <td id='functional_th_td' style='z-index:50;height: 28px;left:0;position: sticky;'>
+                            <form action='view.php#4057' style='margin-bottom:0;' method='GET'>
+                                <button id='more_button<?= $key['customer_id']; ?>' onclick='toggleTheFunctionalMenu1(<?= $key["customer_id"]; ?>);' type='button'
+                                    class='more_button' name='aWRjb2Rl' value='<?= $key['customer_mobile']; ?>'>
+                                    بیشتر
                                 </button>
-                                <input type='hidden' name='c2lk' value='4015' style=''></input>
+                                <input type='hidden' name='c2lk' value='<?= $key['customer_id']; ?>' style=''></input>
                             </form>
-                            <form action='/membership/bank/PaymentTerminal/V1/costumer/view.php'
-                                style='margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);'
-                                method='GET'>
-                                <button class='more_button' name='aWRjb2Rl' value='2800568607'>
-                                    پذیرنده
-                                </button>
-                                <input type='hidden' name='c2lk' value='4015' style=''></input>
-                            </form>
-                            <form action='/membership/bank/PaymentTerminal/V1/document/view.php'
-                                style='margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);'
-                                method='GET'>
-                                <button class='more_button' name='aWRjb2Rl' value='2800568607'>
-                                    مدارک
-                                </button>
-                                <input type='hidden' name='c2lk' value='4015' style=''></input>
-                            </form>
-                            <form action='/membership/bank/PaymentTerminal/V1/document/upload/'
-                                style='margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);'
-                                method='GET'>
-                                <button class='more_button' name='aWRjb2Rl' value='2800568607'>
-                                    بارگذاری
-                                </button>
-                                <input type='hidden' name='c2lk' value='4015' style=''></input>
-                            </form>
-                        </div>
-                    </td>
-                </tr>
-                <tr style="">
-								<td style="width:50px;"><div class="Counter" style="background-color:orange;color: white;">2</div></td>
-								<td class="MiddleScreens" style="width:35px;">
-									<div class="ImageField">
-										<img src="/membership/bank/images/Passargad.webp">
-									</div>
-								</td>
-								<td class="LittleScreens"><input value="1403-01-19 23:45"></td>
-								<td class=""><input value="محمد  پایروندی"></td>
-								<td class=""><input value="ارسال به شاپرک"></td>
-								<td><input value="4510125526"></td>
-								<td><input value="یونس&nbsp;محمدی نسب"></td>
-								<td class=""><input value="محمدی"></td>
-								<td class=""><input value=""></td>
-								<td class=""><input value=""></td>
-								<td class=""><input value=""></td>
-								<td class=""><input value=""></td>
-								<td class=""><input style="width:250px;" value=""></td>
-								<td class=""><input style="width:225px;" value="IR650150000015180516446583"></td>
-								<td class=""><input value="15180516446583"></td>
-								<td class=""><input value="NEWLAND/ME31/GPRS"></td>
-								<td class=""><input value=""></td>
-								<td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;">
-									<form action="view.php#4067" style="margin-bottom:0;" method="GET">
-										<button id="more_button48" onclick="toggleTheFunctionalMenu1(48);" type="button" class="more_button" name="aWRjb2Rl" value="4510125526">کمتر</button>
-										<input type="hidden" name="c2lk" value="4067" style="">
-									</form>
-									<div id="TheFunctionalMenu148" value="4067" class="slidemenu_table" style="width: 300px; display: flex;">
-										<form action="view.php#4067" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET">
-											<button class="more_button" name="aWRjb2Rl" value="4510125526">
-												نمایش
-											</button>
-											<input type="hidden" name="c2lk" value="4067" style="">
-										</form>
-										<form action="/membership/bank/PaymentTerminal/V1/costumer/view.php" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET">
-											<button class="more_button" name="aWRjb2Rl" value="4510125526">
-												پذیرنده
-											</button>
-											<input type="hidden" name="c2lk" value="4067" style="">
-										</form>
-										<form action="/membership/bank/PaymentTerminal/V1/document/view.php" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET">
-											<button class="more_button" name="aWRjb2Rl" value="4510125526">
-												مدارک
-											</button>
-											<input type="hidden" name="c2lk" value="4067" style="">
-										</form>
-										<form action="/membership/bank/PaymentTerminal/V1/document/upload/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET">
-											<button class="more_button" name="aWRjb2Rl" value="4510125526">
-												بارگذاری
-											</button>
-											<input type="hidden" name="c2lk" value="4067" style="">
-										</form>
-																			</div>
-								</td>
-							</tr>
+                            <div id='TheFunctionalMenu1<?= $key['customer_id']; ?>' value='<?= $key['customer_id']; ?>' class='slidemenu_table' style='width: 300px;'>
+                                <form action='payalist'
+                                    style='margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);'
+                                    method='GET'>
+                                    <button class='more_button' name='aWRjb2Rl' value='<?= $key['customer_id']; ?>'>
+                                        نمایش
+                                    </button>
+                                    <input type='hidden' name='' value='' style=''></input>
+                                </form>
+                                <form action='pazilist' style='margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);' method='GET'>
+                                    <button id='more_button' class='more_button' name='aWRjb2Rl' value='<?= $key['customer_id']; ?>'>
+                                        پذیرنده
+                                    </button> 
+                                </form>
+                                <form action='/membership/bank/PaymentTerminal/V1/document/view.php'
+                                    style='margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);'
+                                    method='GET'>
+                                    <button class='more_button' name='aWRjb2Rl' value='<?= $key['customer_id']; ?>'>
+                                        مدارک
+                                    </button>
+                                    <input type='hidden' name='c2lk' value='<?= $key['customer_id']; ?>' style=''></input>
+                                </form>
+                                <form action='/membership/bank/PaymentTerminal/V1/document/upload/'
+                                    style='margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);'
+                                    method='GET'>
+                                    <button class='more_button' name='aWRjb2Rl' value='<?= $key['customer_id']; ?>'>
+                                        بارگذاری
+                                    </button>
+                                    <input type='hidden' name='c2lk' value='<?= $key['customer_id']; ?>' style=''></input>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+
+                <?php } ?>           
+   
             </table>
         </div>
     </section>
