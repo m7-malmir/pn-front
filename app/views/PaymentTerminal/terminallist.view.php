@@ -9,7 +9,7 @@ $cas_data_arr = json_decode(json_encode($data['casdata']), true);
 <?php
 require_once ("{$base_dir}header.php");
 ?>
-<main>
+<main> 
     <?php include 'sidemenu.php' ?>
     <section id='MainSection'> 
         <section>

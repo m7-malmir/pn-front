@@ -6,6 +6,11 @@ $cas_data_arr = json_decode(json_encode($data['casdata']), true);
 
 ?>
 <title>درخواست</title>
+<style>
+    button {
+        font-size: 12px !important;
+    }
+</style>
 <?php
 require_once ("{$base_dir}header.php");
 ?>
@@ -434,43 +439,45 @@ require_once ("{$base_dir}header.php");
                     </form>
 
                     <?php
-                           $i = 0;
-                        foreach ($cas_data_arr as $variable => $key) {
-                            $i++;
-                             ?>
+                    $i = 0;
+                    foreach ($cas_data_arr as $variable => $key) {
+                        $i++;
+                        ?>
 
-                    <tr style="">
-                        <td style='width:35px;'>
-                            <div class='Counter' style='color:#44a6c6;'><?= $i; ?></div>
-                        </td>
-                        <td class='MiddleScreen' style='width:35px;'>
-                            <div class='ImageField'>
-                                <img src='<?= ROOT_URL; ?>public/assets/img/Sepehr.webp'></img>
-                            </div>
-                        </td>
-                        <td class='LittleScreen'><input value="1403-01-09 16:46"></input></td>
-                        <td class='LittleScreen'><input value="<?= $key['customer_name']; ?>"></input></td>
-                        <td style='width:60px;' class='LittleScreen'><input value='بررسی'></input></td>
-                        <td><input value='<?= $key['customer_nation_code']; ?>'></input></td>
-                        <td><input value='<?= $key['customer_manager_name']; ?>&nbsp<?= $key['customer_manager_family']; ?>'></input></td>
-                        <td class='MiddleScreen'><input value='<?= $key['customer_store_name']; ?>'></input></td>
-                        <td><input value=''></input></td>
-                        <td><input value=''></input></td>
-                        <td><input value=''></input></td>
-                        <td><input value=''></input></td>
-                        <td style='position:sticky;left:0;background-color: inherit;'>
-                            <div style='display:flex;flex-direction:row;width:60px;'>
-                                <form action='view.php#7216' method='GET' style='display:flex;margin-block-end: 0;'>
-                                    <button class='AcceptButton' name='aWRjb2Rl' value='2790249695'>
-                                        نمایش
-                                    </button>
-                                    <input type='hidden' name='c2lk' value='<?= $key['customer_id']; ?>'></input>
-                                </form>
-                            </div>
-                        </td>
-                    </tr>
+                        <tr style="">
+                            <td style='width:35px;'>
+                                <div class='Counter' style='color:#44a6c6;'><?= $i; ?></div>
+                            </td>
+                            <td class='MiddleScreen' style='width:35px;'>
+                                <div class='ImageField'>
+                                    <img src='<?= ROOT_URL; ?>public/assets/img/Sepehr.webp'></img>
+                                </div>
+                            </td>
+                            <td class='LittleScreen'><input value="1403-01-09 16:46"></input></td>
+                            <td class='LittleScreen'><input value="<?= $key['customer_name']; ?>"></input></td>
+                            <td style='width:60px;' class='LittleScreen'><input value='بررسی'></input></td>
+                            <td><input value='<?= $key['customer_nation_code']; ?>'></input></td>
+                            <td><input
+                                    value='<?= $key['customer_manager_name']; ?>&nbsp<?= $key['customer_manager_family']; ?>'></input>
+                            </td>
+                            <td class='MiddleScreen'><input value='<?= $key['customer_store_name']; ?>'></input></td>
+                            <td><input value=''></input></td>
+                            <td><input value=''></input></td>
+                            <td><input value=''></input></td>
+                            <td><input value=''></input></td>
+                            <td style='position:sticky;left:0;background-color: inherit;'>
+                                <div style='display:flex;flex-direction:row;width:60px;'>
+                                    <form action='viewreqlist' method='GET' style='display:flex;margin-block-end: 0;'>
+                                        <button class='AcceptButton' name='aWRjb2Rl' value='<?= $key['customer_mobile']; ?>'>
+                                            نمایش
+                                        </button>
+                                        <input type='hidden' name='c2lk' value='<?= $key['customer_id']; ?>'></input>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
 
-        <?php } ?>
+                    <?php } ?>
 
                     <tr style="">
                         <td style='width:35px;'>
@@ -502,66 +509,7 @@ require_once ("{$base_dir}header.php");
                             </div>
                         </td>
                     </tr>
-                    <tr style="">
-                        <td style='width:35px;'>
-                            <div class='Counter' style='color:#6600cc;'>7</div>
-                        </td>
-                        <td class='MiddleScreen' style='width:35px;'>
-                            <div class='ImageField'>
-                                <img src='<?= ROOT_URL; ?>public/assets/img/Passargad.webp'></img>
-                            </div>
-                        </td>
-                        <td class='LittleScreen'><input value="1402-12-15 15:34"></input></td>
-                        <td class='LittleScreen'><input value="حسین  قوامی فر"></input></td>
-                        <td style='width:60px;' class='LittleScreen'><input value='ویرایش'></input></td>
-                        <td><input value='4890240381'></input></td>
-                        <td><input value='محمد&nbsp;صالحی'></input></td>
-                        <td class='MiddleScreen'><input value='میوه فذوشی محمد'></input></td>
-                        <td><input value=''></input></td>
-                        <td><input value=''></input></td>
-                        <td><input value=''></input></td>
-                        <td><input value=''></input></td>
-                        <td style='position:sticky;left:0;background-color: inherit;'>
-                            <div style='display:flex;flex-direction:row;width:60px;'>
-                                <form action='view.php#7198' method='GET' style='display:flex;margin-block-end: 0;'>
-                                    <button class='AcceptButton' name='aWRjb2Rl' value='4890240381'>
-                                        نمایش
-                                    </button>
-                                    <input type='hidden' name='c2lk' value='7198'></input>
-                                </form>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr style="">
-                        <td style='width:35px;'>
-                            <div class='Counter' style='color:#44a6c6;'>8</div>
-                        </td>
-                        <td class='MiddleScreen' style='width:35px;'>
-                            <div class='ImageField'>
-                                <img src='<?= ROOT_URL; ?>public/assets/img/Passargad.webp'></img>
-                            </div>
-                        </td>
-                        <td class='LittleScreen'><input value="1402-12-13 15:46"></input></td>
-                        <td class='LittleScreen'><input value="غلامرضا حسنلو"></input></td>
-                        <td style='width:60px;' class='LittleScreen'><input value='بررسی'></input></td>
-                        <td><input value='4281626530'></input></td>
-                        <td><input value='علی&nbsp;کریمی'></input></td>
-                        <td class='MiddleScreen'><input value='لواشی زنگان'></input></td>
-                        <td><input value=''></input></td>
-                        <td><input value=''></input></td>
-                        <td><input value=''></input></td>
-                        <td><input value=''></input></td>
-                        <td style='position:sticky;left:0;background-color: inherit;'>
-                            <div style='display:flex;flex-direction:row;width:60px;'>
-                                <form action='view.php#7189' method='GET' style='display:flex;margin-block-end: 0;'>
-                                    <button class='AcceptButton' name='aWRjb2Rl' value='4281626530'>
-                                        نمایش
-                                    </button>
-                                    <input type='hidden' name='c2lk' value='7189'></input>
-                                </form>
-                            </div>
-                        </td>
-                    </tr>
+
 
                 </table>
             </div>
