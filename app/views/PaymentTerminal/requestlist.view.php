@@ -468,7 +468,7 @@ require_once ("{$base_dir}header.php");
                             <td style='position:sticky;left:0;background-color: inherit;'>
                                 <div style='display:flex;flex-direction:row;width:60px;'>
                                     <form action='viewreqlist' method='GET' style='display:flex;margin-block-end: 0;'>
-                                        <button class='AcceptButton' name='aWRjb2Rl' value='<?= $key['customer_mobile']; ?>'>
+                                        <button class='AcceptButton' name='aWRjb2Rl' value='<?= $key['customer_id']; ?>'>
                                             نمایش
                                         </button>
                                         <input type='hidden' name='c2lk' value='<?= $key['customer_id']; ?>'></input>

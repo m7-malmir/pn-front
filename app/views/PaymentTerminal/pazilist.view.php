@@ -302,7 +302,7 @@ if($_GET['sid'] ?? ''){
 						}
 					}
 					?>
-				</article>
+				</article> 
 				</table>
 			</form>
 		</section>
