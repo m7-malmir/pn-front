@@ -48,11 +48,16 @@ if($_GET['payadelete'] ?? ''){
             <form style='display: none;' action='../terminal/new/' id='terminal_new' method='GET'>
                 <input style='display:none;' name='aWRjb2Rl' value='4950150413'></input>
             </form>
-      
+            <?php
+					foreach ($cas_data_arr as $key=> $value) {
+
+						if($value['customer_id']==$key_id){
+	
+					?>
             <div style='display:flex;flex-direction:column;width:100%;'>
                 <article class='Cadre' style='color: #344767;'>
                     <div style='display:flex;'>
-                        <p class='CadreTitle' style='width: calc(100% - 220px);'>اطلاعات پایانه (3939) (1)</p>
+                        <p class='CadreTitle' style='width: calc(100% - 220px);'>اطلاعات پایانه (<?= $value['contract_num']; ?>) (1)</p>
                         <div style='display:flex;width:200px;'>
                             <form style='display:none;'
                                 action='/membership/bank/PaymentTerminal/WebServices/PardakhtNovin/Request/FollowupCode/'
@@ -60,12 +65,7 @@ if($_GET['payadelete'] ?? ''){
                                 <button class='SendButton' name='d2ViaWQ=[]' value=''
                                     style="background-image:url('/membership/bank/images/Inquiry.webp');"></button>
                             </form>
-                            <?php
-					foreach ($cas_data_arr as $key=> $value) {
-
-						if($value['customer_id']==$key_id){
-	
-					?>      <form style='display: none;' action='' id='Editor' method='GET'>
+                        <form style='display: none;' action='' id='Editor' method='GET'>
                     <input type="hidden" name="aWRjb2Rl" value="<?= $key_id; ?>">
                 </form>
                             <form style='display:flex;'
@@ -94,13 +94,13 @@ if($_GET['payadelete'] ?? ''){
         
                     <div class='TableRow4'>
                         <input value='کاربر:'></input>
-                        <input value='razmjo'></input>
+                        <input value='<?= $value['customer_agent']; ?>'></input>
                         <input value='ویراستار'></input>
                         <input value=''></input>
                     </div>
                     <div class='TableRow4'>
                         <input value='کد قرارداد:'></input>
-                        <input value=''></input>
+                        <input value='<?= $value['contract_code']; ?>'></input>
                         <input value='کد ملی پذیرنده:'></input>
                         <input value='<?= $value['customer_nation_code']; ?>'></input>
                     </div>
@@ -120,7 +120,7 @@ if($_GET['payadelete'] ?? ''){
                         <input value='کد پیگیری:'></input>
                         <input value=''></input>
                         <input value='پروژه:'></input>
-                        <input value='پرداخت نوین'></input>
+                        <input value='<?= $value['customer_service']; ?>'></input>
                     </div>
                     <div class='TableRow4'>
                         <input value='کد مدارک:'></input>
@@ -132,11 +132,11 @@ if($_GET['payadelete'] ?? ''){
                         <input value='نام فروشگاه:'></input>
                         <input value='<?= $value['customer_store_name']; ?>'></input>
                         <input value='صنف:'></input>
-                        <input value='خشکبار و آجیل فروش'></input>
+                        <input value='<?= $value['customer_cat']; ?>'></input>
                     </div>
                     <div class='TableRow4'>
                         <input value='زمان ثبت:'></input>
-                        <input value='1402-10-28 19:20'></input>
+                        <input value='<?= $value['date']; ?>'></input>
                         <input value='زمان فعال سازی'></input>
                         <input value=''></input>
                     </div>
@@ -148,9 +148,9 @@ if($_GET['payadelete'] ?? ''){
                     </div>
                     <div class='TableRow4'>
                         <input value='وضعیت:'></input>
-                        <input value='ارسال به شرکت'></input>
+                        <input value='<?= $value['customer_terminals']; ?>'></input>
                         <input value='مدل ترمینال:'></input>
-                        <input value='NEWLAND/ME31/GPRS'></input>
+                        <input value='<?= $value['customer_device_model']; ?>'></input>
                     </div>
                     <div class='TableRow4'>
                         <input value='imei:'></input>
@@ -160,17 +160,17 @@ if($_GET['payadelete'] ?? ''){
                     </div>
                     <div class='TableRow4'>
                         <input value='علل مردودی و توضیحات :'></input>
-                        <input class='bigger_field_TableRow2' name='reason' value='' placeholder=''></input>
+                        <input class='bigger_field_TableRow2' name='reason' value='<?= $value['reason']; ?>' placeholder=''></input>
                     </div>
                     <div class='TableRow4'>
                         <input value='نام بانک:'></input>
                         <input value='بانک توسعه و تعاون'></input>
                         <input value='شماره حساب:'></input>
-                        <input value='291420173955811'></input>
+                        <input value='<?= $value['customer_num_acount']; ?>'></input>
                     </div>
                     <div class='TableRow4'>
                         <input value='شماره شبا'></input>
-                        <input class='bigger_field_TableRow2' value='IR130220291402017395581001'></input>
+                        <input class='bigger_field_TableRow2' value='<?= $value['customer_iban']; ?>'></input>
                     </div>
                     <?php
 						}

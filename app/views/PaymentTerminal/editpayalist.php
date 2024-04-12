@@ -99,17 +99,16 @@
                             <div class='table_row_2_partition'>
                                 <label>وضعیت</label>
                                 <select id='status' name='status'>
-                                    <option value='' class='select_option'>همه وضعیت</option>
-                                    <option value='ارسال به شرکت' class='select_option' selected>ارسال به شرکت</option>
-                                    <option value='ارسال به مرکز' class='select_option'>ارسال به مرکز</option>
-                                    <option value='ارسال به شاپرک' class='select_option'>ارسال به شاپرک</option>
-                                    <option value='تأیید شاپرک' class='select_option'>تأیید شاپرک</option>
-                                    <option value='تأیید نصب' class='select_option'>تأیید نصب</option>
-                                    <option value='فعال شده' class='select_option'>فعال شده</option>
-                                    <option value='ارسال به ابطال' class='select_option'>ارسال به ابطال</option>
-                                    <option value='ابطال شده' class='select_option'>ابطال شده</option>
-                                    <option value='مردود شرکت' class='select_option'>مردود شرکت</option>
-                                    <option value='مردود شاپرک' class='select_option'>مردود شاپرک</option>
+                                    <option value='1' class='select_option'>همه وضعیت</option>
+                                    <option value='2' class='select_option' selected>ارسال به شرکت</option>
+                                    <option value='3' class='select_option'>ارسال به مرکز</option>
+                                    <option value='4' class='select_option'>ارسال به شاپرک</option>
+                                    <option value='5' class='select_option'>تأیید شاپرک</option>
+                                    <option value='6' class='select_option'>تأیید نصب</option>
+                                    <option value='7' class='select_option'>فعال شده</option>
+                                    <option value='8' class='select_option'>ارسال به ابطال</option>
+                                    <option value='9' class='select_option'>ابطال شده</option>
+                                    <option value='10' class='select_option'>مردود شرکت</option>
                                 </select>
                             </div>
                             <div class='table_row_2_partition'>

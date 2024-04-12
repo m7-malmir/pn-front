@@ -1,3 +1,4 @@
+
 <style>
 	input {
 		padding: 0 !important;
@@ -46,6 +47,8 @@
 		<input type='hidden' id='project' name='customer_service' value='<?= $_GET['project']; ?>'></input>
 		<input type='hidden' id='' name='customer_requests' value='1'></input>
 		<input type='hidden' id='' name='customer_terminals' value='1'></input>
+		<input type='hidden' id='' name='contract_num' value='<?php print_r(mt_rand(1,999999)); ?>'></input>
+		<input type='hidden' id='' name='contract_code' value='<?php print_r(mt_rand(1,999999)); ?>'></input>
 		
 		<div class='TableRow2'>
 			<?php if ($_GET['nationality'] == 0) { ?>
