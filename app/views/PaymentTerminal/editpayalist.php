@@ -16,7 +16,7 @@
                   $_SESSION['id']=$value['customer_id'];
             ?>
                     <article class='label' style=''>
-                        <p class='LabelTitle'>اطلاعات پایانه (4066)</p>
+                        <p class='LabelTitle'>اطلاعات پایانه (<?= $value['contract_num']; ?>)</p>
                         <div class='TableRow2'>
                             <div class='table_row_2_partition'>
                                 <label>نام پذیرنده</label>
@@ -26,21 +26,21 @@
                         <div class='TableRow2'>
                             <div class='table_row_2_partition'>
                                 <label>نام فروشگاه</label>
-                                <input name='companyname' value='جوشکاری نوآوران' autocomplete='off'></input>
+                                <input name='companyname' value='<?= $value['customer_store_name']; ?>' autocomplete='off'></input>
                             </div>
                             <div class='table_row_2_partition'>
                                 <label>شماره حساب</label>
-                                <input name='ban' value='371145790' maxlength='19' autocomplete='off'></input>
+                                <input name='ban' value='<?= $value['customer_num_acount']; ?>' maxlength='19' autocomplete='off'></input>
                             </div>
                         </div>
                         <div class='TableRow2'>
                             <div class='table_row_2_partition'>
                                 <label>کد شعبه</label>
-                                <input type='number' name='bankcode' value='1005' autocomplete='off'></input>
+                                <input type='number' name='bankcode' value='<?= $value['customer_bank_code']; ?>' autocomplete='off'></input>
                             </div>
                             <div class='table_row_2_partition'>
                                 <label>شماره شبا</label>
-                                <input name='iban' value='IR440130100000000371145790' maxlength='26'
+                                <input name='iban' value='<?= $value['customer_iban']; ?>' maxlength='26'
                                     autocomplete='off'></input>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                             </div>
                             <div class='table_row_2_partition'>
                                 <label>پذیرنده</label>
-                                <input name='acceptancecode' value='' autocomplete='off'></input>
+                                <input name='acceptancecode' value='<?= $value['customer_agent']; ?>' autocomplete='off'></input>
                             </div>
                         </div>
                         <div class='TableRow2'>
@@ -71,8 +71,8 @@
                             </div>
                             <div class='table_row_2_partition'>
                                 <label>پروژه</label>
-                                <select id='project' name='project'>
-                                    <option value='فن آوا'>فن آوا</option>
+                                <select id='project'  name='project'>
+                                    <option value='<?= $value['customer_service']; ?>'>فن آوا</option>
                                     <option value='پاسارگاد' selected>پاسارگاد</option>
                                     <option value='پرداخت نوین'>پرداخت نوین</option>
                                     <option value='سپهر'>سپهر</option>
@@ -99,7 +99,7 @@
                             <div class='table_row_2_partition'>
                                 <label>وضعیت</label>
                                 <select id='status' name='status'>
-                                    <option value='1' class='select_option'>همه وضعیت</option>
+                                    <option value='<?= $value['customer_terminals']; ?>' class='select_option'>همه وضعیت</option>
                                     <option value='2' class='select_option' selected>ارسال به شرکت</option>
                                     <option value='3' class='select_option'>ارسال به مرکز</option>
                                     <option value='4' class='select_option'>ارسال به شاپرک</option>
@@ -149,17 +149,17 @@
                         <div class='TableRow2'>
                             <div class='table_row_2_partition'>
                                 <label>شماره جواز کسب</label>
-                                <input name='business_license_id' value='' autocomplete='off'></input>
+                                <input name='business_license_id' value='<?= $value['customer_num_auth']; ?>' autocomplete='off'></input>
                             </div>
                             <div class='table_row_2_partition'>
                                 <label>تاریخ صدور جواز کسب</label>
-                                <input name='business_license_register_date' value='' autocomplete='off'></input>
+                                <input name='business_license_register_date' value='<?= $value['customer_d_s_num_auth']; ?>' autocomplete='off'></input>
                             </div>
                         </div>
                         <div class='TableRow2'>
                             <div class='table_row_2_partition'>
                                 <label>تاریخ انقضا جواز کسب</label>
-                                <input name='business_license_expire_date' value='' autocomplete='off'></input>
+                                <input name='business_license_expire_date' value='<?= $value['customer_d_e_num_auth']; ?>' autocomplete='off'></input>
                             </div>
                             <div class='table_row_2_partition'>
                                 <label>کد یا کد های مشارکت</label>
@@ -170,7 +170,7 @@
                             <div class='table_row_2_partition'>
                                 <label>صنف</label>
                                 <input id="SearchboxFilter11" onkeyup="LiveFilter('11');" autocomplete='off'
-                                    autocomplete='off' value='ساخت در و پنجره فلزی' required></input>
+                                    autocomplete='off' value='<?= $value['customer_cat']; ?>' required></input>
                                 <select id="SelectListFilter11" name="SelectFilter11" size="4"
                                     style='display:none;width:100%;height:150px;position:absolute;top:50px;'
                                     autocomplete='off'>
@@ -1644,7 +1644,7 @@
                                         onclick='CopyToValue(11,"رزرو جهت کسب و کارهای ویژه--98030001","98030001");'>
                                         رزرو جهت کسب و کارهای ویژه 98030001</option>
                                 </select>
-                            </div>
+                            </div> 
                         </div>
                     </article>
 

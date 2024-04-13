@@ -29,7 +29,7 @@ if($_GET['payadelete'] ?? ''){
 <main>
 <?php include 'sidemenu2.php' ?>
         <section id='MainSection'>
-            <form style='display: none;' action='./Delete/' id='DeleteRequest' method=''></form>
+            <form style='display: none;' action='' id='DeleteRequest' method=''></form>
             <form style='display: none;' action='../request/replacement/' id='ReplacementRequest' method=''></form>
             <form style='display: none;' action='../request/attribution/' id='AttributionRequest' method=''></form>
             <form style='display: none;' target='_blank' action='Help' id='Help' method='GET'></form>

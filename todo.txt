@@ -12,7 +12,7 @@
 
 	2-4-namayesh ✅
 			2-4-1-edit payaneh info ✅
-			2-4-2-delete payaneh info 
+			2-4-2-delete payaneh info ✅
 	2-5-right menu expanded✅
 
 3-liste darkhastha ✅

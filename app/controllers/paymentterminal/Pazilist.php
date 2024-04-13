@@ -22,11 +22,13 @@ class Pazilist
                unset($_SESSION['id']);
             }
         }
+
         if ($_SERVER['REQUEST_METHOD'] == "GET"){
            if(isset($_GET['sid'])){
             echo 'get ok';
            }
         }
+
         $this->view('paymentterminal/pazilist',$data);
     }
 }

@@ -19,11 +19,11 @@ $key_id=$_GET['aWRjb2Rl'] ?? '';
 </style>
 <?php
 require_once ("{$base_dir}header.php");
-if($_GET['sid'] ?? ''){   
+if($_GET['sid'] ?? ''){
     $ds = DIRECTORY_SEPARATOR;
     $base_dir = realpath(dirname(__FILE__)  . $ds) . $ds;
     require_once "{$base_dir}deletepazlist.php";
-}elseif($_GET['kind'] ?? ''){   
+}elseif($_GET['kind'] ?? ''){
     $ds = DIRECTORY_SEPARATOR;
     $base_dir = realpath(dirname(__FILE__)  . $ds) . $ds;
     require_once "{$base_dir}editpazlist.php"; 
