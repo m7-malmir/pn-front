@@ -67,7 +67,7 @@ if ($_GET[''] ?? '') {
                     <input type='hidden' name='aWRjb2Rl' value='4280870160'></input>
                     <article class='Cadre' style=''>
                         <div style="display:flex;">
-                            <p class="CadreTitle" id="7050" style="width: calc(100% - 180px);">اطلاعات درخواست (7050)</p>
+                            <p class="CadreTitle" id="7050" style="width: calc(100% - 180px);">اطلاعات درخواست (<?= $value['contract_code']; ?>)</p>
                             <div style="display:flex;width:160px;">
                                 <button name="c2lk" class="SendButton" form="CheckUp" value="7050" type="submit"
                                     style="background-image:url(&quot;<?= ROOT_URL; ?>public/assets/img/GreenCheck.webp&quot;);"></button>
