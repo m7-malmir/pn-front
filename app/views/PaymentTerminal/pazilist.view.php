@@ -99,7 +99,7 @@ if($_GET['sid'] ?? ''){
 							<option value='1'>خارجی</option>
 						</select>
 					</div>
-					<div class='TableRow4'>
+					<div class='TableRow4'> 
 						<input value='نام:'></input>
 						<input value='<?= $value['customer_manager_name']; ?>'></input>
 						<input value='نام خانوادگی:'></input>
