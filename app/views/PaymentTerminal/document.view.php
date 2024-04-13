@@ -7,7 +7,7 @@ $cas_data_arr = json_decode(json_encode($data['casdata']), true);
   <title>مدارک</title>
 <?php 
  require_once("{$base_dir}header.php");
-?>
+?> 
 <style>
     .AcceptButton {
         font-size: 12px!important;
@@ -136,9 +136,9 @@ $cas_data_arr = json_decode(json_encode($data['casdata']), true);
                             <td class='MiddleScreen'><input value='<?= $key['customer_store_name']; ?>'></input></td>
                             <td style='width:70px;'>
                                 <div style='display:flex;flex-direction:row;'>
-                                    <form action='.php' method='GET' style='margin:0 auto;display:flex;'>
-                                        <input style='display:none;' name='aWRjb2Rl' value='3581008734'></input>
-                                        <button class='AcceptButton' name='c2lk' value='<?= $key['customer_id']; ?>'>
+                                    <form action='docview' method='GET' style='margin:0 auto;display:flex;'>
+                                        <!-- <input style='display:none;' name='aWRjb2Rl' value='3581008734'></input> -->
+                                        <button class='AcceptButton' name='aWRjb2Rl' value='<?= $key['customer_id']; ?>'>
                                             نمایش
                                         </button>
                                     </form>

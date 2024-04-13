@@ -3,7 +3,7 @@ $ds = DIRECTORY_SEPARATOR;
 $base_dir = realpath(dirname(__FILE__)  . $ds . '..') . $ds;
 require_once("{$base_dir}header-up.php");
  $cas_data_arr = json_decode(json_encode($data['casdata']), true);
-
+ 
 ?>
 <title>پذیرندگان</title>
 <meta name='robots' content='noindex, nofollow'>
