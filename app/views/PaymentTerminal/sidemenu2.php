@@ -14,7 +14,7 @@
         <img src='<?= ROOT_URL; ?>public/assets/img/new_acceptor.png'></img>
         <p>ثبت پذیرنده</p>
     </a>
-    <a href='../../../../../membership/bank/PaymentTerminal/V1/terminal/new/?aWRjb2Rl=+1 (162) 777-5604'
+    <a href='<?= ROOT_URL; ?>public\paymentterminal\newterminal'
         class='side_menu_topic'>
         <img src='<?= ROOT_URL; ?>public/assets/img/new_terminal.png'></img>
         <p>ثبت ترمینال جدید</p>
@@ -35,7 +35,7 @@
         <img src='<?= ROOT_URL; ?>public/assets/img/document.png'></img>
         <p>لیست بایگانی</p>
     </a>
-    <a href='../../../../../membership/bank/PaymentTerminal/V1/costumer/view.php?aWRjb2Rl=+1 (162) 777-5604'
+    <a href='<?= ROOT_URL; ?>public\paymentterminal\pazilist?aWRjb2Rl=<?= $key_id; ?>'
         class='side_menu_topic'>
         <img src='<?= ROOT_URL; ?>public/assets/img/acceptor.png'></img>
         <p>اطلاعات پذیرنده</p>
